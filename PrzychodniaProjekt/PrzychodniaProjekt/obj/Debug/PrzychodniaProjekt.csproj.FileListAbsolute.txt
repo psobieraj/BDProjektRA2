@@ -1,2 +1,14 @@
 c:\users\patryk\documents\visual studio 2015\Projects\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
 C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.pdb
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.pdb
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.pdb
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csprojResolveAssemblyReference.cache
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Properties.Resources.resources
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb

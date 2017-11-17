@@ -1,0 +1,6 @@
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.dll.config
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.pdb
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.pdb

@@ -1,0 +1,7 @@
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\bin\Debug\BizzLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\bin\Debug\BizzLayer.pdb
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\bin\Debug\DataLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\bin\Debug\DataLayer.pdb
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.dll
+D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.pdb
