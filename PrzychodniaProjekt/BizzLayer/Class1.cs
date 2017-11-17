@@ -15,6 +15,7 @@ namespace BizzLayer
 
         // aahahaaaxaxaxa
         //test Pat
-        //test 2 Łukasz
+        //test lukasz
+        //terst2 lukasz
     }
 }
