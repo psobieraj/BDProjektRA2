@@ -9,6 +9,6 @@ namespace BizzLayer
     public class Class1
     {
 
-
+        //bez merge
     }
 }
