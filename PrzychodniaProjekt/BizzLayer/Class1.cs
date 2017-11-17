@@ -9,12 +9,6 @@ namespace BizzLayer
     public class Class1
     {
 
-        //hyhy
-        //haha
 
-
-        // aahahaaaxaxaxa
-        //test Pat
-        //test2 Patryk
     }
 }
