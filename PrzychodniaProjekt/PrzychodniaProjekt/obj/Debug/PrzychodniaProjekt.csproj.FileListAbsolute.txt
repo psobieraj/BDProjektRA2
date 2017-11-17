@@ -1,0 +1,2 @@
+c:\users\patryk\documents\visual studio 2015\Projects\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
+C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config

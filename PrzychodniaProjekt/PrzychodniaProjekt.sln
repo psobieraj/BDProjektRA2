@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrzychodniaProjekt", "PrzychodniaProjekt\PrzychodniaProjekt.csproj", "{41747B98-09B4-49C1-A9B7-CED2C43DA85B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BizzLayer", "BizzLayer\BizzLayer.csproj", "{071BB9C1-4753-4A08-9A36-9D4FE086EE93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{6768AE50-683D-45D3-9625-66613199E23C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41747B98-09B4-49C1-A9B7-CED2C43DA85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41747B98-09B4-49C1-A9B7-CED2C43DA85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41747B98-09B4-49C1-A9B7-CED2C43DA85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41747B98-09B4-49C1-A9B7-CED2C43DA85B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071BB9C1-4753-4A08-9A36-9D4FE086EE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071BB9C1-4753-4A08-9A36-9D4FE086EE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071BB9C1-4753-4A08-9A36-9D4FE086EE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071BB9C1-4753-4A08-9A36-9D4FE086EE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6768AE50-683D-45D3-9625-66613199E23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6768AE50-683D-45D3-9625-66613199E23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6768AE50-683D-45D3-9625-66613199E23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6768AE50-683D-45D3-9625-66613199E23C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
