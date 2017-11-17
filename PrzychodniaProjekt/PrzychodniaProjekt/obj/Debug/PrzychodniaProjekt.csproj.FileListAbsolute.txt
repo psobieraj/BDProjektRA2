@@ -12,3 +12,5 @@ D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\
 D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
 D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
 D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
+C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
