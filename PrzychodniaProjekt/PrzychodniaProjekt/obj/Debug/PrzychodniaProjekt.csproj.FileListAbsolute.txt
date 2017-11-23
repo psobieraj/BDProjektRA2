@@ -14,3 +14,18 @@ D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\
 D:\politechnika\V semestr\BD2\PrzychodniaProjektRepozytorium\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
 C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
 C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.pdb
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.dll
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.dll
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.pdb
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.pdb
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csprojResolveAssemblyReference.cache
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Properties.Resources.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Login.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
