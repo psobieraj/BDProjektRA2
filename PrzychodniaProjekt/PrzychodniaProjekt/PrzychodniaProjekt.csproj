@@ -77,11 +77,41 @@
     <Compile Include="Doctor_visit.Designer.cs">
       <DependentUpon>Doctor_visit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examination_aborted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination_aborted.Designer.cs">
+      <DependentUpon>Examination_aborted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examination_all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination_all.Designer.cs">
+      <DependentUpon>Examination_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examination_completed_confirmed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination_completed_confirmed.Designer.cs">
+      <DependentUpon>Examination_completed_confirmed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examination_ordered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination_ordered.Designer.cs">
+      <DependentUpon>Examination_ordered.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_technician_start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_technician_start.Designer.cs">
+      <DependentUpon>Lab_technician_start.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -142,8 +172,23 @@
     <EmbeddedResource Include="Doctor_visit.resx">
       <DependentUpon>Doctor_visit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Examination_aborted.resx">
+      <DependentUpon>Examination_aborted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination_all.resx">
+      <DependentUpon>Examination_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination_completed_confirmed.resx">
+      <DependentUpon>Examination_completed_confirmed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination_ordered.resx">
+      <DependentUpon>Examination_ordered.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_technician_start.resx">
+      <DependentUpon>Lab_technician_start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

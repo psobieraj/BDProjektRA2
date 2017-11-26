@@ -54,3 +54,33 @@ C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt
 C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
 C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_comments.resources
 C:\Users\Patryk\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.pdb
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.dll
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.dll
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.pdb
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.pdb
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csprojResolveAssemblyReference.cache
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_main.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_manage.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_main.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_visit.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Login.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Properties.Resources.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Recommend_examination.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_cancel.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_main.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_register.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_comments.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_aborted.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_all.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_completed_confirmed.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_ordered.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_start.resources
