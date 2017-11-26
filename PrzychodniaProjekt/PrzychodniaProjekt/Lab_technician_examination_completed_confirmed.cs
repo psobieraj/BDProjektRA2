@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrzychodniaProjekt
 {
-    public partial class Examination_all : Form
+    public partial class Lab_technician_examination_completed_confirmed : Form
     {
-        public Examination_all()
+        public Lab_technician_examination_completed_confirmed()
         {
             InitializeComponent();
         }

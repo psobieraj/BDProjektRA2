@@ -77,29 +77,29 @@
     <Compile Include="Doctor_visit.Designer.cs">
       <DependentUpon>Doctor_visit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Examination_aborted.cs">
+    <Compile Include="Lab_technician_examination_aborted.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Examination_aborted.Designer.cs">
-      <DependentUpon>Examination_aborted.cs</DependentUpon>
+    <Compile Include="Lab_technician_examination_aborted.Designer.cs">
+      <DependentUpon>Lab_technician_examination_aborted.cs</DependentUpon>
     </Compile>
-    <Compile Include="Examination_all.cs">
+    <Compile Include="Lab_technician_examination_all.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Examination_all.Designer.cs">
-      <DependentUpon>Examination_all.cs</DependentUpon>
+    <Compile Include="Lab_technician_examination_all.Designer.cs">
+      <DependentUpon>Lab_technician_examination_all.cs</DependentUpon>
     </Compile>
-    <Compile Include="Examination_completed_confirmed.cs">
+    <Compile Include="Lab_technician_examination_completed_confirmed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Examination_completed_confirmed.Designer.cs">
-      <DependentUpon>Examination_completed_confirmed.cs</DependentUpon>
+    <Compile Include="Lab_technician_examination_completed_confirmed.Designer.cs">
+      <DependentUpon>Lab_technician_examination_completed_confirmed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Examination_ordered.cs">
+    <Compile Include="Lab_technician_examination_ordered.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Examination_ordered.Designer.cs">
-      <DependentUpon>Examination_ordered.cs</DependentUpon>
+    <Compile Include="Lab_technician_examination_ordered.Designer.cs">
+      <DependentUpon>Lab_technician_examination_ordered.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -172,17 +172,17 @@
     <EmbeddedResource Include="Doctor_visit.resx">
       <DependentUpon>Doctor_visit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examination_aborted.resx">
-      <DependentUpon>Examination_aborted.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_technician_examination_aborted.resx">
+      <DependentUpon>Lab_technician_examination_aborted.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examination_all.resx">
-      <DependentUpon>Examination_all.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_technician_examination_all.resx">
+      <DependentUpon>Lab_technician_examination_all.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examination_completed_confirmed.resx">
-      <DependentUpon>Examination_completed_confirmed.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_technician_examination_completed_confirmed.resx">
+      <DependentUpon>Lab_technician_examination_completed_confirmed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examination_ordered.resx">
-      <DependentUpon>Examination_ordered.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_technician_examination_ordered.resx">
+      <DependentUpon>Lab_technician_examination_ordered.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

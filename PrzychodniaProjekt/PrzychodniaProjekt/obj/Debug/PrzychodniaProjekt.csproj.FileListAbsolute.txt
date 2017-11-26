@@ -79,8 +79,8 @@ D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaP
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_comments.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
-D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_aborted.resources
-D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_all.resources
-D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_completed_confirmed.resources
-D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Examination_ordered.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_start.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_examination_aborted.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_examination_all.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_examination_completed_confirmed.resources
+D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_examination_ordered.resources

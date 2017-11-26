@@ -1,6 +1,6 @@
 ﻿namespace PrzychodniaProjekt
 {
-    partial class Examination_aborted
+    partial class Lab_technician_examination_aborted
     {
         /// <summary>
         /// Required designer variable.

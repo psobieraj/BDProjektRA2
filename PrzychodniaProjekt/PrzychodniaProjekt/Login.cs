@@ -50,5 +50,17 @@ namespace PrzychodniaProjekt
             
             this.Close();   /// po wylaczeniu formularza kierownika wylaczamy aplikacje
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();    /// ukrywamy formularz logowania
+
+            Lab_technician_start lab_technician_start = new Lab_technician_start();
+            lab_technician_start.ShowDialog();
+
+
+            this.Close();   /// po wylaczeniu formularza wylaczamy aplikacje
+
+        }
     }
 }
