@@ -59,6 +59,24 @@
     <Compile Include="Admin_manage.Designer.cs">
       <DependentUpon>Admin_manage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_examination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_examination.Designer.cs">
+      <DependentUpon>Doctor_examination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_main.Designer.cs">
+      <DependentUpon>Doctor_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_visit.Designer.cs">
+      <DependentUpon>Doctor_visit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +91,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recommend_examination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recommend_examination.Designer.cs">
+      <DependentUpon>Recommend_examination.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registry_cancel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +133,15 @@
     <EmbeddedResource Include="Admin_manage.resx">
       <DependentUpon>Admin_manage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_examination.resx">
+      <DependentUpon>Doctor_examination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_main.resx">
+      <DependentUpon>Doctor_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_visit.resx">
+      <DependentUpon>Doctor_visit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +157,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recommend_examination.resx">
+      <DependentUpon>Recommend_examination.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registry_cancel.resx">
       <DependentUpon>Registry_cancel.cs</DependentUpon>
     </EmbeddedResource>
