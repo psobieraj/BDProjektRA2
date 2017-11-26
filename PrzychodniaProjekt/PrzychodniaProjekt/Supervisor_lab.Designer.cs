@@ -28,104 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button buttonShowExams;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lekarz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uwagi_lek = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wynik = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laborant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uwagi_kier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_zl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_wyk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_zatw = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonComments = new System.Windows.Forms.Button();
+            this.labelListOfExams = new System.Windows.Forms.Label();
+            this.comboBoxState = new System.Windows.Forms.ComboBox();
+            this.labelState = new System.Windows.Forms.Label();
+            this.textCode = new System.Windows.Forms.TextBox();
+            this.labelCode = new System.Windows.Forms.Label();
+            this.textLab = new System.Windows.Forms.TextBox();
+            this.labelLab = new System.Windows.Forms.Label();
+            this.textMD = new System.Windows.Forms.TextBox();
+            this.labelMD = new System.Windows.Forms.Label();
+            buttonShowExams = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.lekarz,
-            this.uwagi_lek,
-            this.kod,
-            this.status,
-            this.wynik,
-            this.laborant,
-            this.uwagi_kier,
-            this.data_zl,
-            this.data_wyk,
-            this.data_zatw});
             this.dataGridView1.Location = new System.Drawing.Point(12, 104);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1047, 162);
+            this.dataGridView1.Size = new System.Drawing.Size(684, 300);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // lekarz
-            // 
-            this.lekarz.HeaderText = "Lekarz";
-            this.lekarz.Name = "lekarz";
-            // 
-            // uwagi_lek
-            // 
-            this.uwagi_lek.HeaderText = "Uwagi lekarza";
-            this.uwagi_lek.Name = "uwagi_lek";
-            // 
-            // kod
-            // 
-            this.kod.HeaderText = "Kod";
-            this.kod.Name = "kod";
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            // 
-            // wynik
-            // 
-            this.wynik.HeaderText = "Wynik";
-            this.wynik.Name = "wynik";
-            // 
-            // laborant
-            // 
-            this.laborant.HeaderText = "Laborant";
-            this.laborant.Name = "laborant";
-            // 
-            // uwagi_kier
-            // 
-            this.uwagi_kier.HeaderText = "Uwagi kier.";
-            this.uwagi_kier.Name = "uwagi_kier";
-            // 
-            // data_zl
-            // 
-            this.data_zl.HeaderText = "Data zlecenia";
-            this.data_zl.Name = "data_zl";
-            // 
-            // data_wyk
-            // 
-            this.data_wyk.HeaderText = "Data wykonania";
-            this.data_wyk.Name = "data_wyk";
-            // 
-            // data_zatw
-            // 
-            this.data_zatw.HeaderText = "Data zatw.";
-            this.data_zatw.Name = "data_zatw";
             // 
             // buttonConfirm
             // 
-            this.buttonConfirm.Location = new System.Drawing.Point(12, 306);
+            this.buttonConfirm.Location = new System.Drawing.Point(714, 105);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(127, 23);
             this.buttonConfirm.TabIndex = 1;
             this.buttonConfirm.Text = "Zatwierdź badanie";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(177, 306);
+            this.buttonCancel.Location = new System.Drawing.Point(714, 134);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(127, 23);
             this.buttonCancel.TabIndex = 2;
@@ -134,18 +75,111 @@
             // 
             // buttonComments
             // 
-            this.buttonComments.Location = new System.Drawing.Point(12, 349);
+            this.buttonComments.Location = new System.Drawing.Point(714, 206);
             this.buttonComments.Name = "buttonComments";
             this.buttonComments.Size = new System.Drawing.Size(75, 23);
             this.buttonComments.TabIndex = 3;
-            this.buttonComments.Text = "Uwagi";
+            this.buttonComments.Text = "Skomentuj";
             this.buttonComments.UseVisualStyleBackColor = true;
+            // 
+            // labelListOfExams
+            // 
+            this.labelListOfExams.AutoSize = true;
+            this.labelListOfExams.Location = new System.Drawing.Point(9, 88);
+            this.labelListOfExams.Name = "labelListOfExams";
+            this.labelListOfExams.Size = new System.Drawing.Size(65, 13);
+            this.labelListOfExams.TabIndex = 4;
+            this.labelListOfExams.Text = "Lista badań:";
+            // 
+            // buttonShowExams
+            // 
+            buttonShowExams.Location = new System.Drawing.Point(714, 41);
+            buttonShowExams.Name = "buttonShowExams";
+            buttonShowExams.Size = new System.Drawing.Size(127, 23);
+            buttonShowExams.TabIndex = 5;
+            buttonShowExams.Text = "Wyświetl badania";
+            buttonShowExams.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxState
+            // 
+            this.comboBoxState.FormattingEnabled = true;
+            this.comboBoxState.Location = new System.Drawing.Point(610, 41);
+            this.comboBoxState.Name = "comboBoxState";
+            this.comboBoxState.Size = new System.Drawing.Size(86, 21);
+            this.comboBoxState.TabIndex = 6;
+            // 
+            // labelState
+            // 
+            this.labelState.AutoSize = true;
+            this.labelState.Location = new System.Drawing.Point(564, 46);
+            this.labelState.Name = "labelState";
+            this.labelState.Size = new System.Drawing.Size(40, 13);
+            this.labelState.TabIndex = 7;
+            this.labelState.Text = "Status:";
+            // 
+            // textCode
+            // 
+            this.textCode.Location = new System.Drawing.Point(470, 41);
+            this.textCode.Name = "textCode";
+            this.textCode.Size = new System.Drawing.Size(70, 20);
+            this.textCode.TabIndex = 8;
+            // 
+            // labelCode
+            // 
+            this.labelCode.AutoSize = true;
+            this.labelCode.Location = new System.Drawing.Point(394, 46);
+            this.labelCode.Name = "labelCode";
+            this.labelCode.Size = new System.Drawing.Size(70, 13);
+            this.labelCode.TabIndex = 9;
+            this.labelCode.Text = "Kod badania:";
+            // 
+            // textLab
+            // 
+            this.textLab.Location = new System.Drawing.Point(250, 42);
+            this.textLab.Name = "textLab";
+            this.textLab.Size = new System.Drawing.Size(100, 20);
+            this.textLab.TabIndex = 10;
+            // 
+            // labelLab
+            // 
+            this.labelLab.AutoSize = true;
+            this.labelLab.Location = new System.Drawing.Point(192, 46);
+            this.labelLab.Name = "labelLab";
+            this.labelLab.Size = new System.Drawing.Size(52, 13);
+            this.labelLab.TabIndex = 11;
+            this.labelLab.Text = "Laborant:";
+            // 
+            // textMD
+            // 
+            this.textMD.Location = new System.Drawing.Point(57, 41);
+            this.textMD.Name = "textMD";
+            this.textMD.Size = new System.Drawing.Size(90, 20);
+            this.textMD.TabIndex = 12;
+            // 
+            // labelMD
+            // 
+            this.labelMD.AutoSize = true;
+            this.labelMD.Location = new System.Drawing.Point(12, 45);
+            this.labelMD.Name = "labelMD";
+            this.labelMD.Size = new System.Drawing.Size(39, 13);
+            this.labelMD.TabIndex = 13;
+            this.labelMD.Text = "Lekarz";
             // 
             // Supervisor_lab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 421);
+            this.ClientSize = new System.Drawing.Size(863, 445);
+            this.Controls.Add(this.labelMD);
+            this.Controls.Add(this.textMD);
+            this.Controls.Add(this.labelLab);
+            this.Controls.Add(this.textLab);
+            this.Controls.Add(this.labelCode);
+            this.Controls.Add(this.textCode);
+            this.Controls.Add(this.labelState);
+            this.Controls.Add(this.comboBoxState);
+            this.Controls.Add(buttonShowExams);
+            this.Controls.Add(this.labelListOfExams);
             this.Controls.Add(this.buttonComments);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonConfirm);
@@ -154,24 +188,24 @@
             this.Text = "Supervisor_lab";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lekarz;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uwagi_lek;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wynik;
-        private System.Windows.Forms.DataGridViewTextBoxColumn laborant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uwagi_kier;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_zl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_wyk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_zatw;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonComments;
+        private System.Windows.Forms.Label labelListOfExams;
+        private System.Windows.Forms.ComboBox comboBoxState;
+        private System.Windows.Forms.Label labelState;
+        private System.Windows.Forms.TextBox textCode;
+        private System.Windows.Forms.Label labelCode;
+        private System.Windows.Forms.TextBox textLab;
+        private System.Windows.Forms.Label labelLab;
+        private System.Windows.Forms.TextBox textMD;
+        private System.Windows.Forms.Label labelMD;
     }
 }

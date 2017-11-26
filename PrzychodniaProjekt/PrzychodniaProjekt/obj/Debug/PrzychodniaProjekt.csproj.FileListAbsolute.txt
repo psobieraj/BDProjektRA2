@@ -32,3 +32,7 @@ C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaPro
 C:\Users\Daniel\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
 C:\Users\Daniel\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
 C:\Users\Daniel\Source\Repos\BDProjektRA22\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_cancel.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_main.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_register.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_comments.resources

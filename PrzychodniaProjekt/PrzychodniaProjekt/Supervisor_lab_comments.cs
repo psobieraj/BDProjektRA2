@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PrzychodniaProjekt
 {
-    public partial class Supervisor_lab : Form
+    public partial class Supervisor_lab_comments : Form
     {
-        public Supervisor_lab()
+        public Supervisor_lab_comments()
         {
             InitializeComponent();
-        }
-
-        private void buttonConfirm_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
