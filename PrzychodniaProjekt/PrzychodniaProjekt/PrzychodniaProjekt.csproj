@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_main.Designer.cs">
+      <DependentUpon>Admin_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_manage.Designer.cs">
+      <DependentUpon>Admin_manage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     <Compile Include="Supervisor_lab_comments.Designer.cs">
       <DependentUpon>Supervisor_lab_comments.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin_main.resx">
+      <DependentUpon>Admin_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_manage.resx">
+      <DependentUpon>Admin_manage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
