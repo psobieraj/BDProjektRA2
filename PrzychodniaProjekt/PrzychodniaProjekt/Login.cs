@@ -62,5 +62,17 @@ namespace PrzychodniaProjekt
             this.Close();   /// po wylaczeniu formularza wylaczamy aplikacje
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();    /// ukrywamy formularz logowania
+
+            Doctor_main doctor_main = new Doctor_main();
+            doctor_main.ShowDialog();
+
+
+            this.Close();   /// po wylaczeniu formularza wylaczamy aplikacje
+
+        }
     }
 }
