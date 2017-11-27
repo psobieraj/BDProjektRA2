@@ -1,6 +1,6 @@
 ﻿namespace PrzychodniaProjekt
 {
-    partial class Doctor_examination
+    partial class Doctor_examination_phisical
     {
         /// <summary>
         /// Required designer variable.
@@ -28,109 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxState = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxComments = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textKod = new System.Windows.Forms.TextBox();
+            this.textNazwa = new System.Windows.Forms.TextBox();
+            this.btnSelectKod = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // comboBoxState
-            // 
-            this.comboBoxState.FormattingEnabled = true;
-            this.comboBoxState.Location = new System.Drawing.Point(74, 33);
-            this.comboBoxState.Name = "comboBoxState";
-            this.comboBoxState.Size = new System.Drawing.Size(86, 21);
-            this.comboBoxState.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Typ:";
             // 
             // textBoxComments
             // 
-            this.textBoxComments.Location = new System.Drawing.Point(74, 125);
+            this.textBoxComments.Location = new System.Drawing.Point(33, 131);
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
             this.textBoxComments.Size = new System.Drawing.Size(214, 92);
             this.textBoxComments.TabIndex = 21;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(421, 125);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 92);
-            this.textBox1.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Opis:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(336, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Diagnoza:";
+            this.label2.Text = "Wynik";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(623, 366);
+            this.button1.Location = new System.Drawing.Point(157, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 29);
             this.button1.TabIndex = 25;
-            this.button1.Text = "Zakończ";
+            this.button1.Text = "Wykonaj";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(65, 366);
+            this.button2.Location = new System.Drawing.Point(38, 261);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 29);
             this.button2.TabIndex = 26;
             this.button2.Text = "Wróc";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // textKod
             // 
-            this.button3.Location = new System.Drawing.Point(197, 279);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(292, 54);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Zleć badanie";
-            this.button3.UseVisualStyleBackColor = true;
+            this.textKod.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textKod.Enabled = false;
+            this.textKod.Location = new System.Drawing.Point(33, 24);
+            this.textKod.Name = "textKod";
+            this.textKod.Size = new System.Drawing.Size(100, 20);
+            this.textKod.TabIndex = 28;
+            // 
+            // textNazwa
+            // 
+            this.textNazwa.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textNazwa.Location = new System.Drawing.Point(33, 51);
+            this.textNazwa.Name = "textNazwa";
+            this.textNazwa.Size = new System.Drawing.Size(442, 20);
+            this.textNazwa.TabIndex = 29;
+            // 
+            // btnSelectKod
+            // 
+            this.btnSelectKod.Location = new System.Drawing.Point(139, 24);
+            this.btnSelectKod.Name = "btnSelectKod";
+            this.btnSelectKod.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectKod.TabIndex = 30;
+            this.btnSelectKod.Text = "...";
+            this.btnSelectKod.UseVisualStyleBackColor = true;
+            this.btnSelectKod.Click += new System.EventHandler(this.btnSelectKod_Click);
             // 
             // Doctor_examination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 472);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSelectKod);
+            this.Controls.Add(this.textNazwa);
+            this.Controls.Add(this.textKod);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxComments);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxState);
             this.Name = "Doctor_examination";
             this.Text = "Doctor_examination";
             this.ResumeLayout(false);
@@ -139,15 +119,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBoxState;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxComments;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textKod;
+        private System.Windows.Forms.TextBox textNazwa;
+        private System.Windows.Forms.Button btnSelectKod;
     }
 }

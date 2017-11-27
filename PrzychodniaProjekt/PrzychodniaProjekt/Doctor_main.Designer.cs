@@ -40,6 +40,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.dateTimeRegistration = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVisits)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,6 +138,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(95, 21);
             this.comboBox1.TabIndex = 24;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -145,11 +149,38 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Filtruj:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "nazwisko";
+            // 
+            // textName
+            // 
+            this.textName.Location = new System.Drawing.Point(140, 73);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(100, 20);
+            this.textName.TabIndex = 27;
+            // 
+            // dateTimeRegistration
+            // 
+            this.dateTimeRegistration.Location = new System.Drawing.Point(322, 75);
+            this.dateTimeRegistration.Name = "dateTimeRegistration";
+            this.dateTimeRegistration.ShowCheckBox = true;
+            this.dateTimeRegistration.Size = new System.Drawing.Size(200, 20);
+            this.dateTimeRegistration.TabIndex = 28;
+            // 
             // Doctor_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 476);
+            this.Controls.Add(this.dateTimeRegistration);
+            this.Controls.Add(this.textName);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
@@ -184,5 +215,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.DateTimePicker dateTimeRegistration;
     }
 }

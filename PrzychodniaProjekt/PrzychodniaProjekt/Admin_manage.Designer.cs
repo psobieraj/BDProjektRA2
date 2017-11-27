@@ -36,6 +36,7 @@
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // textBoxLogin
@@ -106,11 +107,19 @@
             this.labelRole.TabIndex = 7;
             this.labelRole.Text = "Rola:";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(59, 179);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
             // Admin_manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 273);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
@@ -136,5 +145,6 @@
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelRole;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
