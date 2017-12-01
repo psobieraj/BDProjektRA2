@@ -31,7 +31,6 @@
             this.dataGridViewAccounts = new System.Windows.Forms.DataGridView();
             this.buttonManage = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,15 +63,6 @@
             this.buttonAdd.Text = "Dodaj nowe";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Location = new System.Drawing.Point(398, 173);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(131, 23);
-            this.buttonDelete.TabIndex = 3;
-            this.buttonDelete.Text = "Usuń";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(398, 142);
@@ -92,11 +82,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 13);
+            this.label1.Location = new System.Drawing.Point(46, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "filtr";
+            this.label1.Text = "filtr po username";
             // 
             // Admin_main
             // 
@@ -106,7 +96,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonManage);
             this.Controls.Add(this.dataGridViewAccounts);
@@ -123,7 +112,6 @@
         private System.Windows.Forms.DataGridView dataGridViewAccounts;
         private System.Windows.Forms.Button buttonManage;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
