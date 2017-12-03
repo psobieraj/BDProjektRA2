@@ -44,5 +44,16 @@ namespace DataLayer.Properties {
                 return ((string)(this["PrzychodniaConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-T34RC4B\\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Sec" +
+            "urity=True")]
+        public string PrzychodniaConnectionString2 {
+            get {
+                return ((string)(this["PrzychodniaConnectionString2"]));
+            }
+        }
     }
 }
