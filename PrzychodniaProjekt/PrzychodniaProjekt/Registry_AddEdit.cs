@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PrzychodniaProjekt
 {
-    public partial class Registry_cancel : Form
+    public partial class Registry_AddEdit : Form
     {
-        public Registry_cancel()
+        public Registry_AddEdit()
         {
             InitializeComponent();
         }
-
     }
 }

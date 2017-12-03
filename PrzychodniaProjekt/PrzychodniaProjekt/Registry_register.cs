@@ -16,5 +16,12 @@ namespace PrzychodniaProjekt
         {
             InitializeComponent();
         }
+
+        private void Registry_register_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'przychodniaDataSet1.Doctor' table. You can move, or remove it, as needed.
+            this.doctorTableAdapter.Fill(this.przychodniaDataSet1.Doctor);
+
+        }
     }
 }

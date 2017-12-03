@@ -30,10 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAccept = new System.Windows.Forms.Button();
+            this.buttonReturn = new System.Windows.Forms.Button();
+            this.dtpCancel = new System.Windows.Forms.DateTimePicker();
+            this.textIdVisit = new System.Windows.Forms.TextBox();
+            this.textIdPatient = new System.Windows.Forms.TextBox();
+            this.textIdDoctor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,47 +58,89 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Data anulowania";
             // 
-            // textBox1
+            // buttonAccept
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
-            this.textBox1.TabIndex = 2;
+            this.buttonAccept.Location = new System.Drawing.Point(134, 133);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(95, 29);
+            this.buttonAccept.TabIndex = 4;
+            this.buttonAccept.Text = "Zatwierdź";
+            this.buttonAccept.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // buttonReturn
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 20);
-            this.textBox2.TabIndex = 3;
+            this.buttonReturn.Location = new System.Drawing.Point(256, 133);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(95, 29);
+            this.buttonReturn.TabIndex = 5;
+            this.buttonReturn.Text = "Powrót";
+            this.buttonReturn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // dtpCancel
             // 
-            this.button1.Location = new System.Drawing.Point(39, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dtpCancel.Location = new System.Drawing.Point(136, 74);
+            this.dtpCancel.Name = "dtpCancel";
+            this.dtpCancel.Size = new System.Drawing.Size(215, 20);
+            this.dtpCancel.TabIndex = 6;
             // 
-            // button2
+            // textIdVisit
             // 
-            this.button2.Location = new System.Drawing.Point(155, 133);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 29);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Powrót";
-            this.button2.UseVisualStyleBackColor = true;
+            this.textIdVisit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIdVisit.Enabled = false;
+            this.textIdVisit.Location = new System.Drawing.Point(134, 42);
+            this.textIdVisit.Name = "textIdVisit";
+            this.textIdVisit.Size = new System.Drawing.Size(35, 20);
+            this.textIdVisit.TabIndex = 2;
+            // 
+            // textIdPatient
+            // 
+            this.textIdPatient.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIdPatient.Enabled = false;
+            this.textIdPatient.Location = new System.Drawing.Point(273, 42);
+            this.textIdPatient.Name = "textIdPatient";
+            this.textIdPatient.Size = new System.Drawing.Size(35, 20);
+            this.textIdPatient.TabIndex = 7;
+            // 
+            // textIdDoctor
+            // 
+            this.textIdDoctor.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIdDoctor.Enabled = false;
+            this.textIdDoctor.Location = new System.Drawing.Point(396, 42);
+            this.textIdDoctor.Name = "textIdDoctor";
+            this.textIdDoctor.Size = new System.Drawing.Size(35, 20);
+            this.textIdDoctor.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(228, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Pacjent";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(351, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Lekarz";
             // 
             // Registry_cancel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 192);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(446, 192);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textIdDoctor);
+            this.Controls.Add(this.textIdPatient);
+            this.Controls.Add(this.dtpCancel);
+            this.Controls.Add(this.buttonReturn);
+            this.Controls.Add(this.buttonAccept);
+            this.Controls.Add(this.textIdVisit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registry_cancel";
@@ -108,9 +154,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.DateTimePicker dtpCancel;
+        private System.Windows.Forms.TextBox textIdVisit;
+        private System.Windows.Forms.TextBox textIdPatient;
+        private System.Windows.Forms.TextBox textIdDoctor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

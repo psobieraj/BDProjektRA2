@@ -28,32 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.textDoctor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAccept = new System.Windows.Forms.Button();
+            this.buttonReturn = new System.Windows.Forms.Button();
+            this.dgvDoctors = new System.Windows.Forms.DataGridView();
+            this.idlekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPWZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.przychodniaDataSet1 = new PrzychodniaProjekt.PrzychodniaDataSet1();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.doctorTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSet1TableAdapters.DoctorTableAdapter();
+            this.textSurname = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.textPesel = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textDoctor
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(101, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 20);
-            this.textBox2.TabIndex = 1;
+            this.textDoctor.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textDoctor.Enabled = false;
+            this.textDoctor.Location = new System.Drawing.Point(93, 82);
+            this.textDoctor.Name = "textDoctor";
+            this.textDoctor.Size = new System.Drawing.Size(125, 20);
+            this.textDoctor.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 34);
+            this.label1.Location = new System.Drawing.Point(57, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 2;
@@ -62,55 +75,194 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 57);
+            this.label2.Location = new System.Drawing.Point(48, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Lekarz";
             // 
-            // button1
+            // buttonAccept
             // 
-            this.button1.Location = new System.Drawing.Point(23, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAccept.Location = new System.Drawing.Point(93, 136);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(92, 28);
+            this.buttonAccept.TabIndex = 4;
+            this.buttonAccept.Text = "Zatwierdź";
+            this.buttonAccept.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonReturn
             // 
-            this.button2.Location = new System.Drawing.Point(172, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 28);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Powrót";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonReturn.Location = new System.Drawing.Point(208, 136);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(92, 28);
+            this.buttonReturn.TabIndex = 5;
+            this.buttonReturn.Text = "Powrót";
+            this.buttonReturn.UseVisualStyleBackColor = true;
+            // 
+            // dgvDoctors
+            // 
+            this.dgvDoctors.AutoGenerateColumns = false;
+            this.dgvDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoctors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idlekDataGridViewTextBoxColumn,
+            this.imieDataGridViewTextBoxColumn,
+            this.nazwiskoDataGridViewTextBoxColumn,
+            this.nPWZDataGridViewTextBoxColumn});
+            this.dgvDoctors.DataSource = this.doctorBindingSource;
+            this.dgvDoctors.Location = new System.Drawing.Point(365, 53);
+            this.dgvDoctors.Name = "dgvDoctors";
+            this.dgvDoctors.Size = new System.Drawing.Size(445, 111);
+            this.dgvDoctors.TabIndex = 6;
+            // 
+            // idlekDataGridViewTextBoxColumn
+            // 
+            this.idlekDataGridViewTextBoxColumn.DataPropertyName = "id_lek";
+            this.idlekDataGridViewTextBoxColumn.HeaderText = "id_lek";
+            this.idlekDataGridViewTextBoxColumn.Name = "idlekDataGridViewTextBoxColumn";
+            this.idlekDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // imieDataGridViewTextBoxColumn
+            // 
+            this.imieDataGridViewTextBoxColumn.DataPropertyName = "imie";
+            this.imieDataGridViewTextBoxColumn.HeaderText = "imie";
+            this.imieDataGridViewTextBoxColumn.Name = "imieDataGridViewTextBoxColumn";
+            // 
+            // nazwiskoDataGridViewTextBoxColumn
+            // 
+            this.nazwiskoDataGridViewTextBoxColumn.DataPropertyName = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn.HeaderText = "nazwisko";
+            this.nazwiskoDataGridViewTextBoxColumn.Name = "nazwiskoDataGridViewTextBoxColumn";
+            // 
+            // nPWZDataGridViewTextBoxColumn
+            // 
+            this.nPWZDataGridViewTextBoxColumn.DataPropertyName = "NPWZ";
+            this.nPWZDataGridViewTextBoxColumn.HeaderText = "NPWZ";
+            this.nPWZDataGridViewTextBoxColumn.Name = "nPWZDataGridViewTextBoxColumn";
+            // 
+            // doctorBindingSource
+            // 
+            this.doctorBindingSource.DataMember = "Doctor";
+            this.doctorBindingSource.DataSource = this.przychodniaDataSet1;
+            // 
+            // przychodniaDataSet1
+            // 
+            this.przychodniaDataSet1.DataSetName = "PrzychodniaDataSet1";
+            this.przychodniaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(93, 56);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(207, 20);
+            this.dtpDate.TabIndex = 7;
+            // 
+            // doctorTableAdapter
+            // 
+            this.doctorTableAdapter.ClearBeforeFill = true;
+            // 
+            // textSurname
+            // 
+            this.textSurname.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textSurname.Enabled = false;
+            this.textSurname.Location = new System.Drawing.Point(93, 12);
+            this.textSurname.Name = "textSurname";
+            this.textSurname.Size = new System.Drawing.Size(125, 20);
+            this.textSurname.TabIndex = 8;
+            // 
+            // textName
+            // 
+            this.textName.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textName.Enabled = false;
+            this.textName.Location = new System.Drawing.Point(308, 12);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(125, 20);
+            this.textName.TabIndex = 9;
+            // 
+            // textPesel
+            // 
+            this.textPesel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textPesel.Enabled = false;
+            this.textPesel.Location = new System.Drawing.Point(520, 12);
+            this.textPesel.Name = "textPesel";
+            this.textPesel.Size = new System.Drawing.Size(125, 20);
+            this.textPesel.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Nazwisko";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(276, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Imię";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(481, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Pesel";
             // 
             // Registry_register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 192);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(844, 230);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textPesel);
+            this.Controls.Add(this.textName);
+            this.Controls.Add(this.textSurname);
+            this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.dgvDoctors);
+            this.Controls.Add(this.buttonReturn);
+            this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textDoctor);
             this.Name = "Registry_register";
             this.Text = "Registry_register";
+            this.Load += new System.EventHandler(this.Registry_register_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textDoctor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.DataGridView dgvDoctors;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private PrzychodniaDataSet1 przychodniaDataSet1;
+        private System.Windows.Forms.BindingSource doctorBindingSource;
+        private PrzychodniaDataSet1TableAdapters.DoctorTableAdapter doctorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlekDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPWZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textSurname;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.TextBox textPesel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
