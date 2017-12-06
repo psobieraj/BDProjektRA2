@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bizz_admin.cs" />
+    <Compile Include="Bizz_Clinic.cs" />
+    <Compile Include="Bizz_MD5hash.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

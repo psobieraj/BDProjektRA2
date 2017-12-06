@@ -32,7 +32,7 @@
             this.textPassword = new System.Windows.Forms.TextBox();
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.buttonLogOn = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.linkLabelSupervisor_lab = new System.Windows.Forms.LinkLabel();
             this.labelFunctions = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -76,14 +76,15 @@
             this.labelPassword.Text = "Hasło:";
             this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
-            // buttonLogOn
+            // buttonLogin
             // 
-            this.buttonLogOn.Location = new System.Drawing.Point(28, 197);
-            this.buttonLogOn.Name = "buttonLogOn";
-            this.buttonLogOn.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogOn.TabIndex = 4;
-            this.buttonLogOn.Text = "Zaloguj";
-            this.buttonLogOn.UseVisualStyleBackColor = true;
+            this.buttonLogin.Location = new System.Drawing.Point(28, 197);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.TabIndex = 4;
+            this.buttonLogin.Text = "Login";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // linkLabelSupervisor_lab
             // 
@@ -136,7 +137,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelFunctions);
             this.Controls.Add(this.linkLabelSupervisor_lab);
-            this.Controls.Add(this.buttonLogOn);
+            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.textPassword);
@@ -154,7 +155,7 @@
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.Button buttonLogOn;
+        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.LinkLabel linkLabelSupervisor_lab;
         private System.Windows.Forms.Label labelFunctions;
         private System.Windows.Forms.LinkLabel linkLabel1;

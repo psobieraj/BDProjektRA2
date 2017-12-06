@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvPatients = new System.Windows.Forms.DataGridView();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.przychodniaDataSet = new PrzychodniaProjekt.PrzychodniaDataSet();
             this.dgvVisits = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,36 +46,31 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonShowVisits = new System.Windows.Forms.Button();
-            this.przychodniaDataSet = new PrzychodniaProjekt.PrzychodniaDataSet();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSetTableAdapters.PatientTableAdapter();
-            this.idpacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pESELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idadresuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisits)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisits)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPatients
             // 
-            this.dgvPatients.AutoGenerateColumns = false;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idpacDataGridViewTextBoxColumn,
-            this.imieDataGridViewTextBoxColumn,
-            this.nazwiskoDataGridViewTextBoxColumn,
-            this.pESELDataGridViewTextBoxColumn,
-            this.idadresuDataGridViewTextBoxColumn});
-            this.dgvPatients.DataSource = this.patientBindingSource;
             this.dgvPatients.Location = new System.Drawing.Point(57, 94);
             this.dgvPatients.Name = "dgvPatients";
             this.dgvPatients.Size = new System.Drawing.Size(625, 184);
             this.dgvPatients.TabIndex = 0;
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this.przychodniaDataSet;
+            // 
+            // przychodniaDataSet
+            // 
+            this.przychodniaDataSet.DataSetName = "PrzychodniaDataSet";
+            this.przychodniaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvVisits
             // 
@@ -194,50 +191,9 @@
             this.buttonShowVisits.Text = "Pokaż wizyty";
             this.buttonShowVisits.UseVisualStyleBackColor = true;
             // 
-            // przychodniaDataSet
-            // 
-            this.przychodniaDataSet.DataSetName = "PrzychodniaDataSet";
-            this.przychodniaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataMember = "Patient";
-            this.patientBindingSource.DataSource = this.przychodniaDataSet;
-            // 
             // patientTableAdapter
             // 
             this.patientTableAdapter.ClearBeforeFill = true;
-            // 
-            // idpacDataGridViewTextBoxColumn
-            // 
-            this.idpacDataGridViewTextBoxColumn.DataPropertyName = "id_pac";
-            this.idpacDataGridViewTextBoxColumn.HeaderText = "id_pac";
-            this.idpacDataGridViewTextBoxColumn.Name = "idpacDataGridViewTextBoxColumn";
-            this.idpacDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imieDataGridViewTextBoxColumn
-            // 
-            this.imieDataGridViewTextBoxColumn.DataPropertyName = "Imie";
-            this.imieDataGridViewTextBoxColumn.HeaderText = "Imie";
-            this.imieDataGridViewTextBoxColumn.Name = "imieDataGridViewTextBoxColumn";
-            // 
-            // nazwiskoDataGridViewTextBoxColumn
-            // 
-            this.nazwiskoDataGridViewTextBoxColumn.DataPropertyName = "nazwisko";
-            this.nazwiskoDataGridViewTextBoxColumn.HeaderText = "nazwisko";
-            this.nazwiskoDataGridViewTextBoxColumn.Name = "nazwiskoDataGridViewTextBoxColumn";
-            // 
-            // pESELDataGridViewTextBoxColumn
-            // 
-            this.pESELDataGridViewTextBoxColumn.DataPropertyName = "PESEL";
-            this.pESELDataGridViewTextBoxColumn.HeaderText = "PESEL";
-            this.pESELDataGridViewTextBoxColumn.Name = "pESELDataGridViewTextBoxColumn";
-            // 
-            // idadresuDataGridViewTextBoxColumn
-            // 
-            this.idadresuDataGridViewTextBoxColumn.DataPropertyName = "id_adresu";
-            this.idadresuDataGridViewTextBoxColumn.HeaderText = "id_adresu";
-            this.idadresuDataGridViewTextBoxColumn.Name = "idadresuDataGridViewTextBoxColumn";
             // 
             // buttonEdit
             // 
@@ -273,9 +229,9 @@
             this.Text = "Registry_main";
             this.Load += new System.EventHandler(this.Registry_main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVisits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,11 +257,6 @@
         private PrzychodniaDataSet przychodniaDataSet;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private PrzychodniaDataSetTableAdapters.PatientTableAdapter patientTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pESELDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idadresuDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonEdit;
     }
 }

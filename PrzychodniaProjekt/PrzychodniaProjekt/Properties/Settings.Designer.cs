@@ -33,5 +33,16 @@ namespace PrzychodniaProjekt.Properties {
                 return ((string)(this["PrzychodniaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LUKASZ-KOMPUTER\\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Sec" +
+            "urity=True;TrustServerCertificate=True")]
+        public string PrzychodniaConnectionString1 {
+            get {
+                return ((string)(this["PrzychodniaConnectionString1"]));
+            }
+        }
     }
 }

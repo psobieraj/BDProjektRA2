@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataLayer;
+using BizzLayer;
 
 namespace PrzychodniaProjekt
 {
@@ -15,6 +17,25 @@ namespace PrzychodniaProjekt
         public Admin_main()
         {
             InitializeComponent();
+        }
+
+        private void Admin_main_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'przychodniaDataSet2.User' table. You can move, or remove it, as needed.
+            this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
+
+        }
+
+        private void buttonManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            IQueryable<User> user = Bizz_admin.FilterUser(textBoxPattern.Text);
+            dataGridViewAccounts.DataSource = user;
+
         }
     }
 }
