@@ -42,6 +42,8 @@
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSet2TableAdapters.UserTableAdapter();
             this.checkBoxUserActive = new System.Windows.Forms.CheckBox();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +128,7 @@
             // 
             // dateTimePickerExpired
             // 
+            this.dateTimePickerExpired.Enabled = false;
             this.dateTimePickerExpired.Location = new System.Drawing.Point(34, 179);
             this.dateTimePickerExpired.Name = "dateTimePickerExpired";
             this.dateTimePickerExpired.Size = new System.Drawing.Size(200, 20);
@@ -150,16 +153,36 @@
             this.checkBoxUserActive.AutoSize = true;
             this.checkBoxUserActive.Location = new System.Drawing.Point(240, 179);
             this.checkBoxUserActive.Name = "checkBoxUserActive";
-            this.checkBoxUserActive.Size = new System.Drawing.Size(66, 17);
+            this.checkBoxUserActive.Size = new System.Drawing.Size(81, 17);
             this.checkBoxUserActive.TabIndex = 9;
-            this.checkBoxUserActive.Text = "Aktywny";
+            this.checkBoxUserActive.Text = "Niekatywny";
             this.checkBoxUserActive.UseVisualStyleBackColor = true;
+            this.checkBoxUserActive.CheckedChanged += new System.EventHandler(this.checkBoxUserActive_CheckedChanged);
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Enabled = false;
+            this.textBoxId.Location = new System.Drawing.Point(115, 12);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxId.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Id:";
             // 
             // Admin_manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 273);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.checkBoxUserActive);
             this.Controls.Add(this.dateTimePickerExpired);
             this.Controls.Add(this.labelRole);
@@ -195,5 +218,7 @@
         private System.Windows.Forms.BindingSource userBindingSource;
         private PrzychodniaDataSet2TableAdapters.UserTableAdapter userTableAdapter;
         private System.Windows.Forms.CheckBox checkBoxUserActive;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Label label1;
     }
 }

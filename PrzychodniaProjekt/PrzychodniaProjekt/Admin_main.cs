@@ -14,6 +14,8 @@ namespace PrzychodniaProjekt
 {
     public partial class Admin_main : Form
     {
+        public static string addOrManage = "";
+
         public Admin_main()
         {
             InitializeComponent();
@@ -26,6 +28,16 @@ namespace PrzychodniaProjekt
 
         }
 
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            IQueryable<User> user = Bizz_admin.FilterUser(textBoxPattern.Text);
+            dataGridViewAccounts.DataSource = user;
+
+        }
+
+
+        
+
         private void buttonManage_Click(object sender, EventArgs e)
         {
             Admin_manage admin_manage = new Admin_manage();
@@ -33,25 +45,26 @@ namespace PrzychodniaProjekt
             int rowindex = dataGridViewAccounts.CurrentCell.RowIndex;
             string login = dataGridViewAccounts.Rows[rowindex].Cells[3].Value.ToString();
             string rola = dataGridViewAccounts.Rows[rowindex].Cells[2].Value.ToString();
+           
+            string id = dataGridViewAccounts.Rows[rowindex].Cells[0].Value.ToString();
+
             dynamic data = dataGridViewAccounts.Rows[rowindex].Cells[4].Value;
 
-            
+            //if (data != string.Empty)
+            //{
+            //    data = data.ToString();
+            //}
+
+
             //if (dataGridViewAccounts.Rows[rowindex].Cells[4].Value != null)
             //{
             //    data = "";
             //};
 
-            admin_manage.fillForms(login, rola);
-
+            admin_manage.fillForms(login, rola, id);
+            addOrManage = "man";
             admin_manage.ShowDialog();
 
-
-        }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            IQueryable<User> user = Bizz_admin.FilterUser(textBoxPattern.Text);
-            dataGridViewAccounts.DataSource = user;
 
         }
 
@@ -60,6 +73,7 @@ namespace PrzychodniaProjekt
             Admin_manage admin_add = new Admin_manage();
 
             admin_add.HideDatePicker(false);
+            addOrManage = "add";
             admin_add.ShowDialog();
             
             //admin_add.set

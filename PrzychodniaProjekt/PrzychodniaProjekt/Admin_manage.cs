@@ -14,6 +14,9 @@ namespace PrzychodniaProjekt
 {
     public partial class Admin_manage : Form
     {
+
+        public static bool dateExpired = false;
+
         public Admin_manage()
         {
             InitializeComponent();
@@ -24,11 +27,12 @@ namespace PrzychodniaProjekt
 
         }
 
-        public void fillForms(string login, string rola)
+        public void fillForms(string login, string rola, string id)
         {
             textBoxLogin.Text = login.Replace(" ", string.Empty);
             //textBoxPassword.Text = haslo;
             comboBoxRole.Text = rola;
+            textBoxId.Text = id;
 
             //dateTimePickerExpired = data;
             //System.Nullable<DateTime> SelectedDate;
@@ -73,13 +77,40 @@ namespace PrzychodniaProjekt
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            
-            Bizz_admin.AddUser(textBoxLogin.Text, textBoxPassword.Text, comboBoxRole.Text, dateTimePickerExpired.Value);
+
+            if (Admin_main.addOrManage == "add")
+            {
+                Bizz_admin.AddUser(textBoxPassword.Text, comboBoxRole.Text, textBoxLogin.Text);
+            }
+            if (Admin_main.addOrManage == "man")
+            {
+
+                Bizz_admin.UpdateUser(int.Parse(textBoxId.Text), textBoxPassword.Text, comboBoxRole.Text, textBoxLogin.Text, dateTimePickerExpired.Value, dateExpired);
+            }
+
+
+            //textBoxLogin.Text = names;
+
+
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = System.Windows.Forms.DialogResult.No;         
+        }
+
+        private void checkBoxUserActive_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxUserActive.Checked == true)
+            {
+                dateTimePickerExpired.Enabled = true;
+                dateExpired = true;
+            }
+            else
+            {
+                dateTimePickerExpired.Enabled = false;
+                dateExpired = false;
+            }
         }
     }
 }
