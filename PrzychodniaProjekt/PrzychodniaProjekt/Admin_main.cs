@@ -28,6 +28,23 @@ namespace PrzychodniaProjekt
 
         private void buttonManage_Click(object sender, EventArgs e)
         {
+            Admin_manage admin_manage = new Admin_manage();
+
+            int rowindex = dataGridViewAccounts.CurrentCell.RowIndex;
+            string login = dataGridViewAccounts.Rows[rowindex].Cells[3].Value.ToString();
+            string rola = dataGridViewAccounts.Rows[rowindex].Cells[2].Value.ToString();
+            dynamic data = dataGridViewAccounts.Rows[rowindex].Cells[4].Value;
+
+            
+            //if (dataGridViewAccounts.Rows[rowindex].Cells[4].Value != null)
+            //{
+            //    data = "";
+            //};
+
+            admin_manage.fillForms(login, rola);
+
+            admin_manage.ShowDialog();
+
 
         }
 
@@ -35,6 +52,21 @@ namespace PrzychodniaProjekt
         {
             IQueryable<User> user = Bizz_admin.FilterUser(textBoxPattern.Text);
             dataGridViewAccounts.DataSource = user;
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Admin_manage admin_add = new Admin_manage();
+
+            admin_add.HideDatePicker(false);
+            admin_add.ShowDialog();
+            
+            //admin_add.set
+
+            //admin_add.textBoxLogin = dataGridViewAccounts.DataSource;
+            // admin_add->te
+            
 
         }
     }

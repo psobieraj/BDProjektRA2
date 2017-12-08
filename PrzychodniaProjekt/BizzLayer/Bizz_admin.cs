@@ -17,5 +17,19 @@ namespace BizzLayer
                         select u);
             return user;
         }
+
+        public static void AddUser(string haslo, string rola, string login, System.DateTime data_wyg)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            User user = new User();
+            user.login = login;
+            user.haslo = Bizz_MD5hash.GetHash(haslo);
+            user.Rola = rola;
+            user.dat_wyg = data_wyg;
+
+            dc.Users.InsertOnSubmit(user);
+            dc.SubmitChanges();
+
+        }
     }
 }

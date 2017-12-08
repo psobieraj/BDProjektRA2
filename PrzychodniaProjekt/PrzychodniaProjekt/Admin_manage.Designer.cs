@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
@@ -36,30 +37,43 @@
             this.labelLogin = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerExpired = new System.Windows.Forms.DateTimePicker();
+            this.przychodniaDataSet2 = new PrzychodniaProjekt.PrzychodniaDataSet2();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSet2TableAdapters.UserTableAdapter();
+            this.checkBoxUserActive = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(115, 41);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLogin.Size = new System.Drawing.Size(84, 20);
             this.textBoxLogin.TabIndex = 0;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(115, 96);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(84, 20);
             this.textBoxPassword.TabIndex = 1;
             // 
             // comboBoxRole
             // 
+            this.comboBoxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRole.FormattingEnabled = true;
+            this.comboBoxRole.Items.AddRange(new object[] {
+            "rec ",
+            "doc ",
+            "lab ",
+            "klab"});
             this.comboBoxRole.Location = new System.Drawing.Point(115, 152);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(100, 21);
             this.comboBoxRole.TabIndex = 2;
+            this.comboBoxRole.SelectedIndexChanged += new System.EventHandler(this.comboBoxRole_SelectedIndexChanged);
             // 
             // buttonOk
             // 
@@ -69,6 +83,7 @@
             this.buttonOk.TabIndex = 3;
             this.buttonOk.Text = "Zatwierdź";
             this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonCancel
             // 
@@ -78,6 +93,7 @@
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Anuluj";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // labelLogin
             // 
@@ -94,9 +110,10 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Location = new System.Drawing.Point(31, 99);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(39, 13);
+            this.labelPassword.Size = new System.Drawing.Size(66, 13);
             this.labelPassword.TabIndex = 6;
-            this.labelPassword.Text = "Hasło:";
+            this.labelPassword.Text = "Zmień hasło";
+            this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // labelRole
             // 
@@ -107,19 +124,44 @@
             this.labelRole.TabIndex = 7;
             this.labelRole.Text = "Rola:";
             // 
-            // dateTimePicker1
+            // dateTimePickerExpired
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(59, 179);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePickerExpired.Location = new System.Drawing.Point(34, 179);
+            this.dateTimePickerExpired.Name = "dateTimePickerExpired";
+            this.dateTimePickerExpired.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerExpired.TabIndex = 8;
+            // 
+            // przychodniaDataSet2
+            // 
+            this.przychodniaDataSet2.DataSetName = "PrzychodniaDataSet2";
+            this.przychodniaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.przychodniaDataSet2;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
+            // checkBoxUserActive
+            // 
+            this.checkBoxUserActive.AutoSize = true;
+            this.checkBoxUserActive.Location = new System.Drawing.Point(240, 179);
+            this.checkBoxUserActive.Name = "checkBoxUserActive";
+            this.checkBoxUserActive.Size = new System.Drawing.Size(66, 17);
+            this.checkBoxUserActive.TabIndex = 9;
+            this.checkBoxUserActive.Text = "Aktywny";
+            this.checkBoxUserActive.UseVisualStyleBackColor = true;
             // 
             // Admin_manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 273);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(326, 273);
+            this.Controls.Add(this.checkBoxUserActive);
+            this.Controls.Add(this.dateTimePickerExpired);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
@@ -130,6 +172,9 @@
             this.Controls.Add(this.textBoxLogin);
             this.Name = "Admin_manage";
             this.Text = "Admin_manage";
+            this.Load += new System.EventHandler(this.Admin_manage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +190,10 @@
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelRole;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerExpired;
+        private PrzychodniaDataSet2 przychodniaDataSet2;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private PrzychodniaDataSet2TableAdapters.UserTableAdapter userTableAdapter;
+        private System.Windows.Forms.CheckBox checkBoxUserActive;
     }
 }

@@ -39,43 +39,7 @@ namespace PrzychodniaProjekt
 
         }
 
-        private void linkLabelSupervisor_lab_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //Application.Run(new Supervisor_lab());            /// smieci
-            //Form.ShowDialog(new Supervisor_lab());
-
-            this.Hide();    /// ukrywamy formularz logowania
-
-            Supervisor_lab supervisor_lab = new Supervisor_lab();
-            supervisor_lab.ShowDialog();
-
-            
-            this.Close();   /// po wylaczeniu formularza kierownika wylaczamy aplikacje
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();    /// ukrywamy formularz logowania
-
-            Lab_technician_start lab_technician_start = new Lab_technician_start();
-            lab_technician_start.ShowDialog();
-
-
-            this.Close();   /// po wylaczeniu formularza wylaczamy aplikacje
-
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();    /// ukrywamy formularz logowania
-
-            Doctor_main doctor_main = new Doctor_main();
-            doctor_main.ShowDialog();
-
-
-            this.Close();   /// po wylaczeniu formularza wylaczamy aplikacje
-
-        }
+ 
         private void CheckUser()
         {
             string role;
