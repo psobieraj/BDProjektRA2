@@ -29,7 +29,7 @@ namespace PrzychodniaProjekt
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            IQueryable<Patients_n_Adresses> patient = Bizz_registry.FilterPatient(textSurname.Text);
+            //IQueryable<Patients_n_Adresses> patient = Bizz_registry.FilterPatient(textSurname.Text);
             //dgvPatients.DataSource = patient;
         }
     }
