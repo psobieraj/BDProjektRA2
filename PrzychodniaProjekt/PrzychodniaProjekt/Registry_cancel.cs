@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BizzLayer;
+using DataLayer;
 
 namespace PrzychodniaProjekt
 {
@@ -17,5 +19,22 @@ namespace PrzychodniaProjekt
             InitializeComponent();
         }
 
+        public void fillForms(string wizyta, string pacjent, string lekarz)
+        {
+            textIdVisit.Text = wizyta;
+            textIdPatient.Text = pacjent;
+            textIdDoctor.Text = lekarz;
+        }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+                this.DialogResult = System.Windows.Forms.DialogResult.No;
+        }
+
+        private void buttonAccept_Click(object sender, EventArgs e)
+        {
+            Bizz_registry.UpdateVisit(int.Parse(textIdVisit.Text), dtpCancel.Value);
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+        }
     }
 }

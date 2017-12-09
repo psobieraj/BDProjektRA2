@@ -13,8 +13,42 @@ namespace BizzLayer
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var vis = (from v in dc.Visits
-                        select v);
+                       select v);
             return vis;
+        }
+
+        public static IQueryable<Patient> FilterPatient(string pattern, string pattern2, string pattern3)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var pat = (from p in dc.Patients
+                        where p.nazwisko.Contains(pattern) && p.Imie.Contains(pattern2) && p.PESEL.Contains(pattern3)
+                        select p);
+            return pat;
+        }
+
+        public static IQueryable<Patient> GetPatients()
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var pat = (from p in dc.Patients
+                       select p);
+            return pat;
+        }
+
+        public static void UpdateVisit(int id_wiz, System.DateTime data_anul)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Visit vis = (from v in dc.Visits
+                         where v.id_wiz == id_wiz
+                         select v).Single();
+
+            if (vis.status != "ANUL")
+            {
+                vis.status = "ANUL";
+                vis.data_anul_zak = data_anul;
+                dc.SubmitChanges();
+                dc.SubmitChanges();
+            }
         }
 
         //public static IQueryable<Patients_n_Adresses> FilterPatient(string pattern)

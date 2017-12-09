@@ -39,7 +39,6 @@
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.userTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSet2TableAdapters.UserTableAdapter();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonGetUsers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet2)).BeginInit();
@@ -123,21 +122,11 @@
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // buttonGetUsers
-            // 
-            this.buttonGetUsers.Location = new System.Drawing.Point(121, 250);
-            this.buttonGetUsers.Name = "buttonGetUsers";
-            this.buttonGetUsers.Size = new System.Drawing.Size(130, 23);
-            this.buttonGetUsers.TabIndex = 8;
-            this.buttonGetUsers.Text = "Wyświetl użytkowników";
-            this.buttonGetUsers.UseVisualStyleBackColor = true;
-            // 
             // Admin_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 287);
-            this.Controls.Add(this.buttonGetUsers);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPattern);
@@ -168,6 +157,5 @@
         private PrzychodniaDataSet2TableAdapters.UserTableAdapter userTableAdapter;
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonGetUsers;
     }
 }

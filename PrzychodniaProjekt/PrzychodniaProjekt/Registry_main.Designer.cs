@@ -45,9 +45,9 @@
             this.buttonRegister = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonShowVisits = new System.Windows.Forms.Button();
             this.patientTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSetTableAdapters.PatientTableAdapter();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.btnShowVisits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
@@ -173,6 +173,7 @@
             this.buttonCancel.TabIndex = 12;
             this.buttonCancel.Text = "Anuluj wizytę";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonAdd
             // 
@@ -182,15 +183,6 @@
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Dodaj pacjenta";
             this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // buttonShowVisits
-            // 
-            this.buttonShowVisits.Location = new System.Drawing.Point(316, 317);
-            this.buttonShowVisits.Name = "buttonShowVisits";
-            this.buttonShowVisits.Size = new System.Drawing.Size(93, 20);
-            this.buttonShowVisits.TabIndex = 14;
-            this.buttonShowVisits.Text = "Pokaż wizyty";
-            this.buttonShowVisits.UseVisualStyleBackColor = true;
             // 
             // patientTableAdapter
             // 
@@ -205,13 +197,23 @@
             this.buttonEdit.Text = "Edytuj pacjenta";
             this.buttonEdit.UseVisualStyleBackColor = true;
             // 
+            // btnShowVisits
+            // 
+            this.btnShowVisits.Location = new System.Drawing.Point(333, 314);
+            this.btnShowVisits.Name = "btnShowVisits";
+            this.btnShowVisits.Size = new System.Drawing.Size(93, 20);
+            this.btnShowVisits.TabIndex = 16;
+            this.btnShowVisits.Text = "Pokaż wizyty";
+            this.btnShowVisits.UseVisualStyleBackColor = true;
+            this.btnShowVisits.Click += new System.EventHandler(this.btnShowVisits_Click);
+            // 
             // Registry_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 570);
+            this.Controls.Add(this.btnShowVisits);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.buttonShowVisits);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonRegister);
@@ -254,10 +256,10 @@
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonShowVisits;
         private PrzychodniaDataSet przychodniaDataSet;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private PrzychodniaDataSetTableAdapters.PatientTableAdapter patientTableAdapter;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button btnShowVisits;
     }
 }

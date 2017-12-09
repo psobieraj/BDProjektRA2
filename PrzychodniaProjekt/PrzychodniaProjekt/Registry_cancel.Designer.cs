@@ -66,6 +66,7 @@
             this.buttonAccept.TabIndex = 4;
             this.buttonAccept.Text = "Zatwierdź";
             this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // buttonReturn
             // 
@@ -75,6 +76,7 @@
             this.buttonReturn.TabIndex = 5;
             this.buttonReturn.Text = "Powrót";
             this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
             // dtpCancel
             // 
