@@ -44,7 +44,10 @@
     <Compile Include="Bizz_admin.cs" />
     <Compile Include="Bizz_Clinic.cs" />
     <Compile Include="Bizz_MD5hash.cs" />
+    <Compile Include="Bizz_registry.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Pateints_n_Adresses.cs" />
+    <Compile Include="Patients_n_Adresses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
