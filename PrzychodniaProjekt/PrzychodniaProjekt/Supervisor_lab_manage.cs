@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PrzychodniaProjekt
 {
-    public partial class Supervisor_lab_comments : Form
+    public partial class Supervisor_lab_manage : Form
     {
-        public Supervisor_lab_comments()
+        public Supervisor_lab_manage()
         {
             InitializeComponent();
         }

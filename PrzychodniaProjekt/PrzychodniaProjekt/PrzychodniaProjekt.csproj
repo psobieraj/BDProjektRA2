@@ -112,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrzychodniaDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PrzychodniaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrzychodniaDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Recommend_examination.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,11 +153,11 @@
     <Compile Include="Supervisor_lab.Designer.cs">
       <DependentUpon>Supervisor_lab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Supervisor_lab_comments.cs">
+    <Compile Include="Supervisor_lab_manage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Supervisor_lab_comments.Designer.cs">
-      <DependentUpon>Supervisor_lab_comments.cs</DependentUpon>
+    <Compile Include="Supervisor_lab_manage.Designer.cs">
+      <DependentUpon>Supervisor_lab_manage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin_main.resx">
       <DependentUpon>Admin_main.cs</DependentUpon>
@@ -205,8 +210,8 @@
     <EmbeddedResource Include="Supervisor_lab.resx">
       <DependentUpon>Supervisor_lab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supervisor_lab_comments.resx">
-      <DependentUpon>Supervisor_lab_comments.cs</DependentUpon>
+    <EmbeddedResource Include="Supervisor_lab_manage.resx">
+      <DependentUpon>Supervisor_lab_manage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,6 +254,17 @@
     </None>
     <None Include="PrzychodniaDataSet2.xss">
       <DependentUpon>PrzychodniaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PrzychodniaDataSet3.xsc">
+      <DependentUpon>PrzychodniaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PrzychodniaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrzychodniaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrzychodniaDataSet3.xss">
+      <DependentUpon>PrzychodniaDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

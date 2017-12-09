@@ -88,7 +88,7 @@ namespace PrzychodniaProjekt
                 Bizz_admin.UpdateUser(int.Parse(textBoxId.Text), textBoxPassword.Text, comboBoxRole.Text, textBoxLogin.Text, dateTimePickerExpired.Value, dateExpired);
             }
 
-
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
             //textBoxLogin.Text = names;
 
 

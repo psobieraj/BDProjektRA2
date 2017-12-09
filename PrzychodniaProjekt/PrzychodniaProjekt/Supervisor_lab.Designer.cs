@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button buttonShowExams;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonComments = new System.Windows.Forms.Button();
             this.labelListOfExams = new System.Windows.Forms.Label();
             this.comboBoxState = new System.Windows.Forms.ComboBox();
             this.labelState = new System.Windows.Forms.Label();
@@ -42,13 +42,28 @@
             this.labelLab = new System.Windows.Forms.Label();
             this.textMD = new System.Windows.Forms.TextBox();
             this.labelMD = new System.Windows.Forms.Label();
+            this.przychodniaDataSet3 = new PrzychodniaProjekt.PrzychodniaDataSet3();
+            this.przychodniaDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             buttonShowExams = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3BindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // buttonShowExams
+            // 
+            buttonShowExams.Location = new System.Drawing.Point(714, 41);
+            buttonShowExams.Name = "buttonShowExams";
+            buttonShowExams.Size = new System.Drawing.Size(127, 23);
+            buttonShowExams.TabIndex = 5;
+            buttonShowExams.Text = "Wyświetl badania";
+            buttonShowExams.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.przychodniaDataSet3BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 104);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(684, 300);
@@ -73,15 +88,6 @@
             this.buttonCancel.Text = "Anuluj badanie";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // buttonComments
-            // 
-            this.buttonComments.Location = new System.Drawing.Point(714, 206);
-            this.buttonComments.Name = "buttonComments";
-            this.buttonComments.Size = new System.Drawing.Size(75, 23);
-            this.buttonComments.TabIndex = 3;
-            this.buttonComments.Text = "Skomentuj";
-            this.buttonComments.UseVisualStyleBackColor = true;
-            // 
             // labelListOfExams
             // 
             this.labelListOfExams.AutoSize = true;
@@ -90,15 +96,6 @@
             this.labelListOfExams.Size = new System.Drawing.Size(65, 13);
             this.labelListOfExams.TabIndex = 4;
             this.labelListOfExams.Text = "Lista badań:";
-            // 
-            // buttonShowExams
-            // 
-            buttonShowExams.Location = new System.Drawing.Point(714, 41);
-            buttonShowExams.Name = "buttonShowExams";
-            buttonShowExams.Size = new System.Drawing.Size(127, 23);
-            buttonShowExams.TabIndex = 5;
-            buttonShowExams.Text = "Wyświetl badania";
-            buttonShowExams.UseVisualStyleBackColor = true;
             // 
             // comboBoxState
             // 
@@ -165,6 +162,16 @@
             this.labelMD.TabIndex = 13;
             this.labelMD.Text = "Lekarz";
             // 
+            // przychodniaDataSet3
+            // 
+            this.przychodniaDataSet3.DataSetName = "PrzychodniaDataSet3";
+            this.przychodniaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // przychodniaDataSet3BindingSource
+            // 
+            this.przychodniaDataSet3BindingSource.DataSource = this.przychodniaDataSet3;
+            this.przychodniaDataSet3BindingSource.Position = 0;
+            // 
             // Supervisor_lab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,13 +187,14 @@
             this.Controls.Add(this.comboBoxState);
             this.Controls.Add(buttonShowExams);
             this.Controls.Add(this.labelListOfExams);
-            this.Controls.Add(this.buttonComments);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Supervisor_lab";
             this.Text = "Supervisor_lab";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +205,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonComments;
         private System.Windows.Forms.Label labelListOfExams;
         private System.Windows.Forms.ComboBox comboBoxState;
         private System.Windows.Forms.Label labelState;
@@ -207,5 +214,7 @@
         private System.Windows.Forms.Label labelLab;
         private System.Windows.Forms.TextBox textMD;
         private System.Windows.Forms.Label labelMD;
+        private System.Windows.Forms.BindingSource przychodniaDataSet3BindingSource;
+        private PrzychodniaDataSet3 przychodniaDataSet3;
     }
 }

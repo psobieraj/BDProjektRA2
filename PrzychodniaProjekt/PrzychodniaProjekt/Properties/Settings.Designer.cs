@@ -44,5 +44,16 @@ namespace PrzychodniaProjekt.Properties {
                 return ((string)(this["PrzychodniaConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=COMP81\\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Security=Tru" +
+            "e")]
+        public string PrzychodniaConnectionString2 {
+            get {
+                return ((string)(this["PrzychodniaConnectionString2"]));
+            }
+        }
     }
 }

@@ -50,7 +50,7 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(115, 41);
+            this.textBoxLogin.Location = new System.Drawing.Point(115, 53);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(84, 20);
             this.textBoxLogin.TabIndex = 0;
@@ -71,7 +71,7 @@
             "doc ",
             "lab ",
             "klab"});
-            this.comboBoxRole.Location = new System.Drawing.Point(115, 152);
+            this.comboBoxRole.Location = new System.Drawing.Point(115, 147);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(100, 21);
             this.comboBoxRole.TabIndex = 2;
@@ -100,7 +100,7 @@
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(31, 44);
+            this.labelLogin.Location = new System.Drawing.Point(31, 56);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(36, 13);
             this.labelLogin.TabIndex = 5;
@@ -112,15 +112,15 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Location = new System.Drawing.Point(31, 99);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(66, 13);
+            this.labelPassword.Size = new System.Drawing.Size(65, 13);
             this.labelPassword.TabIndex = 6;
-            this.labelPassword.Text = "Zmień hasło";
+            this.labelPassword.Text = "Nowe hasło";
             this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // labelRole
             // 
             this.labelRole.AutoSize = true;
-            this.labelRole.Location = new System.Drawing.Point(31, 155);
+            this.labelRole.Location = new System.Drawing.Point(31, 150);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(32, 13);
             this.labelRole.TabIndex = 7;
@@ -155,7 +155,7 @@
             this.checkBoxUserActive.Name = "checkBoxUserActive";
             this.checkBoxUserActive.Size = new System.Drawing.Size(81, 17);
             this.checkBoxUserActive.TabIndex = 9;
-            this.checkBoxUserActive.Text = "Niekatywny";
+            this.checkBoxUserActive.Text = "Nieaktywny";
             this.checkBoxUserActive.UseVisualStyleBackColor = true;
             this.checkBoxUserActive.CheckedChanged += new System.EventHandler(this.checkBoxUserActive_CheckedChanged);
             // 
@@ -164,7 +164,7 @@
             this.textBoxId.Enabled = false;
             this.textBoxId.Location = new System.Drawing.Point(115, 12);
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxId.Size = new System.Drawing.Size(84, 20);
             this.textBoxId.TabIndex = 10;
             // 
             // label1

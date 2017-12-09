@@ -50,6 +50,8 @@ namespace PrzychodniaProjekt
 
             dynamic data = dataGridViewAccounts.Rows[rowindex].Cells[4].Value;
 
+            //if(data==null) MessageBox.Show("Nieustawiona data.");
+
             //if (data != string.Empty)
             //{
             //    data = data.ToString();
@@ -82,6 +84,12 @@ namespace PrzychodniaProjekt
             // admin_add->te
             
 
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+            //this.Show();
         }
     }
 }
