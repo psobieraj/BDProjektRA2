@@ -16,3 +16,9 @@ D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\DataLayer\bi
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.dll
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.pdb

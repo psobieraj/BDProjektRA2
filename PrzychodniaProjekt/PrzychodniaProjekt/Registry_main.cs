@@ -23,8 +23,8 @@ namespace PrzychodniaProjekt
         private void Registry_main_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'przychodniaDataSet.Patient' table. You can move, or remove it, as needed.
-            this.patientTableAdapter.Fill(this.przychodniaDataSet.Patient);
-
+            //this.patientTableAdapter.Fill(this.przychodniaDataSet.Patient);
+            dgvVisits.DataSource = Bizz_registry.GetVisits();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)

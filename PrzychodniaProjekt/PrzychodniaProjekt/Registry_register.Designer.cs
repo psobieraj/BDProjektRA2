@@ -35,10 +35,6 @@
             this.buttonAccept = new System.Windows.Forms.Button();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.dgvDoctors = new System.Windows.Forms.DataGridView();
-            this.idlekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nPWZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.przychodniaDataSet1 = new PrzychodniaProjekt.PrzychodniaDataSet1();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -101,43 +97,11 @@
             // 
             // dgvDoctors
             // 
-            this.dgvDoctors.AutoGenerateColumns = false;
             this.dgvDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoctors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idlekDataGridViewTextBoxColumn,
-            this.imieDataGridViewTextBoxColumn,
-            this.nazwiskoDataGridViewTextBoxColumn,
-            this.nPWZDataGridViewTextBoxColumn});
-            this.dgvDoctors.DataSource = this.doctorBindingSource;
             this.dgvDoctors.Location = new System.Drawing.Point(365, 53);
             this.dgvDoctors.Name = "dgvDoctors";
             this.dgvDoctors.Size = new System.Drawing.Size(445, 111);
             this.dgvDoctors.TabIndex = 6;
-            // 
-            // idlekDataGridViewTextBoxColumn
-            // 
-            this.idlekDataGridViewTextBoxColumn.DataPropertyName = "id_lek";
-            this.idlekDataGridViewTextBoxColumn.HeaderText = "id_lek";
-            this.idlekDataGridViewTextBoxColumn.Name = "idlekDataGridViewTextBoxColumn";
-            this.idlekDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imieDataGridViewTextBoxColumn
-            // 
-            this.imieDataGridViewTextBoxColumn.DataPropertyName = "imie";
-            this.imieDataGridViewTextBoxColumn.HeaderText = "imie";
-            this.imieDataGridViewTextBoxColumn.Name = "imieDataGridViewTextBoxColumn";
-            // 
-            // nazwiskoDataGridViewTextBoxColumn
-            // 
-            this.nazwiskoDataGridViewTextBoxColumn.DataPropertyName = "nazwisko";
-            this.nazwiskoDataGridViewTextBoxColumn.HeaderText = "nazwisko";
-            this.nazwiskoDataGridViewTextBoxColumn.Name = "nazwiskoDataGridViewTextBoxColumn";
-            // 
-            // nPWZDataGridViewTextBoxColumn
-            // 
-            this.nPWZDataGridViewTextBoxColumn.DataPropertyName = "NPWZ";
-            this.nPWZDataGridViewTextBoxColumn.HeaderText = "NPWZ";
-            this.nPWZDataGridViewTextBoxColumn.Name = "nPWZDataGridViewTextBoxColumn";
             // 
             // doctorBindingSource
             // 
@@ -254,10 +218,6 @@
         private PrzychodniaDataSet1 przychodniaDataSet1;
         private System.Windows.Forms.BindingSource doctorBindingSource;
         private PrzychodniaDataSet1TableAdapters.DoctorTableAdapter doctorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idlekDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nPWZDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textSurname;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.TextBox textPesel;

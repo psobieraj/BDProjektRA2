@@ -24,8 +24,8 @@ namespace PrzychodniaProjekt
         private void Admin_main_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'przychodniaDataSet2.User' table. You can move, or remove it, as needed.
-            this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
-
+            //this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
+            dataGridViewAccounts.DataSource = Bizz_admin.GetUsers();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace PrzychodniaProjekt
 
         }
 
-
+        
         
 
         private void buttonManage_Click(object sender, EventArgs e)

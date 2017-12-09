@@ -66,8 +66,7 @@ namespace PrzychodniaProjekt
         private void Admin_manage_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'przychodniaDataSet2.User' table. You can move, or remove it, as needed.
-            this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
-
+            //this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
         }
 
         private void comboBoxRole_SelectedIndexChanged(object sender, EventArgs e)

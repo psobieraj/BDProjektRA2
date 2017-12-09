@@ -30,20 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewAccounts = new System.Windows.Forms.DataGridView();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.przychodniaDataSet2 = new PrzychodniaProjekt.PrzychodniaDataSet2();
             this.buttonManage = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxPattern = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLogOut = new System.Windows.Forms.Button();
-            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hasloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datwygDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.przychodniaDataSet2 = new PrzychodniaProjekt.PrzychodniaDataSet2();
             this.userTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSet2TableAdapters.UserTableAdapter();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonGetUsers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet2)).BeginInit();
@@ -51,19 +47,21 @@
             // 
             // dataGridViewAccounts
             // 
-            this.dataGridViewAccounts.AutoGenerateColumns = false;
             this.dataGridViewAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iduserDataGridViewTextBoxColumn,
-            this.hasloDataGridViewTextBoxColumn,
-            this.rolaDataGridViewTextBoxColumn,
-            this.loginDataGridViewTextBoxColumn,
-            this.datwygDataGridViewTextBoxColumn});
-            this.dataGridViewAccounts.DataSource = this.userBindingSource;
             this.dataGridViewAccounts.Location = new System.Drawing.Point(12, 46);
             this.dataGridViewAccounts.Name = "dataGridViewAccounts";
             this.dataGridViewAccounts.Size = new System.Drawing.Size(361, 198);
             this.dataGridViewAccounts.TabIndex = 0;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.przychodniaDataSet2;
+            // 
+            // przychodniaDataSet2
+            // 
+            this.przychodniaDataSet2.DataSetName = "PrzychodniaDataSet2";
+            this.przychodniaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonManage
             // 
@@ -84,16 +82,6 @@
             this.buttonAdd.Text = "Dodaj nowe";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Location = new System.Drawing.Point(398, 16);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(106, 23);
-            this.buttonSearch.TabIndex = 4;
-            this.buttonSearch.Text = "Szukaj";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // textBoxPattern
             // 
@@ -121,56 +109,35 @@
             this.buttonLogOut.UseVisualStyleBackColor = true;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
-            // iduserDataGridViewTextBoxColumn
-            // 
-            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "Id_user";
-            this.iduserDataGridViewTextBoxColumn.HeaderText = "Id_user";
-            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
-            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hasloDataGridViewTextBoxColumn
-            // 
-            this.hasloDataGridViewTextBoxColumn.DataPropertyName = "haslo";
-            this.hasloDataGridViewTextBoxColumn.HeaderText = "haslo";
-            this.hasloDataGridViewTextBoxColumn.Name = "hasloDataGridViewTextBoxColumn";
-            // 
-            // rolaDataGridViewTextBoxColumn
-            // 
-            this.rolaDataGridViewTextBoxColumn.DataPropertyName = "Rola";
-            this.rolaDataGridViewTextBoxColumn.HeaderText = "Rola";
-            this.rolaDataGridViewTextBoxColumn.Name = "rolaDataGridViewTextBoxColumn";
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            // 
-            // datwygDataGridViewTextBoxColumn
-            // 
-            this.datwygDataGridViewTextBoxColumn.DataPropertyName = "dat_wyg";
-            this.datwygDataGridViewTextBoxColumn.HeaderText = "dat_wyg";
-            this.datwygDataGridViewTextBoxColumn.Name = "datwygDataGridViewTextBoxColumn";
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.przychodniaDataSet2;
-            // 
-            // przychodniaDataSet2
-            // 
-            this.przychodniaDataSet2.DataSetName = "PrzychodniaDataSet2";
-            this.przychodniaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // userTableAdapter
             // 
             this.userTableAdapter.ClearBeforeFill = true;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(398, 16);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(106, 23);
+            this.buttonSearch.TabIndex = 4;
+            this.buttonSearch.Text = "Szukaj";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // buttonGetUsers
+            // 
+            this.buttonGetUsers.Location = new System.Drawing.Point(121, 250);
+            this.buttonGetUsers.Name = "buttonGetUsers";
+            this.buttonGetUsers.Size = new System.Drawing.Size(130, 23);
+            this.buttonGetUsers.TabIndex = 8;
+            this.buttonGetUsers.Text = "Wyświetl użytkowników";
+            this.buttonGetUsers.UseVisualStyleBackColor = true;
             // 
             // Admin_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 273);
+            this.ClientSize = new System.Drawing.Size(541, 287);
+            this.Controls.Add(this.buttonGetUsers);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPattern);
@@ -194,17 +161,13 @@
         private System.Windows.Forms.DataGridView dataGridViewAccounts;
         private System.Windows.Forms.Button buttonManage;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxPattern;
         private System.Windows.Forms.Label label1;
         private PrzychodniaDataSet2 przychodniaDataSet2;
         private System.Windows.Forms.BindingSource userBindingSource;
         private PrzychodniaDataSet2TableAdapters.UserTableAdapter userTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hasloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rolaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datwygDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonLogOut;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonGetUsers;
     }
 }

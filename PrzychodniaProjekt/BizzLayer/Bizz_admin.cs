@@ -21,6 +21,14 @@ namespace BizzLayer
             return user;
         }
 
+        public static IQueryable<User> GetUsers()
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var user = (from u in dc.Users
+                        select u);
+            return user;
+        }
+
         public static void AddUser(string haslo, string rola, string login)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
