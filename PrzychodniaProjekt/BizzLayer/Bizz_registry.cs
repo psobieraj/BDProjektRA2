@@ -51,6 +51,29 @@ namespace BizzLayer
             }
         }
 
+        public static IQueryable<Doctor> GetDoctors()
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var doc = (from d in dc.Doctors
+                       select d);
+            return doc;
+        }
+        public static void AddVisit(int id_pac, int id_rec, int id_lek, System.DateTime data_rej)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            Visit vis = new Visit();
+
+            vis.data_rej = data_rej;
+            vis.id_pac = id_pac;
+            vis.id_lek = id_lek;
+            vis.id_rec = id_rec;
+            vis.status = "REJ";
+            
+            dc.Visits.InsertOnSubmit(vis);
+            dc.SubmitChanges();
+
+        }
+
         //public static IQueryable<Patients_n_Adresses> FilterPatient(string pattern)
         //{
         //DataClassesClinicDataContext dc = new DataClassesClinicDataContext();

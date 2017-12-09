@@ -45,6 +45,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnChoose = new System.Windows.Forms.Button();
+            this.textIDdoctor = new System.Windows.Forms.TextBox();
+            this.textIDpatient = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoctors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet1)).BeginInit();
@@ -54,7 +58,7 @@
             // 
             this.textDoctor.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textDoctor.Enabled = false;
-            this.textDoctor.Location = new System.Drawing.Point(93, 82);
+            this.textDoctor.Location = new System.Drawing.Point(126, 85);
             this.textDoctor.Name = "textDoctor";
             this.textDoctor.Size = new System.Drawing.Size(125, 20);
             this.textDoctor.TabIndex = 1;
@@ -71,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 85);
+            this.label2.Location = new System.Drawing.Point(48, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 3;
@@ -85,6 +89,7 @@
             this.buttonAccept.TabIndex = 4;
             this.buttonAccept.Text = "Zatwierdź";
             this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // buttonReturn
             // 
@@ -94,6 +99,7 @@
             this.buttonReturn.TabIndex = 5;
             this.buttonReturn.Text = "Powrót";
             this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
             // dgvDoctors
             // 
@@ -178,11 +184,53 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Pesel";
             // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(532, 170);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(92, 28);
+            this.btnChoose.TabIndex = 14;
+            this.btnChoose.Text = "Wybierz lekarza";
+            this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
+            // 
+            // textIDdoctor
+            // 
+            this.textIDdoctor.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIDdoctor.Enabled = false;
+            this.textIDdoctor.Location = new System.Drawing.Point(93, 85);
+            this.textIDdoctor.Name = "textIDdoctor";
+            this.textIDdoctor.Size = new System.Drawing.Size(27, 20);
+            this.textIDdoctor.TabIndex = 15;
+            // 
+            // textIDpatient
+            // 
+            this.textIDpatient.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIDpatient.Enabled = false;
+            this.textIDpatient.Location = new System.Drawing.Point(696, 12);
+            this.textIDpatient.Name = "textIDpatient";
+            this.textIDpatient.Size = new System.Drawing.Size(38, 20);
+            this.textIDpatient.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(672, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "ID";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Registry_register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 230);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textIDpatient);
+            this.Controls.Add(this.textIDdoctor);
+            this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -224,5 +272,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnChoose;
+        private System.Windows.Forms.TextBox textIDdoctor;
+        private System.Windows.Forms.TextBox textIDpatient;
+        private System.Windows.Forms.Label label6;
     }
 }

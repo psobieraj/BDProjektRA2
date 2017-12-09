@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using DataLayer;
 using BizzLayer;
 
@@ -51,6 +50,21 @@ namespace PrzychodniaProjekt
         private void btnShowVisits_Click(object sender, EventArgs e)
         {
             dgvVisits.DataSource = Bizz_registry.GetVisits();
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            Registry_register registry_register = new Registry_register();
+
+            int rowindex = dgvPatients.CurrentCell.RowIndex;
+            string nazwisko = dgvPatients.Rows[rowindex].Cells[2].Value.ToString();
+            string imie = dgvPatients.Rows[rowindex].Cells[1].Value.ToString();
+            string pesel = dgvPatients.Rows[rowindex].Cells[3].Value.ToString();
+            string id = dgvPatients.Rows[rowindex].Cells[0].Value.ToString();
+
+            registry_register.fillForms(nazwisko,imie,pesel,id);
+
+            registry_register.ShowDialog();
         }
     }
 }

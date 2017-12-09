@@ -39,13 +39,12 @@ namespace PrzychodniaProjekt
 
         }
 
- 
         private void CheckUser()
         {
             string role;
 
             IQueryable<User> user = Bizz_Clinic.SearchUser(textLogin.Text, textPassword.Text);
-                
+
             if (user.Any())
             {
                 //var userDate = user.Single().dat_wyg;
