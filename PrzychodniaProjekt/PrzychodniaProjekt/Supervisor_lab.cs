@@ -19,7 +19,13 @@ namespace PrzychodniaProjekt
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void buttonManage_Click(object sender, EventArgs e)
+        {
+           Supervisor_lab_manage supervisor_lab_manage = new Supervisor_lab_manage();
+            supervisor_lab_manage.ShowDialog();
         }
     }
 }

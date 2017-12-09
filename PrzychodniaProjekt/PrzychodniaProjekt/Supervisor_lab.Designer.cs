@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button buttonShowExams;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonConfirm = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.labelListOfExams = new System.Windows.Forms.Label();
             this.comboBoxState = new System.Windows.Forms.ComboBox();
             this.labelState = new System.Windows.Forms.Label();
@@ -44,6 +42,7 @@
             this.labelMD = new System.Windows.Forms.Label();
             this.przychodniaDataSet3 = new PrzychodniaProjekt.PrzychodniaDataSet3();
             this.przychodniaDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonManage = new System.Windows.Forms.Button();
             buttonShowExams = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).BeginInit();
@@ -68,25 +67,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(684, 300);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // buttonConfirm
-            // 
-            this.buttonConfirm.Location = new System.Drawing.Point(714, 105);
-            this.buttonConfirm.Name = "buttonConfirm";
-            this.buttonConfirm.Size = new System.Drawing.Size(127, 23);
-            this.buttonConfirm.TabIndex = 1;
-            this.buttonConfirm.Text = "Zatwierdź badanie";
-            this.buttonConfirm.UseVisualStyleBackColor = true;
-            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Location = new System.Drawing.Point(714, 134);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(127, 23);
-            this.buttonCancel.TabIndex = 2;
-            this.buttonCancel.Text = "Anuluj badanie";
-            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // labelListOfExams
             // 
@@ -172,11 +152,22 @@
             this.przychodniaDataSet3BindingSource.DataSource = this.przychodniaDataSet3;
             this.przychodniaDataSet3BindingSource.Position = 0;
             // 
+            // buttonManage
+            // 
+            this.buttonManage.Location = new System.Drawing.Point(714, 104);
+            this.buttonManage.Name = "buttonManage";
+            this.buttonManage.Size = new System.Drawing.Size(109, 24);
+            this.buttonManage.TabIndex = 14;
+            this.buttonManage.Text = "Obsłuż";
+            this.buttonManage.UseVisualStyleBackColor = true;
+            this.buttonManage.Click += new System.EventHandler(this.buttonManage_Click);
+            // 
             // Supervisor_lab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 445);
+            this.Controls.Add(this.buttonManage);
             this.Controls.Add(this.labelMD);
             this.Controls.Add(this.textMD);
             this.Controls.Add(this.labelLab);
@@ -187,8 +178,6 @@
             this.Controls.Add(this.comboBoxState);
             this.Controls.Add(buttonShowExams);
             this.Controls.Add(this.labelListOfExams);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Supervisor_lab";
             this.Text = "Supervisor_lab";
@@ -203,8 +192,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonConfirm;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelListOfExams;
         private System.Windows.Forms.ComboBox comboBoxState;
         private System.Windows.Forms.Label labelState;
@@ -216,5 +203,6 @@
         private System.Windows.Forms.Label labelMD;
         private System.Windows.Forms.BindingSource przychodniaDataSet3BindingSource;
         private PrzychodniaDataSet3 przychodniaDataSet3;
+        private System.Windows.Forms.Button buttonManage;
     }
 }
