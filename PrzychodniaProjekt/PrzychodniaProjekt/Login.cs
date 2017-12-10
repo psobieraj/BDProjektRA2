@@ -14,6 +14,12 @@ namespace PrzychodniaProjekt
 {
     public partial class Login : Form
     {
+
+
+
+        public static string login_rejestratorki = "";
+       
+
         public Login()
         {
             InitializeComponent();
@@ -94,6 +100,7 @@ namespace PrzychodniaProjekt
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            login_rejestratorki = textLogin.Text;
             CheckUser();
 
         }

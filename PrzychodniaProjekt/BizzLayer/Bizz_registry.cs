@@ -125,6 +125,24 @@ namespace BizzLayer
             dc.SubmitChanges();
         }
 
+        public static int checkRegistryLadyID(string login_rejestratorki)
+        {
+
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            User idrec = (from usr in dc.Users
+                           where usr.login == login_rejestratorki
+                           select usr).Single();
+
+           
+
+            Register idrec2 = (from usr in dc.Registers
+                          where usr.Id_user == idrec.Id_user
+                               select usr).Single();
+
+            return idrec2.id_rec;
+        }
+
     }
 
     }

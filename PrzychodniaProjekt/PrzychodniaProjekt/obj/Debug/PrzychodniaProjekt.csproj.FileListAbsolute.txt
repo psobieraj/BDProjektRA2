@@ -73,7 +73,6 @@ D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaP
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_main.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_register.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
-D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_comments.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_start.resources
 C:\Users\Daniel\Source\Repos\BDProjektRA24\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
@@ -119,3 +118,4 @@ C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\PrzychodniaProjekt
 C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
 C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_manage.resources
 C:\Users\Daniel\Source\Repos\BDProjektRA28\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
+d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_manage.resources

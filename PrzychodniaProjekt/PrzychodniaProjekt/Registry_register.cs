@@ -52,7 +52,12 @@ namespace PrzychodniaProjekt
 
         private void buttonAccept_Click(object sender, EventArgs e)
         {
-            Bizz_registry.AddVisit(int.Parse(textIDpatient.Text), 1, int.Parse(textIDdoctor.Text), dtpDate.Value);
+            int id_rej = 0;
+
+            id_rej = Bizz_registry.checkRegistryLadyID(Login.login_rejestratorki);
+
+            
+            Bizz_registry.AddVisit(int.Parse(textIDpatient.Text), id_rej, int.Parse(textIDdoctor.Text), dtpDate.Value);
             this.DialogResult = System.Windows.Forms.DialogResult.No;
         }
 
