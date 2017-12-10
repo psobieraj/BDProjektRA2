@@ -24,7 +24,7 @@ namespace PrzychodniaProjekt
             // TODO: This line of code loads data into the 'przychodniaDataSet.Patient' table. You can move, or remove it, as needed.
             //this.patientTableAdapter.Fill(this.przychodniaDataSet.Patient);
             dgvVisits.DataSource = Bizz_registry.GetVisits();
-            dgvPatients.DataSource = Bizz_registry.GetPatients();
+            dgvPatients.DataSource = Bizz_registry.GetPatients((id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu});
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -50,6 +50,7 @@ namespace PrzychodniaProjekt
         private void btnShowVisits_Click(object sender, EventArgs e)
         {
             dgvVisits.DataSource = Bizz_registry.GetVisits();
+            dgvPatients.DataSource=Bizz_registry.GetPatients((id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu });
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -65,6 +66,33 @@ namespace PrzychodniaProjekt
             registry_register.fillForms(nazwisko,imie,pesel,id);
 
             registry_register.ShowDialog();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Registry_AddEdit registry_add = new Registry_AddEdit();
+
+            registry_add.ShowDialog();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            Registry_AddEdit registry_edit = new Registry_AddEdit();
+
+            int rowindex = dgvPatients.CurrentCell.RowIndex;
+            string id_pac = dgvPatients.Rows[rowindex].Cells[0].Value.ToString();
+            string imie = dgvPatients.Rows[rowindex].Cells[1].Value.ToString();
+            string nazwisko = dgvPatients.Rows[rowindex].Cells[2].Value.ToString();
+            string pesel = dgvPatients.Rows[rowindex].Cells[3].Value.ToString();
+            string id_adresu = dgvPatients.Rows[rowindex].Cells[4].Value.ToString();
+            string miejscowosc = dgvPatients.Rows[rowindex].Cells[5].Value.ToString();
+            string ulica = dgvPatients.Rows[rowindex].Cells[6].Value.ToString();
+            string nr_domu = dgvPatients.Rows[rowindex].Cells[7].Value.ToString();
+            string nr_lokalu = dgvPatients.Rows[rowindex].Cells[8].Value.ToString();
+
+            registry_edit.fillForms(id_pac, imie, nazwisko, pesel, id_adresu,miejscowosc, ulica, nr_domu, nr_lokalu);
+
+            registry_edit.ShowDialog();
         }
     }
 }

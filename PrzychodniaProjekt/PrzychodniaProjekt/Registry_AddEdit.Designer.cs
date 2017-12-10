@@ -45,6 +45,10 @@
             this.textStreet = new System.Windows.Forms.TextBox();
             this.textHouse = new System.Windows.Forms.TextBox();
             this.textApartment = new System.Windows.Forms.TextBox();
+            this.textIDpat = new System.Windows.Forms.TextBox();
+            this.textIDadr = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -118,6 +122,7 @@
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Dodaj";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonModify
             // 
@@ -127,6 +132,7 @@
             this.buttonModify.TabIndex = 14;
             this.buttonModify.Text = "Zatwierdź zmiany";
             this.buttonModify.UseVisualStyleBackColor = true;
+            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
             // 
             // buttonReturn
             // 
@@ -136,6 +142,7 @@
             this.buttonReturn.TabIndex = 15;
             this.buttonReturn.Text = "Powrót";
             this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
             // textName
             // 
@@ -186,11 +193,52 @@
             this.textApartment.Size = new System.Drawing.Size(30, 20);
             this.textApartment.TabIndex = 25;
             // 
+            // textIDpat
+            // 
+            this.textIDpat.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIDpat.Enabled = false;
+            this.textIDpat.ForeColor = System.Drawing.SystemColors.Window;
+            this.textIDpat.Location = new System.Drawing.Point(216, 12);
+            this.textIDpat.Name = "textIDpat";
+            this.textIDpat.Size = new System.Drawing.Size(30, 20);
+            this.textIDpat.TabIndex = 26;
+            // 
+            // textIDadr
+            // 
+            this.textIDadr.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textIDadr.Enabled = false;
+            this.textIDadr.Location = new System.Drawing.Point(379, 12);
+            this.textIDadr.Name = "textIDadr";
+            this.textIDadr.Size = new System.Drawing.Size(30, 20);
+            this.textIDadr.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(150, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Id pacjenta";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(322, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Id adresu";
+            // 
             // Registry_AddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 292);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textIDadr);
+            this.Controls.Add(this.textIDpat);
             this.Controls.Add(this.textApartment);
             this.Controls.Add(this.textHouse);
             this.Controls.Add(this.textStreet);
@@ -234,5 +282,9 @@
         private System.Windows.Forms.TextBox textStreet;
         private System.Windows.Forms.TextBox textHouse;
         private System.Windows.Forms.TextBox textApartment;
+        private System.Windows.Forms.TextBox textIDpat;
+        private System.Windows.Forms.TextBox textIDadr;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
     }
 }

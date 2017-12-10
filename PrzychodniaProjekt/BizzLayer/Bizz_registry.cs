@@ -26,13 +26,16 @@ namespace BizzLayer
             return pat;
         }
 
-        public static IQueryable<Patient> GetPatients()
+        public static IQueryable<TResult> GetPatients<TResult>(Func<object, object, object, object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-            var pat = (from p in dc.Patients
-                       select p);
-            return pat;
+            var result = from d in dc.Patients
+                         join b in dc.Addresses on d.id_pac equals b.id_pac
+                         select creator(d.id_pac, d.Imie, d.nazwisko, d.PESEL, b.id_adresu,b.miejscowosc, b.ulica, b.nr_domu, b.nr_lokalu);
+            return result;
         }
+
+
 
         public static void UpdateVisit(int id_wiz, System.DateTime data_anul)
         {
@@ -74,37 +77,54 @@ namespace BizzLayer
 
         }
 
-        //public static IQueryable<Patients_n_Adresses> FilterPatient(string pattern)
-        //{
-        //DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-        //var patient = (from p in dc.Patients
-        //            where p.nazwisko.Contains(pattern)
-        //            select p);
-        //return patient;
+        public static void EditPatient(int id_pac, string Imie, string Nazwisko, string PESEL, int id_adresu,string Miejscowosc, string Ulica, string Nr_domu, string Nr_lokalu)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
-        /// wzor:
-        //return (from i1 in DBContext.Table1
-        //        join j1 in DBContext.Table2 on i1.GroupID equals j1.GroupID
-        //        where i1.RecID.Equals(RecID)
-        //        select new TableJoinResult { Table1 = i1, Table2 = j1 }).SingleOrDefault();
+            Patient pat = (from p in dc.Patients
+                         where p.id_pac == id_pac
+                         select p).Single();
 
-        //DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-        //IQueryable<Patients_n_Adresses> result = (from p in dc.Patients
-        //              join a in dc.Addresses
-        //                on p.id_pac equals a.id_pac
-        //              where p.nazwisko.Contains(pattern)
-        //              select new Patients_n_Adresses { Patient =p, Address =a }).SingleOrDefault();
-        //return result;
+            pat.Imie = Imie;
+            pat.nazwisko = Nazwisko;
+            pat.PESEL = PESEL;
 
-        //DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-        //var result = (from p in dc.Patients
-        //                                          join a in dc.Addresses
-        //                                          on p.id_pac equals a.id_pac
-        //                                          where p.nazwisko.Contains(pattern)
-        //                                          select new { Patient = p,  Address = a });
-        //return result;
+            Address adr = (from ad in dc.Addresses
+                           where ad.id_adresu==id_adresu
+                           select ad).Single();
+
+            adr.miejscowosc = Miejscowosc;
+            adr.ulica = Ulica;
+            adr.nr_domu = Nr_domu;
+            adr.nr_lokalu = Nr_lokalu;
+
+            dc.SubmitChanges();
+            dc.SubmitChanges();
+        }
+
+        public static void AddPatient(string Imie, string Nazwisko, string PESEL, string Miejscowosc, string Ulica, string Nr_domu, string Nr_lokalu)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Patient pat = new Patient();
+
+            pat.Imie = Imie;
+            pat.nazwisko = Nazwisko;
+            pat.PESEL = PESEL;
 
 
-        //}
+            Address adr = new Address();
+
+            adr.miejscowosc = Miejscowosc;
+            adr.ulica = Ulica;
+            adr.nr_domu = Nr_domu;
+            adr.nr_lokalu = Nr_lokalu;
+
+            dc.Patients.InsertOnSubmit(pat);
+            dc.Addresses.InsertOnSubmit(adr);
+            dc.SubmitChanges();
+        }
+
     }
-}
+
+    }

@@ -184,6 +184,7 @@
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Dodaj pacjenta";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // patientTableAdapter
             // 
@@ -197,14 +198,15 @@
             this.buttonEdit.TabIndex = 15;
             this.buttonEdit.Text = "Edytuj pacjenta";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnShowVisits
             // 
-            this.btnShowVisits.Location = new System.Drawing.Point(333, 314);
+            this.btnShowVisits.Location = new System.Drawing.Point(316, 299);
             this.btnShowVisits.Name = "btnShowVisits";
-            this.btnShowVisits.Size = new System.Drawing.Size(93, 20);
+            this.btnShowVisits.Size = new System.Drawing.Size(142, 20);
             this.btnShowVisits.TabIndex = 16;
-            this.btnShowVisits.Text = "Pokaż wizyty";
+            this.btnShowVisits.Text = "Pokaż pacjentów/wizyty";
             this.btnShowVisits.UseVisualStyleBackColor = true;
             this.btnShowVisits.Click += new System.EventHandler(this.btnShowVisits_Click);
             // 
