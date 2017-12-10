@@ -30,7 +30,11 @@ namespace PrzychodniaProjekt
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             //IQueryable<Patients_n_Adresses> patient = Bizz_registry.FilterPatient(textSurname.Text);
-            dgvPatients.DataSource = Bizz_registry.FilterPatient(textSurname.Text, textName.Text, textPesel.Text);
+
+            dgvPatients.DataSource = Bizz_registry.FilterPatient(textSurname.Text, textName.Text, textPesel.Text,
+                (id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => 
+                new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu });
+            
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

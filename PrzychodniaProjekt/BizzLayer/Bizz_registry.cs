@@ -17,6 +17,7 @@ namespace BizzLayer
             return vis;
         }
 
+        /*** stara wersja, wyswietlajaca bez adresow
         public static IQueryable<Patient> FilterPatient(string pattern, string pattern2, string pattern3)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -24,6 +25,18 @@ namespace BizzLayer
                         where p.nazwisko.Contains(pattern) && p.Imie.Contains(pattern2) && p.PESEL.Contains(pattern3)
                         select p);
             return pat;
+        }
+        ***/
+
+        public static IQueryable<TResult> FilterPatient<TResult>(string pattern, string pattern2, string pattern3,
+            Func<object, object, object, object, object, object, object, object, object, TResult> creator)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var result = from d in dc.Patients
+                         join b in dc.Addresses on d.id_pac equals b.id_pac
+                         where d.nazwisko.Contains(pattern) && d.Imie.Contains(pattern2) && d.PESEL.Contains(pattern3)
+                         select creator(d.id_pac, d.Imie, d.nazwisko, d.PESEL, b.id_adresu, b.miejscowosc, b.ulica, b.nr_domu, b.nr_lokalu);
+            return result;
         }
 
         public static IQueryable<TResult> GetPatients<TResult>(Func<object, object, object, object, object, object, object, object, object, TResult> creator)
@@ -107,10 +120,15 @@ namespace BizzLayer
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             Patient pat = new Patient();
+            
 
             pat.Imie = Imie;
             pat.nazwisko = Nazwisko;
             pat.PESEL = PESEL;
+            
+
+            dc.Patients.InsertOnSubmit(pat);
+            dc.SubmitChanges();
 
 
             Address adr = new Address();
@@ -119,9 +137,13 @@ namespace BizzLayer
             adr.ulica = Ulica;
             adr.nr_domu = Nr_domu;
             adr.nr_lokalu = Nr_lokalu;
+            adr.id_pac = pat.id_pac;
 
-            dc.Patients.InsertOnSubmit(pat);
+            
             dc.Addresses.InsertOnSubmit(adr);
+            dc.SubmitChanges();
+
+            pat.id_adresu = adr.id_adresu;
             dc.SubmitChanges();
         }
 
