@@ -14,9 +14,20 @@ namespace PrzychodniaProjekt
 {
     public partial class Registry_AddEdit : Form
     {
-        public Registry_AddEdit()
+        string addOrEdit =  "";
+        public Registry_AddEdit(string addOrE)
         {
             InitializeComponent();
+            addOrEdit = addOrE;
+            if(addOrEdit == "add")
+            {
+                buttonModify.Enabled = false;
+            }
+
+            if (addOrEdit == "mod")
+            {
+                buttonAdd.Enabled = false;
+            }
         }
 
         public void fillForms(string id_pac, string Imie, string Nazwisko, string PESEL, string id_adresu,string Miejscowosc, string Ulica, string Nr_domu, string Nr_lokalu)

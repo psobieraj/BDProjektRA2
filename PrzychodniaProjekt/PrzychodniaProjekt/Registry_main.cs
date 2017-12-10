@@ -74,14 +74,14 @@ namespace PrzychodniaProjekt
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Registry_AddEdit registry_add = new Registry_AddEdit();
+            Registry_AddEdit registry_add = new Registry_AddEdit("add");
 
             registry_add.ShowDialog();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            Registry_AddEdit registry_edit = new Registry_AddEdit();
+            Registry_AddEdit registry_edit = new Registry_AddEdit("mod");
 
             int rowindex = dgvPatients.CurrentCell.RowIndex;
             string id_pac = dgvPatients.Rows[rowindex].Cells[0].Value.ToString();

@@ -27,12 +27,17 @@ namespace PrzychodniaProjekt
 
         }
 
-        public void fillForms(string login, string rola, string id)
+        public void fillForms(string login, string rola, string id, dynamic data)
         {
             textBoxLogin.Text = login.Replace(" ", string.Empty);
             //textBoxPassword.Text = haslo;
             comboBoxRole.Text = rola;
             textBoxId.Text = id;
+            dateTimePickerExpired.Value = Convert.ToDateTime(data);
+
+
+
+
 
             //dateTimePickerExpired = data;
             //System.Nullable<DateTime> SelectedDate;
@@ -110,6 +115,18 @@ namespace PrzychodniaProjekt
                 dateTimePickerExpired.Enabled = false;
                 dateExpired = false;
             }
+        }
+
+        public void setCheckBoxUserActive(dynamic data)
+        {
+            if (data != null)
+            {
+                checkBoxUserActive.Checked = true;
+            }
+            else
+            {
+                checkBoxUserActive.Checked = false;
+            };
         }
     }
 }

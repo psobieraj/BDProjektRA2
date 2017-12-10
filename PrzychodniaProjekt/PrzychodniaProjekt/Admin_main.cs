@@ -50,6 +50,14 @@ namespace PrzychodniaProjekt
 
             dynamic data = dataGridViewAccounts.Rows[rowindex].Cells[4].Value;
 
+            if(data!=null)
+            {
+                data=data.ToString();
+            } else
+            {
+                data = DateTime.Now;
+            };
+
             //if(data==null) MessageBox.Show("Nieustawiona data.");
 
             //if (data != string.Empty)
@@ -63,7 +71,8 @@ namespace PrzychodniaProjekt
             //    data = "";
             //};
 
-            admin_manage.fillForms(login, rola, id);
+            admin_manage.fillForms(login, rola, id, data);
+            admin_manage.setCheckBoxUserActive(dataGridViewAccounts.Rows[rowindex].Cells[4].Value);
             addOrManage = "man";
             admin_manage.ShowDialog();
 

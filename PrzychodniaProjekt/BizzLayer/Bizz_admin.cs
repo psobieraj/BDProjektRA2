@@ -68,6 +68,7 @@ namespace BizzLayer
                 user.haslo = Bizz_MD5hash.GetHash(haslo);
             }
             user.Rola = rola;
+
             if (dateExpired == true)
             {
                 user.dat_wyg = data_wyg;
