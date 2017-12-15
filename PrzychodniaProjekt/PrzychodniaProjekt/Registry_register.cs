@@ -65,5 +65,10 @@ namespace PrzychodniaProjekt
         {
 
         }
+
+        private void textPesel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

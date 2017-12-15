@@ -34,27 +34,6 @@ namespace PrzychodniaProjekt
             comboBoxRole.Text = rola;
             textBoxId.Text = id;
             dateTimePickerExpired.Value = Convert.ToDateTime(data);
-
-
-
-
-
-            //dateTimePickerExpired = data;
-            //System.Nullable<DateTime> SelectedDate;
-            //data = dateTimePickerExpired.SelectedDate;
-            //dateTimePickerExpired.SelectedDate = DateTime.Parse(data);
-
-
-            //dateTimePickerExpired = data;
-            //if (data == "")
-            //{
-            //    checkBoxUserActive.Checked = true;
-            //}
-
-            
-
-
-
         }
 
         public void HideDatePicker(bool someSelector)

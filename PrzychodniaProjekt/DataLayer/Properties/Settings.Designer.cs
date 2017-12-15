@@ -66,5 +66,16 @@ namespace DataLayer.Properties {
                 return ((string)(this["PrzychodniaConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SRYSIEK\\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Security=Tr" +
+            "ue")]
+        public string PrzychodniaConnectionString4 {
+            get {
+                return ((string)(this["PrzychodniaConnectionString4"]));
+            }
+        }
     }
 }

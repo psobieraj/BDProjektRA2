@@ -64,6 +64,7 @@
             // 
             // comboBoxRole
             // 
+            this.comboBoxRole.AllowDrop = true;
             this.comboBoxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRole.FormattingEnabled = true;
             this.comboBoxRole.Items.AddRange(new object[] {

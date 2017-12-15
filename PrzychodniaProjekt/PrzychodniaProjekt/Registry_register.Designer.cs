@@ -156,6 +156,7 @@
             this.textPesel.Name = "textPesel";
             this.textPesel.Size = new System.Drawing.Size(125, 20);
             this.textPesel.TabIndex = 10;
+            this.textPesel.TextChanged += new System.EventHandler(this.textPesel_TextChanged);
             // 
             // label3
             // 

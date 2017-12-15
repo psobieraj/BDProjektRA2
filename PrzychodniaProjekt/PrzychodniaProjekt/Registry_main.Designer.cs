@@ -141,18 +141,20 @@
             // 
             // textPesel
             // 
+            this.textPesel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textPesel.Location = new System.Drawing.Point(523, 43);
+            this.textPesel.MaxLength = 11;
             this.textPesel.Name = "textPesel";
             this.textPesel.Size = new System.Drawing.Size(159, 20);
             this.textPesel.TabIndex = 9;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(717, 43);
+            this.buttonSearch.Location = new System.Drawing.Point(717, 197);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(93, 20);
             this.buttonSearch.TabIndex = 10;
-            this.buttonSearch.Text = "Szukaj pacjenta";
+            this.buttonSearch.Text = "Szukaj";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 

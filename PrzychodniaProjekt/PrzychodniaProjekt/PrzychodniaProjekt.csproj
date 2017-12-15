@@ -59,11 +59,11 @@
     <Compile Include="Admin_manage.Designer.cs">
       <DependentUpon>Admin_manage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctor_examination_phisical.cs">
+    <Compile Include="Doctor_examination_psychical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor_examination_phisical.Designer.cs">
-      <DependentUpon>Doctor_examination_phisical.cs</DependentUpon>
+    <Compile Include="Doctor_examination_psychical.Designer.cs">
+      <DependentUpon>Doctor_examination_psychical.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctor_main.cs">
       <SubType>Form</SubType>
@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="Doctor_visit.Designer.cs">
       <DependentUpon>Doctor_visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientExamsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientExamsList.Designer.cs">
+      <DependentUpon>PatientExamsList.cs</DependentUpon>
     </Compile>
     <Compile Include="Lab_technician_serve_examination.cs">
       <SubType>Form</SubType>
@@ -165,14 +171,17 @@
     <EmbeddedResource Include="Admin_manage.resx">
       <DependentUpon>Admin_manage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor_examination_phisical.resx">
-      <DependentUpon>Doctor_examination_phisical.cs</DependentUpon>
+    <EmbeddedResource Include="Doctor_examination_psychical.resx">
+      <DependentUpon>Doctor_examination_psychical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_main.resx">
       <DependentUpon>Doctor_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_visit.resx">
       <DependentUpon>Doctor_visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientExamsList.resx">
+      <DependentUpon>PatientExamsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab_technician_serve_examination.resx">
       <DependentUpon>Lab_technician_serve_examination.cs</DependentUpon>

@@ -29,18 +29,22 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.mlDecription = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonLabExam = new System.Windows.Forms.Button();
+            this.textDecription = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.mlDiagnosis = new System.Windows.Forms.TextBox();
+            this.textDiagnosis = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonPhExam = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxIDPatient = new System.Windows.Forms.TextBox();
+            this.textIDvisit = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -53,62 +57,64 @@
             this.label3.Text = "opis";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button1
+            // buttonExit
             // 
-            this.button1.Location = new System.Drawing.Point(43, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Zakończ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonExit.Location = new System.Drawing.Point(43, 391);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(95, 23);
+            this.buttonExit.TabIndex = 27;
+            this.buttonExit.Text = "Zakończ";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // button2
+            // buttonBack
             // 
-            this.button2.Location = new System.Drawing.Point(325, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 29);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Wróć";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonBack.Location = new System.Drawing.Point(325, 388);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(95, 29);
+            this.buttonBack.TabIndex = 28;
+            this.buttonBack.Text = "Wróć";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // button3
+            // buttonLabExam
             // 
-            this.button3.Location = new System.Drawing.Point(482, 105);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 99);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Bad Lab";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonLabExam.Location = new System.Drawing.Point(482, 105);
+            this.buttonLabExam.Name = "buttonLabExam";
+            this.buttonLabExam.Size = new System.Drawing.Size(95, 21);
+            this.buttonLabExam.TabIndex = 29;
+            this.buttonLabExam.Text = "Bad Lab";
+            this.buttonLabExam.UseVisualStyleBackColor = true;
+            this.buttonLabExam.Click += new System.EventHandler(this.button3_Click);
             // 
-            // mlDecription
+            // textDecription
             // 
-            this.mlDecription.Location = new System.Drawing.Point(28, 71);
-            this.mlDecription.Multiline = true;
-            this.mlDecription.Name = "mlDecription";
-            this.mlDecription.Size = new System.Drawing.Size(409, 67);
-            this.mlDecription.TabIndex = 30;
+            this.textDecription.Location = new System.Drawing.Point(28, 71);
+            this.textDecription.Multiline = true;
+            this.textDecription.Name = "textDecription";
+            this.textDecription.Size = new System.Drawing.Size(409, 67);
+            this.textDecription.TabIndex = 30;
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(99, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 31;
+            this.textBoxName.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxName.Location = new System.Drawing.Point(179, 27);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.TabIndex = 31;
             // 
-            // textBox3
+            // textBoxUsername
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(337, 29);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 32;
+            this.textBoxUsername.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxUsername.Location = new System.Drawing.Point(361, 27);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUsername.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 24);
+            this.label4.Location = new System.Drawing.Point(148, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 33;
@@ -123,13 +129,13 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "diagnoza";
             // 
-            // mlDiagnosis
+            // textDiagnosis
             // 
-            this.mlDiagnosis.Location = new System.Drawing.Point(31, 161);
-            this.mlDiagnosis.Multiline = true;
-            this.mlDiagnosis.Name = "mlDiagnosis";
-            this.mlDiagnosis.Size = new System.Drawing.Size(406, 43);
-            this.mlDiagnosis.TabIndex = 35;
+            this.textDiagnosis.Location = new System.Drawing.Point(31, 161);
+            this.textDiagnosis.Multiline = true;
+            this.textDiagnosis.Name = "textDiagnosis";
+            this.textDiagnosis.Size = new System.Drawing.Size(406, 43);
+            this.textDiagnosis.TabIndex = 35;
             // 
             // btnCancel
             // 
@@ -139,42 +145,81 @@
             this.btnCancel.TabIndex = 36;
             this.btnCancel.Text = "Anuluj wizyte";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button4
+            // buttonPhExam
             // 
-            this.button4.Location = new System.Drawing.Point(482, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 23);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "bad fiz";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonPhExam.Location = new System.Drawing.Point(482, 50);
+            this.buttonPhExam.Name = "buttonPhExam";
+            this.buttonPhExam.Size = new System.Drawing.Size(95, 23);
+            this.buttonPhExam.TabIndex = 37;
+            this.buttonPhExam.Text = "Bad Fiz";
+            this.buttonPhExam.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 27);
+            this.label1.Location = new System.Drawing.Point(285, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 38;
             this.label1.Text = "nazwisko";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "ID:";
+            // 
+            // textBoxIDPatient
+            // 
+            this.textBoxIDPatient.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxIDPatient.Location = new System.Drawing.Point(38, 24);
+            this.textBoxIDPatient.Name = "textBoxIDPatient";
+            this.textBoxIDPatient.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIDPatient.TabIndex = 40;
+            // 
+            // textIDvisit
+            // 
+            this.textIDvisit.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textIDvisit.Location = new System.Drawing.Point(533, 27);
+            this.textIDvisit.Name = "textIDvisit";
+            this.textIDvisit.Size = new System.Drawing.Size(44, 20);
+            this.textIDvisit.TabIndex = 41;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(491, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "id_wiz";
             // 
             // Doctor_visit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 472);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textIDvisit);
+            this.Controls.Add(this.textBoxIDPatient);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonPhExam);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.mlDiagnosis);
+            this.Controls.Add(this.textDiagnosis);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.mlDecription);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textDecription);
+            this.Controls.Add(this.buttonLabExam);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label3);
             this.Name = "Doctor_visit";
             this.Text = "Doctor_visit";
@@ -185,17 +230,21 @@
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox mlDecription;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonLabExam;
+        private System.Windows.Forms.TextBox textDecription;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox mlDiagnosis;
+        private System.Windows.Forms.TextBox textDiagnosis;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonPhExam;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxIDPatient;
+        private System.Windows.Forms.TextBox textIDvisit;
+        private System.Windows.Forms.Label label6;
     }
 }
