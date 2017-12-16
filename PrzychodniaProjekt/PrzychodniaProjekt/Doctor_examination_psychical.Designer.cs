@@ -62,6 +62,7 @@
             this.buttonExecuteOrOrder.TabIndex = 25;
             this.buttonExecuteOrOrder.Text = "Wykonaj";
             this.buttonExecuteOrOrder.UseVisualStyleBackColor = true;
+            this.buttonExecuteOrOrder.Click += new System.EventHandler(this.buttonExecuteOrOrder_Click);
             // 
             // buttonBack
             // 
@@ -71,6 +72,7 @@
             this.buttonBack.TabIndex = 26;
             this.buttonBack.Text = "Wróc";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textCode
             // 

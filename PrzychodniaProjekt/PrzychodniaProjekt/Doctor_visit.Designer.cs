@@ -98,6 +98,7 @@
             // textBoxName
             // 
             this.textBoxName.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxName.Enabled = false;
             this.textBoxName.Location = new System.Drawing.Point(179, 27);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
@@ -106,6 +107,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxUsername.Enabled = false;
             this.textBoxUsername.Location = new System.Drawing.Point(361, 27);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(100, 20);
@@ -155,6 +157,7 @@
             this.buttonPhExam.TabIndex = 37;
             this.buttonPhExam.Text = "Bad Fiz";
             this.buttonPhExam.UseVisualStyleBackColor = true;
+            this.buttonPhExam.Click += new System.EventHandler(this.buttonPhExam_Click);
             // 
             // label1
             // 
@@ -177,6 +180,7 @@
             // textBoxIDPatient
             // 
             this.textBoxIDPatient.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxIDPatient.Enabled = false;
             this.textBoxIDPatient.Location = new System.Drawing.Point(38, 24);
             this.textBoxIDPatient.Name = "textBoxIDPatient";
             this.textBoxIDPatient.Size = new System.Drawing.Size(100, 20);
@@ -185,6 +189,7 @@
             // textIDvisit
             // 
             this.textIDvisit.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textIDvisit.Enabled = false;
             this.textIDvisit.Location = new System.Drawing.Point(533, 27);
             this.textIDvisit.Name = "textIDvisit";
             this.textIDvisit.Size = new System.Drawing.Size(44, 20);

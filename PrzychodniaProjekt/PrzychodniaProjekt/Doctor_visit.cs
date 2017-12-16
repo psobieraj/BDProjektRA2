@@ -15,9 +15,12 @@ namespace PrzychodniaProjekt
 {
     public partial class Doctor_visit : Form
     {
+
+        public static int id_wiz;
+
         public Doctor_visit()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -40,7 +43,7 @@ namespace PrzychodniaProjekt
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -53,6 +56,13 @@ namespace PrzychodniaProjekt
         {
             Bizz_Doctor.UpdateVisitCancel(int.Parse(textIDvisit.Text), DateTime.Today, textDecription.Text, textDiagnosis.Text);
             this.Hide();
+        }
+
+        private void buttonPhExam_Click(object sender, EventArgs e)
+        {
+            Form1 patientExamsList = new Form1();
+            id_wiz = Int32.Parse(textIDvisit.Text);
+            patientExamsList.ShowDialog();
         }
     }
 }

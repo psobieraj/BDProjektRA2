@@ -78,7 +78,6 @@ D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaP
 C:\Users\Daniel\Source\Repos\BDProjektRA24\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
 C:\Users\Daniel\Source\Repos\BDProjektRA24\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
 C:\Users\Daniel\Source\Repos\BDProjektRA24\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
-D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_phisical.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_serve_examination.resources
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_AddEdit.resources
 C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_main.resources
@@ -147,3 +146,6 @@ C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt
 C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
 C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_psychical.resources
 C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
+d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_psychical.resources
+d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
+d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Exam_dictionary.resources

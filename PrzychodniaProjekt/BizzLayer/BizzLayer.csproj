@@ -44,6 +44,8 @@
     <Compile Include="Bizz_Doctor.cs" />
     <Compile Include="Bizz_admin.cs" />
     <Compile Include="Bizz_Clinic.cs" />
+    <Compile Include="Bizz_Doctor_examination_Psychical.cs" />
+    <Compile Include="Bizz_examDictionary.cs" />
     <Compile Include="Bizz_MD5hash.cs" />
     <Compile Include="Bizz_registry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -45,21 +45,23 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(41, 259);
+            this.buttonBack.Location = new System.Drawing.Point(233, 259);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 22;
             this.buttonBack.Text = "Wróć";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonNextExam
             // 
-            this.buttonNextExam.Location = new System.Drawing.Point(542, 259);
+            this.buttonNextExam.Location = new System.Drawing.Point(368, 259);
             this.buttonNextExam.Name = "buttonNextExam";
             this.buttonNextExam.Size = new System.Drawing.Size(229, 23);
             this.buttonNextExam.TabIndex = 24;
             this.buttonNextExam.Text = "Wykonaj następne badanie";
             this.buttonNextExam.UseVisualStyleBackColor = true;
+            this.buttonNextExam.Click += new System.EventHandler(this.buttonNextExam_Click);
             // 
             // label1
             // 
@@ -81,6 +83,7 @@
             this.Controls.Add(this.dataGridViewExams);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExams)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
