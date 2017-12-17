@@ -107,5 +107,13 @@ namespace PrzychodniaProjekt
                 checkBoxUserActive.Checked = false;
             };
         }
+
+        private void Only_Number_Press(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

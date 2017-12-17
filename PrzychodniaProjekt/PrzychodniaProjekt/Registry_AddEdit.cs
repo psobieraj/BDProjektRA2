@@ -59,5 +59,21 @@ namespace PrzychodniaProjekt
             Bizz_registry.AddPatient(textName.Text, textSurname.Text, textPesel.Text, textCity.Text, textStreet.Text, textHouse.Text, textApartment.Text);
             this.DialogResult = System.Windows.Forms.DialogResult.No;
         }
+
+        private void Only_Char_Press(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Number_Press(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

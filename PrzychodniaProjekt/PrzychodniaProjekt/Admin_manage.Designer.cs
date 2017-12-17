@@ -68,6 +68,7 @@
             this.comboBoxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRole.FormattingEnabled = true;
             this.comboBoxRole.Items.AddRange(new object[] {
+            "adm",
             "rec ",
             "doc ",
             "lab ",
@@ -167,6 +168,7 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(84, 20);
             this.textBoxId.TabIndex = 10;
+            this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Press);
             // 
             // label1
             // 

@@ -104,5 +104,12 @@ namespace PrzychodniaProjekt
             CheckUser();
 
         }
+
+        private void buttonLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            {
+                if (e.KeyCode == Keys.Enter) CheckUser();
+            }
+        }
     }
 }

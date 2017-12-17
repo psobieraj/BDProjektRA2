@@ -98,5 +98,27 @@ namespace PrzychodniaProjekt
 
             registry_edit.ShowDialog();
         }
+
+        private void textPesel_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Only_Number_Press(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar)&& !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Char_Press(object sender, KeyPressEventArgs e)
+        {
+        
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

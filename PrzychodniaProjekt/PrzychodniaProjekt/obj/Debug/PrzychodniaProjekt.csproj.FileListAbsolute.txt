@@ -149,3 +149,32 @@ C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt
 d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_psychical.resources
 d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
 d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Exam_dictionary.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe.config
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.exe
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.exe
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\PrzychodniaProjekt.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.dll
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.dll
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\BizzLayer.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\bin\Debug\DataLayer.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csprojResolveAssemblyReference.cache
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_main.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_manage.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_psychical.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_main.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_visit.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Exam_dictionary.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_serve_examination.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_start.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Login.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Properties.Resources.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Recommend_examination.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_AddEdit.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_cancel.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_main.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_register.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Supervisor_lab_manage.resources
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache

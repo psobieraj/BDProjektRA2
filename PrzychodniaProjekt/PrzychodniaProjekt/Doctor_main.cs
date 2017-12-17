@@ -60,5 +60,13 @@ namespace PrzychodniaProjekt
            
             doctor_visit.ShowDialog();
         }
+
+        private void Only_Char_Press(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

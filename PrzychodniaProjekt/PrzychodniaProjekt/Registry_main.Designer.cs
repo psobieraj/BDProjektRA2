@@ -131,6 +131,7 @@
             this.textSurname.Name = "textSurname";
             this.textSurname.Size = new System.Drawing.Size(159, 20);
             this.textSurname.TabIndex = 7;
+            this.textSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // textName
             // 
@@ -138,6 +139,7 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(159, 20);
             this.textName.TabIndex = 8;
+            this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // textPesel
             // 
@@ -147,6 +149,8 @@
             this.textPesel.Name = "textPesel";
             this.textPesel.Size = new System.Drawing.Size(159, 20);
             this.textPesel.TabIndex = 9;
+            this.textPesel.TextChanged += new System.EventHandler(this.textPesel_TextChanged);
+            this.textPesel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Press);
             // 
             // buttonSearch
             // 

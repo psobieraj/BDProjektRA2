@@ -28,3 +28,9 @@ C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\DataLayer\bin\Debu
 C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\Patryk\Source\Repos\BDProjektRA29\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Patryk\Source\Repos\BDProjektRA210\PrzychodniaProjekt\DataLayer\obj\Debug\DataLayer.pdb

@@ -126,6 +126,7 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(100, 20);
             this.textName.TabIndex = 27;
+            this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // dateTimeRegistration
             // 

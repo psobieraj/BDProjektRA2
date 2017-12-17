@@ -150,6 +150,7 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(103, 20);
             this.textName.TabIndex = 16;
+            this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // textSurname
             // 
@@ -157,6 +158,7 @@
             this.textSurname.Name = "textSurname";
             this.textSurname.Size = new System.Drawing.Size(103, 20);
             this.textSurname.TabIndex = 17;
+            this.textSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // textCity
             // 
@@ -164,6 +166,7 @@
             this.textCity.Name = "textCity";
             this.textCity.Size = new System.Drawing.Size(103, 20);
             this.textCity.TabIndex = 18;
+            this.textCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // textPesel
             // 
@@ -171,6 +174,7 @@
             this.textPesel.Name = "textPesel";
             this.textPesel.Size = new System.Drawing.Size(103, 20);
             this.textPesel.TabIndex = 19;
+            this.textPesel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Press);
             // 
             // textStreet
             // 
@@ -178,6 +182,7 @@
             this.textStreet.Name = "textStreet";
             this.textStreet.Size = new System.Drawing.Size(103, 20);
             this.textStreet.TabIndex = 21;
+            this.textStreet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char_Press);
             // 
             // textHouse
             // 
@@ -185,6 +190,7 @@
             this.textHouse.Name = "textHouse";
             this.textHouse.Size = new System.Drawing.Size(30, 20);
             this.textHouse.TabIndex = 24;
+            this.textHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Press);
             // 
             // textApartment
             // 
@@ -192,6 +198,7 @@
             this.textApartment.Name = "textApartment";
             this.textApartment.Size = new System.Drawing.Size(30, 20);
             this.textApartment.TabIndex = 25;
+            this.textApartment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Press);
             // 
             // textIDpat
             // 
