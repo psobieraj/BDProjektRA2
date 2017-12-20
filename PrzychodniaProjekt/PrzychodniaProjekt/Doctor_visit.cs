@@ -17,6 +17,7 @@ namespace PrzychodniaProjekt
     {
 
         public static int id_wiz;
+        public static int id_pac_nie_globalna_wogole_ni_a_nic;
 
         public Doctor_visit()
         {
@@ -39,6 +40,8 @@ namespace PrzychodniaProjekt
             textBoxName.Text = imie;
             textBoxUsername.Text = nazwisko;
             textIDvisit.Text = id_wiz;
+
+            id_pac_nie_globalna_wogole_ni_a_nic = int.Parse(id);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -62,6 +65,18 @@ namespace PrzychodniaProjekt
         {
             Form1 patientExamsList = new Form1();
             id_wiz = Int32.Parse(textIDvisit.Text);
+            patientExamsList.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBadLab_Click(object sender, EventArgs e)
+        {
+            Form1 patientExamsList = new Form1();
+            //id_wiz = Int32.Parse(textIDvisit.Text);
             patientExamsList.ShowDialog();
         }
     }

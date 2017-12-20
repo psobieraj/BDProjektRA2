@@ -76,5 +76,34 @@ public static void UpdateVisitCancel(int id_wiz, System.DateTime data_anul, stri
             }
         }
 
+public static void AddExam(string wynik, int id_wiz, string kod)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            Physical_exam ex = new Physical_exam();
+
+            ex.wynik = wynik;
+            ex.id_wiz = id_wiz;
+            ex.kod = kod;
+
+            dc.Physical_exams.InsertOnSubmit(ex);
+            dc.SubmitChanges();
+
+        }
+
+        public static IQueryable<TResult> GetPhisicalExaminationList<TResult>(int id_pac, Func<object, object, object, object, object, object, TResult> creator)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var result = from p in dc.Patients
+                         join v in dc.Visits on p.id_pac equals v.id_pac
+                         join ph in dc.Physical_exams on v.id_wiz equals ph.id_wiz
+                         join di in dc.Exam_dictionaries on ph.kod equals di.kod
+
+                         where p.id_pac == id_pac
+                         where di.typ == "fiz"
+
+                         select creator(p.id_pac, p.nazwisko, v.data_anul_zak, di.kod, di.nazwa, ph.wynik);
+            return result;
+        }
+
     }
 }

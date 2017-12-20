@@ -31,7 +31,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.buttonLabExam = new System.Windows.Forms.Button();
             this.textDecription = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.textBoxIDPatient = new System.Windows.Forms.TextBox();
             this.textIDvisit = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonBadLab = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -76,16 +76,6 @@
             this.buttonBack.Text = "Wróć";
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
-            // buttonLabExam
-            // 
-            this.buttonLabExam.Location = new System.Drawing.Point(482, 105);
-            this.buttonLabExam.Name = "buttonLabExam";
-            this.buttonLabExam.Size = new System.Drawing.Size(95, 21);
-            this.buttonLabExam.TabIndex = 29;
-            this.buttonLabExam.Text = "Bad Lab";
-            this.buttonLabExam.UseVisualStyleBackColor = true;
-            this.buttonLabExam.Click += new System.EventHandler(this.button3_Click);
             // 
             // textDecription
             // 
@@ -204,11 +194,23 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "id_wiz";
             // 
+            // buttonBadLab
+            // 
+            this.buttonBadLab.Location = new System.Drawing.Point(494, 105);
+            this.buttonBadLab.Name = "buttonBadLab";
+            this.buttonBadLab.Size = new System.Drawing.Size(75, 23);
+            this.buttonBadLab.TabIndex = 43;
+            this.buttonBadLab.Text = "Bad Lab";
+            this.buttonBadLab.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonBadLab.UseVisualStyleBackColor = true;
+            this.buttonBadLab.Click += new System.EventHandler(this.buttonBadLab_Click);
+            // 
             // Doctor_visit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 472);
+            this.Controls.Add(this.buttonBadLab);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textIDvisit);
             this.Controls.Add(this.textBoxIDPatient);
@@ -222,7 +224,6 @@
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.textDecription);
-            this.Controls.Add(this.buttonLabExam);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label3);
@@ -237,7 +238,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Button buttonLabExam;
         private System.Windows.Forms.TextBox textDecription;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxUsername;
@@ -251,5 +251,6 @@
         private System.Windows.Forms.TextBox textBoxIDPatient;
         private System.Windows.Forms.TextBox textIDvisit;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonBadLab;
     }
 }

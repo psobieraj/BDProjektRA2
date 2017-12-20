@@ -32,7 +32,7 @@ namespace PrzychodniaProjekt
 
         private void buttonExecuteOrOrder_Click(object sender, EventArgs e)
         {
-            Bizz_Doctor_examination_Psychical.AddExam(textBoxComments.Text, Doctor_visit.id_wiz, textCode.Text);
+            Bizz_Doctor.AddExam(textBoxComments.Text, Doctor_visit.id_wiz, textCode.Text);
             this.Hide();
         }
 
