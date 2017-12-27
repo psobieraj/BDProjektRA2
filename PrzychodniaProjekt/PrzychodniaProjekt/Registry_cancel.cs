@@ -19,11 +19,12 @@ namespace PrzychodniaProjekt
             InitializeComponent();
         }
 
-        public void fillForms(string wizyta, string pacjent, string lekarz)
+        public void fillForms(string wizyta, string pacjent, string pat_nazw, string pesel)
         {
             textIdVisit.Text = wizyta;
             textIdPatient.Text = pacjent;
-            textIdDoctor.Text = lekarz;
+            textPatName.Text = pat_nazw;
+            textPESEL.Text = pesel;
         }
 
         private void buttonReturn_Click(object sender, EventArgs e)

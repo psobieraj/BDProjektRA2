@@ -60,6 +60,7 @@
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "Wróć";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // Exam_dictionary
             // 

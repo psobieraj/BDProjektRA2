@@ -35,9 +35,11 @@
             this.dtpCancel = new System.Windows.Forms.DateTimePicker();
             this.textIdVisit = new System.Windows.Forms.TextBox();
             this.textIdPatient = new System.Windows.Forms.TextBox();
-            this.textIdDoctor = new System.Windows.Forms.TextBox();
+            this.textPatName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textPESEL = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -103,14 +105,14 @@
             this.textIdPatient.Size = new System.Drawing.Size(35, 20);
             this.textIdPatient.TabIndex = 7;
             // 
-            // textIdDoctor
+            // textPatName
             // 
-            this.textIdDoctor.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textIdDoctor.Enabled = false;
-            this.textIdDoctor.Location = new System.Drawing.Point(396, 42);
-            this.textIdDoctor.Name = "textIdDoctor";
-            this.textIdDoctor.Size = new System.Drawing.Size(35, 20);
-            this.textIdDoctor.TabIndex = 8;
+            this.textPatName.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textPatName.Enabled = false;
+            this.textPatName.Location = new System.Drawing.Point(396, 42);
+            this.textPatName.Name = "textPatName";
+            this.textPatName.Size = new System.Drawing.Size(102, 20);
+            this.textPatName.TabIndex = 8;
             // 
             // label3
             // 
@@ -124,20 +126,40 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 45);
+            this.label4.Location = new System.Drawing.Point(337, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Lekarz";
+            this.label4.Text = "Nazwisko";
+            // 
+            // textPESEL
+            // 
+            this.textPESEL.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textPESEL.Enabled = false;
+            this.textPESEL.Location = new System.Drawing.Point(396, 12);
+            this.textPESEL.Name = "textPESEL";
+            this.textPESEL.Size = new System.Drawing.Size(102, 20);
+            this.textPESEL.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(357, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Pesel";
             // 
             // Registry_cancel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 192);
+            this.ClientSize = new System.Drawing.Size(529, 192);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textPESEL);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textIdDoctor);
+            this.Controls.Add(this.textPatName);
             this.Controls.Add(this.textIdPatient);
             this.Controls.Add(this.dtpCancel);
             this.Controls.Add(this.buttonReturn);
@@ -161,8 +183,10 @@
         private System.Windows.Forms.DateTimePicker dtpCancel;
         private System.Windows.Forms.TextBox textIdVisit;
         private System.Windows.Forms.TextBox textIdPatient;
-        private System.Windows.Forms.TextBox textIdDoctor;
+        private System.Windows.Forms.TextBox textPatName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textPESEL;
+        private System.Windows.Forms.Label label5;
     }
 }

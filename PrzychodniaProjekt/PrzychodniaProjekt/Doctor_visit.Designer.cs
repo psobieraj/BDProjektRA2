@@ -141,7 +141,7 @@
             // 
             // buttonPhExam
             // 
-            this.buttonPhExam.Location = new System.Drawing.Point(482, 50);
+            this.buttonPhExam.Location = new System.Drawing.Point(482, 71);
             this.buttonPhExam.Name = "buttonPhExam";
             this.buttonPhExam.Size = new System.Drawing.Size(95, 23);
             this.buttonPhExam.TabIndex = 37;
@@ -196,9 +196,9 @@
             // 
             // buttonBadLab
             // 
-            this.buttonBadLab.Location = new System.Drawing.Point(494, 105);
+            this.buttonBadLab.Location = new System.Drawing.Point(482, 115);
             this.buttonBadLab.Name = "buttonBadLab";
-            this.buttonBadLab.Size = new System.Drawing.Size(75, 23);
+            this.buttonBadLab.Size = new System.Drawing.Size(95, 23);
             this.buttonBadLab.TabIndex = 43;
             this.buttonBadLab.Text = "Bad Lab";
             this.buttonBadLab.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

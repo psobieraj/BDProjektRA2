@@ -23,21 +23,8 @@ namespace PrzychodniaProjekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            dataGridViewExams.DataSource = Bizz_Doctor.GetPhisicalExaminationList(Doctor_visit.id_pac_nie_globalna_wogole_ni_a_nic,(id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik ) 
+            dataGridViewExams.DataSource = Bizz_Doctor.GetPhisicalExaminationList(Doctor_visit.id_pacjenta,(id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik ) 
                 => new { id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik });
-
-
-
-
-            //GetPatients((id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) 
-                
-            //    => new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu });
-
-
-            //creator(p.id_pac, p.nazwisko, v.data_anul_zak, di.kod, di.nazwa, ph.wynik);
-
-
         }
 
         private void buttonNextExam_Click(object sender, EventArgs e)

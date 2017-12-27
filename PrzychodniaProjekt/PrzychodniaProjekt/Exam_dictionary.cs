@@ -32,15 +32,14 @@ namespace PrzychodniaProjekt
             string name = dataGridViewExamDictionaryList.Rows[rowindex].Cells[2].Value.ToString();
 
             Form1.doctor_examination_psychical.fillForms(code, name);
+            PatientLabExamList.doctor_examination_laboratory.fillForms(code, name);
+            
             this.Hide();
         }
 
-
-
-
-
-
-        
-
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

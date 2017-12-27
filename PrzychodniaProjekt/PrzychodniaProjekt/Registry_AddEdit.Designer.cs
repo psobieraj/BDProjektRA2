@@ -171,6 +171,7 @@
             // textPesel
             // 
             this.textPesel.Location = new System.Drawing.Point(491, 47);
+            this.textPesel.MaxLength = 11;
             this.textPesel.Name = "textPesel";
             this.textPesel.Size = new System.Drawing.Size(103, 20);
             this.textPesel.TabIndex = 19;

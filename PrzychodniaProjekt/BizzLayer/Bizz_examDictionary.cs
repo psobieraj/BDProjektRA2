@@ -14,7 +14,7 @@ namespace BizzLayer
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var exams = (from u in dc.Exam_dictionaries
-                         where u.typ=="fiz"
+                         //tymczasowe rozwiazanie//where u.typ=="fiz"
                          select u);
             return exams;
         }

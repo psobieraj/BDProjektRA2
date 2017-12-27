@@ -90,6 +90,20 @@ public static void AddExam(string wynik, int id_wiz, string kod)
 
         }
 
+public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie działa bo trzeba ogarnąć klucze obce
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            Laboratory_exam ex = new Laboratory_exam();
+
+            ex.wynik = uwagi;
+            ex.id_wiz = id_wiz;
+            ex.kod = kod;
+
+            dc.Laboratory_exams.InsertOnSubmit(ex);
+            dc.SubmitChanges();
+
+        }
+
         public static IQueryable<TResult> GetPhisicalExaminationList<TResult>(int id_pac, Func<object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -105,5 +119,20 @@ public static void AddExam(string wynik, int id_wiz, string kod)
             return result;
         }
 
+        public static IQueryable<TResult> GetLaboratoryExaminationList<TResult>(int id_pac, Func<object, object, object, object, object, object, object, object, TResult> creator)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var result = from p in dc.Patients
+                         join v in dc.Visits on p.id_pac equals v.id_pac
+                         join lab in dc.Laboratory_exams on v.id_wiz equals lab.id_wiz
+                         join di in dc.Exam_dictionaries on lab.kod equals di.kod
+
+                         where p.id_pac == id_pac
+                         where di.typ == "lab"
+
+                         select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul, di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
+            return result;
+        }
+        
     }
 }

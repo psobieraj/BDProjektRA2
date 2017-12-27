@@ -23,7 +23,7 @@ namespace PrzychodniaProjekt
         {
             // TODO: This line of code loads data into the 'przychodniaDataSet.Patient' table. You can move, or remove it, as needed.
             //this.patientTableAdapter.Fill(this.przychodniaDataSet.Patient);
-            dgvVisits.DataSource = Bizz_registry.GetVisits();
+            dgvVisits.DataSource = Bizz_registry.GetVisits((id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz) => new { id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz });
             dgvPatients.DataSource = Bizz_registry.GetPatients((id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu});
         }
 
@@ -34,7 +34,10 @@ namespace PrzychodniaProjekt
             dgvPatients.DataSource = Bizz_registry.FilterPatient(textSurname.Text, textName.Text, textPesel.Text,
                 (id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => 
                 new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu });
-            
+
+            dgvVisits.DataSource = Bizz_registry.FilterVisit(textSurname.Text, textName.Text, textPesel.Text,
+                (id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz) => new { id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz });
+
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -42,18 +45,19 @@ namespace PrzychodniaProjekt
             Registry_cancel registry_cancel = new Registry_cancel();
 
             int rowindex = dgvVisits.CurrentCell.RowIndex;
-            string wizyta = dgvVisits.Rows[rowindex].Cells[0].Value.ToString();
-            string pacjent = dgvVisits.Rows[rowindex].Cells[3].Value.ToString();
-            string lekarz = dgvVisits.Rows[rowindex].Cells[2].Value.ToString();
+            string wizyta = dgvVisits.Rows[rowindex].Cells[7].Value.ToString();
+            string pacjent = dgvVisits.Rows[rowindex].Cells[0].Value.ToString();
+            string pac_nazw = dgvVisits.Rows[rowindex].Cells[2].Value.ToString();
+            string pesel = dgvVisits.Rows[rowindex].Cells[3].Value.ToString();
 
-            registry_cancel.fillForms(wizyta,pacjent,lekarz);
+            registry_cancel.fillForms(wizyta,pacjent,pac_nazw,pesel);
 
             registry_cancel.ShowDialog();
         }
 
         private void btnShowVisits_Click(object sender, EventArgs e)
         {
-            dgvVisits.DataSource = Bizz_registry.GetVisits();
+            dgvVisits.DataSource = Bizz_registry.GetVisits((id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz) => new { id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz});
             dgvPatients.DataSource=Bizz_registry.GetPatients((id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu });
         }
 

@@ -9,24 +9,16 @@ namespace BizzLayer
 {
     public class Bizz_registry
     {
-        public static IQueryable<Visit> GetVisits()
+
+        public static IQueryable<TResult> GetVisits<TResult>(Func<object, object, object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-            var vis = (from v in dc.Visits
-                       select v);
-            return vis;
+            var result = from p in dc.Patients
+                         join v in dc.Visits on p.id_pac equals v.id_pac
+                         select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej, v.data_anul_zak, v.id_wiz);
+            return result;
         }
 
-        /*** stara wersja, wyswietlajaca bez adresow
-        public static IQueryable<Patient> FilterPatient(string pattern, string pattern2, string pattern3)
-        {
-            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-            var pat = (from p in dc.Patients
-                        where p.nazwisko.Contains(pattern) && p.Imie.Contains(pattern2) && p.PESEL.Contains(pattern3)
-                        select p);
-            return pat;
-        }
-        ***/
 
         public static IQueryable<TResult> FilterPatient<TResult>(string pattern, string pattern2, string pattern3,
             Func<object, object, object, object, object, object, object, object, object, TResult> creator)
@@ -38,6 +30,17 @@ namespace BizzLayer
                          select creator(d.id_pac, d.Imie, d.nazwisko, d.PESEL, b.id_adresu, b.miejscowosc, b.ulica, b.nr_domu, b.nr_lokalu);
             return result;
         }
+
+        public static IQueryable<TResult> FilterVisit<TResult>(string pattern, string pattern2, string pattern3,
+             Func<object, object, object, object, object, object, object, object,TResult> creator)
+             {
+                 DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+                 var result = from p in dc.Patients
+                              join v in dc.Visits on p.id_pac equals v.id_pac
+                              where p.nazwisko.Contains(pattern) && p.Imie.Contains(pattern2) && p.PESEL.Contains(pattern3)
+                              select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej, v.data_anul_zak, v.id_wiz);
+                 return result;
+             }
 
         public static IQueryable<TResult> GetPatients<TResult>(Func<object, object, object, object, object, object, object, object, object, TResult> creator)
         {
