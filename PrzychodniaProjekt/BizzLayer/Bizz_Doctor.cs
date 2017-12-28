@@ -42,8 +42,10 @@ namespace BizzLayer
             };
         }
 
-        public static void UpdateVisitEnd(int id_wiz, System.DateTime data_zak, string opis, string dignoza)
+        public static void UpdateVisitEnd(int id_wiz, System.DateTime data_zak, string opis, string diagnoza)
         {
+            /*
+            /// poprzednia wersja:
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             Visit vis = (from v in dc.Visits
@@ -56,12 +58,31 @@ namespace BizzLayer
                 vis.data_anul_zak = data_zak;
                 dc.SubmitChanges();
                 dc.SubmitChanges();
+            }*/
+
+            
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Visit vis = (from v in dc.Visits
+                         where v.id_wiz == id_wiz
+                         select v).Single();
+
+            if (vis.status == "ANUL") return;   /// jak anulowana, nie wprowadzac zadnych zmian
+
+            vis.opis = opis;
+            vis.diagnoza = diagnoza;
+
+            if (vis.status == "REJ")    
+            {
+                vis.status = "ZAK";
+                vis.data_anul_zak = data_zak;
             }
+            dc.SubmitChanges();
         }
 
 public static void UpdateVisitCancel(int id_wiz, System.DateTime data_anul, string opis, string dignoza)
         {
-            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            /*DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             Visit vis = (from v in dc.Visits
                          where v.id_wiz == id_wiz
@@ -72,6 +93,20 @@ public static void UpdateVisitCancel(int id_wiz, System.DateTime data_anul, stri
                 vis.status = "ANUL";
                 vis.data_anul_zak = data_anul;
                 dc.SubmitChanges();
+                dc.SubmitChanges();
+            }*/
+
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Visit vis = (from v in dc.Visits
+                         where v.id_wiz == id_wiz
+                         select v).Single();
+
+            if (vis.status != "ANUL")
+            {
+                vis.status = "ANUL";
+                vis.data_anul_zak = data_anul;
+                //dc.SubmitChanges();
                 dc.SubmitChanges();
             }
         }
@@ -109,7 +144,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia≈
 
         }
 
-        public static IQueryable<TResult> GetPhisicalExaminationList<TResult>(int id_pac, Func<object, object, object, object, object, object, TResult> creator)
+        public static IQueryable<TResult> GetPhisicalExaminationList<TResult>(int id_pac, int id_wiz, Func<object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from p in dc.Patients
@@ -120,11 +155,13 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia≈
                          where p.id_pac == id_pac
                          where di.typ == "fiz"
 
+                         where v.id_wiz == id_wiz
+
                          select creator(p.id_pac, p.nazwisko, v.data_anul_zak, di.kod, di.nazwa, ph.wynik);
             return result;
         }
 
-        public static IQueryable<TResult> GetLaboratoryExaminationList<TResult>(int id_pac, Func<object, object, object, object, object, object, object, object, TResult> creator)
+        public static IQueryable<TResult> GetLaboratoryExaminationList<TResult>(int id_pac, int id_wiz, Func<object, object, object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from p in dc.Patients
@@ -135,9 +172,31 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia≈
                          where p.id_pac == id_pac
                          where di.typ == "lab"
 
+                         where v.id_wiz == id_wiz
+
                          select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul, di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
             return result;
-        }
-        
-    }
+        }//GetLaboratoryExaminationList
+        public static string GetDescription(int id_wiz)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Visit vis = (from v in dc.Visits
+                         where v.id_wiz == id_wiz
+                         select v).Single();
+
+            return vis.opis;
+        }//GetDescription
+        public static string GetDiagnosis(int id_wiz)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Visit vis = (from v in dc.Visits
+                         where v.id_wiz == id_wiz
+                         select v).Single();
+
+            return vis.diagnoza;
+        }//GetDiagnosis
+
+    }//public class Bizz_Doctor
 }

@@ -1,36 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Przychodnia" Class="DataClassesClinicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LUKASZ-KOMPUTER\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Security=True;TrustServerCertificate=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="PrzychodniaConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Visit" Member="Visits">
-    <Type Name="Visit">
-      <Column Name="id_wiz" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_rec" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_lek" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_pac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="opis" Type="System.String" DbType="VarChar(214)" CanBeNull="true" />
-      <Column Name="diagnoza" Type="System.String" DbType="VarChar(214)" CanBeNull="true" />
-      <Column Name="data_rej" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="data_anul_zak" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="status" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
-      <Association Name="Visit_Laboratory_exam" Member="Laboratory_exams" ThisKey="id_wiz" OtherKey="id_wiz" Type="Laboratory_exam" />
-      <Association Name="Visit_Physical_exam" Member="Physical_exams" ThisKey="id_wiz" OtherKey="id_wiz" Type="Physical_exam" />
-      <Association Name="Doctor_Visit" Member="Doctor" ThisKey="id_lek" OtherKey="id_lek" Type="Doctor" IsForeignKey="true" />
-      <Association Name="Patient_Visit" Member="Patient" ThisKey="id_pac" OtherKey="id_pac" Type="Patient" IsForeignKey="true" />
-      <Association Name="Register_Visit" Member="Register" ThisKey="id_rec" OtherKey="id_rec" Type="Register" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.[User]" Member="Users">
-    <Type Name="User">
-      <Column Name="Id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="haslo" Type="System.String" DbType="Char(32)" CanBeNull="true" />
-      <Column Name="Rola" Type="System.String" DbType="Char(4)" CanBeNull="true" />
-      <Column Name="login" Type="System.String" DbType="Char(40)" CanBeNull="true" />
-      <Column Name="dat_wyg" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="User_Doctor" Member="Doctors" ThisKey="Id_user" OtherKey="Id_user" Type="Doctor" />
-      <Association Name="User_Laboratory" Member="Laboratories" ThisKey="Id_user" OtherKey="Id_user" Type="Laboratory" />
-      <Association Name="User_Register" Member="Registers" ThisKey="Id_user" OtherKey="Id_user" Type="Register" />
-      <Association Name="User_Supervisor_lab" Member="Supervisor_labs" ThisKey="Id_user" OtherKey="Id_user" Type="Supervisor_lab" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=COMP81\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="PrzychodniaConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Address" Member="Addresses">
     <Type Name="Address">
       <Column Name="id_adresu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -88,8 +57,8 @@
       <Column Name="id_wiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Laboratory_Laboratory_exam" Member="Laboratory" ThisKey="id_lab" OtherKey="id_lab" Type="Laboratory" IsForeignKey="true" />
       <Association Name="Exam_dictionary_Laboratory_exam" Member="Exam_dictionary" ThisKey="kod" OtherKey="kod" Type="Exam_dictionary" IsForeignKey="true" />
-      <Association Name="Visit_Laboratory_exam" Member="Visit" ThisKey="id_wiz" OtherKey="id_wiz" Type="Visit" IsForeignKey="true" />
       <Association Name="Supervisor_lab_Laboratory_exam" Member="Supervisor_lab" ThisKey="id_klab" OtherKey="id_klab" Type="Supervisor_lab" IsForeignKey="true" />
+      <Association Name="Visit_Laboratory_exam" Member="Visit" ThisKey="id_wiz" OtherKey="id_wiz" Type="Visit" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Patient" Member="Patients">
@@ -99,8 +68,8 @@
       <Column Name="nazwisko" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="PESEL" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
       <Column Name="id_adresu" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Patient_Visit" Member="Visits" ThisKey="id_pac" OtherKey="id_pac" Type="Visit" />
       <Association Name="Patient_Address" Member="Addresses" ThisKey="id_pac" OtherKey="id_pac" Type="Address" />
+      <Association Name="Patient_Visit" Member="Visits" ThisKey="id_pac" OtherKey="id_pac" Type="Visit" />
     </Type>
   </Table>
   <Table Name="dbo.Physical_exam" Member="Physical_exams">
@@ -131,6 +100,37 @@
       <Column Name="Id_user" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Supervisor_lab_Laboratory_exam" Member="Laboratory_exams" ThisKey="id_klab" OtherKey="id_klab" Type="Laboratory_exam" />
       <Association Name="User_Supervisor_lab" Member="User" ThisKey="Id_user" OtherKey="Id_user" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="Id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="haslo" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="Rola" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="login" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="dat_wyg" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="User_Doctor" Member="Doctors" ThisKey="Id_user" OtherKey="Id_user" Type="Doctor" />
+      <Association Name="User_Laboratory" Member="Laboratories" ThisKey="Id_user" OtherKey="Id_user" Type="Laboratory" />
+      <Association Name="User_Register" Member="Registers" ThisKey="Id_user" OtherKey="Id_user" Type="Register" />
+      <Association Name="User_Supervisor_lab" Member="Supervisor_labs" ThisKey="Id_user" OtherKey="Id_user" Type="Supervisor_lab" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Visit" Member="Visits">
+    <Type Name="Visit">
+      <Column Name="id_wiz" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_rec" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_lek" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_pac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="opis" Type="System.String" DbType="VarChar(214)" CanBeNull="true" />
+      <Column Name="diagnoza" Type="System.String" DbType="VarChar(214)" CanBeNull="true" />
+      <Column Name="data_rej" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="data_anul_zak" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="Visit_Laboratory_exam" Member="Laboratory_exams" ThisKey="id_wiz" OtherKey="id_wiz" Type="Laboratory_exam" />
+      <Association Name="Visit_Physical_exam" Member="Physical_exams" ThisKey="id_wiz" OtherKey="id_wiz" Type="Physical_exam" />
+      <Association Name="Doctor_Visit" Member="Doctor" ThisKey="id_lek" OtherKey="id_lek" Type="Doctor" IsForeignKey="true" />
+      <Association Name="Patient_Visit" Member="Patient" ThisKey="id_pac" OtherKey="id_pac" Type="Patient" IsForeignKey="true" />
+      <Association Name="Register_Visit" Member="Register" ThisKey="id_rec" OtherKey="id_rec" Type="Register" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

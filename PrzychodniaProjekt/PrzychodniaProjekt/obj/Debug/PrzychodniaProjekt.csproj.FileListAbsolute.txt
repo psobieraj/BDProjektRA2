@@ -82,7 +82,6 @@ D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaP
 D:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Registry_AddEdit.resources
 C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_main.resources
 C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Admin_manage.resources
-C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_phisical.resources
 C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_main.resources
 C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_visit.resources
 C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Lab_technician_serve_examination.resources
@@ -240,3 +239,8 @@ C:\Users\Daniel\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt
 C:\Users\Daniel\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.PatientLabExamList.resources
 d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_laboratory.resources
 d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.PatientLabExamList.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_laboratory.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_psychical.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Exam_dictionary.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Form1.resources
+C:\Users\użytkownik\Source\Repos\BDProjektRA2\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.PatientLabExamList.resources

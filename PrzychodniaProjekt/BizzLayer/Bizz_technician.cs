@@ -9,12 +9,97 @@ namespace BizzLayer
 {
     public class Bizz_technician
     {
-        public static IQueryable<TResult> GetExams<TResult>(Func<object, object, object, object, object, object, object, object, TResult> creator)
+        public static IQueryable<TResult> GetExams<TResult>(Func<object, object, object, object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from d in dc.Laboratory_exams
-                         select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status);
+                         select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
             return result;
         }
+
+        public static IQueryable<TResult> FilterExams<TResult>(DateTime data, string status, bool check, 
+            Func<object, object, object, object, object, object, object, object, object, TResult> creator)
+        {
+                DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            if (!check)
+            {
+                var result = from d in dc.Laboratory_exams
+                             where d.status.Contains(status)
+                             select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
+                return result;
+            }
+            else
+            {
+                var result = from d in dc.Laboratory_exams
+                             where d.status.Contains(status)
+                             where d.data_zlec == data
+                             select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
+                return result;
+            }
+        }
+
+        public static string GetExamName(string kod)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Exam_dictionary exam = (from e in dc.Exam_dictionaries
+                                    where e.kod == kod
+                         select e).Single();
+
+            return exam.nazwa;
+        }// public static string GetExamName
+
+        public static string GetResult(int id_bad)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Laboratory_exam exam = (from e in dc.Laboratory_exams
+                                    where e.id_bad_lab == id_bad
+                                    select e).Single();
+
+            return exam.wynik;
+        }// public static string GetExamName
+
+        public static void PerformExam(int id_bad, string wynik)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Laboratory_exam exam = (from e in dc.Laboratory_exams
+                         where e.id_bad_lab == id_bad
+                         select e).Single();
+
+            //if (vis.status == "ANUL") return;   /// jak anulowana, nie wprowadzac zadnych zmian
+
+            exam.wynik = wynik;
+            
+
+            if (exam.status == "ZLEC")
+            {
+                exam.status = "WYK";
+                exam.data_wyk_anul = DateTime.Now.Date;
+            }
+            dc.SubmitChanges();
+            //dc.SubmitChanges();
+
+
+        }
+
+        public static void CancelExam(int id_bad, string wynik)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Laboratory_exam exam = (from e in dc.Laboratory_exams
+                                    where e.id_bad_lab == id_bad
+                                    select e).Single();
+
+            exam.wynik = wynik;
+
+            if (exam.status == "ZLEC")
+            {
+                exam.status = "AN_L";       /// ewentualnie do poprawy, w bazie jest varchar(4)
+                exam.data_wyk_anul = DateTime.Now.Date;
+            }
+            dc.SubmitChanges();
+         }
     }
 }

@@ -37,8 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -69,6 +67,7 @@
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "Wróć";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textBox1
             // 
@@ -124,24 +123,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Uwagi lekarza:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 245);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Uwagi laboranta";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(42, 261);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(340, 48);
-            this.textBox4.TabIndex = 10;
-            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(43, 353);
@@ -166,8 +147,6 @@
             this.ClientSize = new System.Drawing.Size(445, 478);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label1);
@@ -195,8 +174,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
     }

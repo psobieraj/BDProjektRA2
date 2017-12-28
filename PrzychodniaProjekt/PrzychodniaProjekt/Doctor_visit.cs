@@ -41,6 +41,10 @@ namespace PrzychodniaProjekt
             textBoxUsername.Text = nazwisko;
             textIDvisit.Text = id_wiz;
 
+            /// poniewaz nie ma w gridzie
+            textDecription.Text = Bizz_Doctor.GetDescription(int.Parse(id_wiz));
+            textDiagnosis.Text = Bizz_Doctor.GetDiagnosis(int.Parse(id_wiz));
+
             id_pacjenta = int.Parse(id);
         }
 
@@ -49,7 +53,7 @@ namespace PrzychodniaProjekt
             this.Hide();
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)   // przycisk zakoncz
         {
             Bizz_Doctor.UpdateVisitEnd(int.Parse(textIDvisit.Text),DateTime.Today,textDecription.Text,textDiagnosis.Text);
             this.Hide();
@@ -63,17 +67,13 @@ namespace PrzychodniaProjekt
 
         private void buttonPhExam_Click(object sender, EventArgs e)
         {
-            Form1 patientExamsList = new Form1();
+            Form1 patientExamsList = new Form1(id_wiz, id_pacjenta);       //
             id_wiz = Int32.Parse(textIDvisit.Text);
             
             Exam_dictionary.currentChosenExamType = "fiz";
             patientExamsList.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonBadLab_Click(object sender, EventArgs e)
         {
