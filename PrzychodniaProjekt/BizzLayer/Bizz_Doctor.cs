@@ -102,6 +102,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia�
 
             ex.id_lab = 1; //dodana wartość domyślna wszystko idzie na tego samego laboranta
             ex.id_klab = 1; //dodana wartosć domyślna wszystko idzie na tego samego supervisora
+            ex.status = "ZLEC";
 
             dc.Laboratory_exams.InsertOnSubmit(ex);
             dc.SubmitChanges();
