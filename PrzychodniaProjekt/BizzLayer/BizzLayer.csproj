@@ -47,6 +47,7 @@
     <Compile Include="Bizz_examDictionary.cs" />
     <Compile Include="Bizz_MD5hash.cs" />
     <Compile Include="Bizz_registry.cs" />
+    <Compile Include="Bizz_technician.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

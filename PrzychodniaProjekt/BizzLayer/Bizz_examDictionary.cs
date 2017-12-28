@@ -10,11 +10,11 @@ namespace BizzLayer
     public class Bizz_examDictionary
     {
 
-        public static IQueryable<Exam_dictionary> GetExams()
+        public static IQueryable<Exam_dictionary> GetExams(string currentChosenExamType)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var exams = (from u in dc.Exam_dictionaries
-                         //tymczasowe rozwiazanie//where u.typ=="fiz"
+                         where u.typ==currentChosenExamType
                          select u);
             return exams;
         }

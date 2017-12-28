@@ -89,6 +89,7 @@
             this.Controls.Add(this.dateTimePicker);
             this.Name = "Lab_technician_start";
             this.Text = "Lab_technician_start";
+            this.Load += new System.EventHandler(this.Lab_technician_start_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExaminations)).EndInit();
             this.ResumeLayout(false);
 

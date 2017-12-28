@@ -15,6 +15,9 @@ namespace PrzychodniaProjekt
 {
     public partial class Exam_dictionary : Form
     {
+
+        public static string currentChosenExamType = "";
+
         public Exam_dictionary()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace PrzychodniaProjekt
 
         private void Exam_dictionary_Load_1(object sender, EventArgs e)
         {
-            dataGridViewExamDictionaryList.DataSource = Bizz_examDictionary.GetExams();
+            dataGridViewExamDictionaryList.DataSource = Bizz_examDictionary.GetExams(currentChosenExamType);
         }
 
         private void buttonChoose_Click(object sender, EventArgs e)

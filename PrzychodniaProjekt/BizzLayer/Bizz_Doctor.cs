@@ -95,9 +95,13 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia�
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             Laboratory_exam ex = new Laboratory_exam();
 
-            ex.wynik = uwagi;
+            //ex.wynik = uwagi; zamiast do wyniku chyba powinno być wpisane do uwagi_lekarza?
+            ex.uwagi_lek = uwagi;
             ex.id_wiz = id_wiz;
             ex.kod = kod;
+
+            ex.id_lab = 1; //dodana wartość domyślna wszystko idzie na tego samego laboranta
+            ex.id_klab = 1; //dodana wartosć domyślna wszystko idzie na tego samego supervisora
 
             dc.Laboratory_exams.InsertOnSubmit(ex);
             dc.SubmitChanges();

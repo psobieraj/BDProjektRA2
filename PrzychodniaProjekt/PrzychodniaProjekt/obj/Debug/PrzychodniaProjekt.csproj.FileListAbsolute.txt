@@ -238,3 +238,5 @@ C:\Users\Daniel\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt
 C:\Users\Daniel\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.csproj.GenerateResource.Cache
 C:\Users\Daniel\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_laboratory.resources
 C:\Users\Daniel\Source\Repos\BDProjektRA29\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.PatientLabExamList.resources
+d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.Doctor_examination_laboratory.resources
+d:\politechnika\V semestr\BD2\przychodniaProjekt\PrzychodniaProjekt\PrzychodniaProjekt\obj\Debug\PrzychodniaProjekt.PatientLabExamList.resources
