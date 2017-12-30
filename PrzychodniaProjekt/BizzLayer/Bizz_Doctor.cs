@@ -138,6 +138,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia�
             ex.id_lab = 1; //dodana wartość domyślna wszystko idzie na tego samego laboranta
             ex.id_klab = 1; //dodana wartosć domyślna wszystko idzie na tego samego supervisora
             ex.status = "ZLEC";
+            ex.data_zlec = System.DateTime.Today;
 
             dc.Laboratory_exams.InsertOnSubmit(ex);
             dc.SubmitChanges();
@@ -169,7 +170,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia�
                          join lab in dc.Laboratory_exams on v.id_wiz equals lab.id_wiz
                          join di in dc.Exam_dictionaries on lab.kod equals di.kod
 
-                         where p.id_pac == id_pac
+                         //where p.id_pac == id_pac
                          where di.typ == "lab"
 
                          where v.id_wiz == id_wiz

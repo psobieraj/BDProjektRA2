@@ -101,5 +101,27 @@ namespace BizzLayer
             }
             dc.SubmitChanges();
          }
+
+        public static IQueryable<TResult> FilterExamsSupervisor<TResult>(DateTime data, string status, bool check,
+        Func<object, object, object, object, object, object, object, object, object, TResult> creator)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            if (!check)
+            {
+                var result = from d in dc.Laboratory_exams
+                             where d.status.Contains(status)
+                             select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
+                return result;
+            }
+            else
+            {
+                var result = from d in dc.Laboratory_exams
+                             where d.status.Contains(status)
+                             where d.data_wyk_anul == data
+                             select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
+                return result;
+            }
+        }
+
     }
 }

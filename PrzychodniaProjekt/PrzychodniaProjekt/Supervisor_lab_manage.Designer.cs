@@ -31,14 +31,16 @@
             this.buttonConfirmExam = new System.Windows.Forms.Button();
             this.buttonCancelExam = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxExaminationRes = new System.Windows.Forms.TextBox();
+            this.textBoxExaminationCode = new System.Windows.Forms.TextBox();
             this.labelCode = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxDoctorComments = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxExaminationName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonConfirmExam
@@ -69,22 +71,22 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // textBox1
+            // textBoxExaminationRes
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 106);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(340, 39);
-            this.textBox1.TabIndex = 3;
+            this.textBoxExaminationRes.Location = new System.Drawing.Point(42, 106);
+            this.textBoxExaminationRes.Multiline = true;
+            this.textBoxExaminationRes.Name = "textBoxExaminationRes";
+            this.textBoxExaminationRes.ReadOnly = true;
+            this.textBoxExaminationRes.Size = new System.Drawing.Size(340, 39);
+            this.textBoxExaminationRes.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxExaminationCode
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxExaminationCode.Location = new System.Drawing.Point(111, 31);
+            this.textBoxExaminationCode.Name = "textBoxExaminationCode";
+            this.textBoxExaminationCode.ReadOnly = true;
+            this.textBoxExaminationCode.Size = new System.Drawing.Size(100, 20);
+            this.textBoxExaminationCode.TabIndex = 4;
             // 
             // labelCode
             // 
@@ -105,14 +107,14 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Wynik:";
             // 
-            // textBox3
+            // textBoxDoctorComments
             // 
-            this.textBox3.Location = new System.Drawing.Point(42, 182);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(340, 42);
-            this.textBox3.TabIndex = 7;
+            this.textBoxDoctorComments.Location = new System.Drawing.Point(42, 182);
+            this.textBoxDoctorComments.Multiline = true;
+            this.textBoxDoctorComments.Name = "textBoxDoctorComments";
+            this.textBoxDoctorComments.ReadOnly = true;
+            this.textBoxDoctorComments.Size = new System.Drawing.Size(340, 42);
+            this.textBoxDoctorComments.TabIndex = 7;
             // 
             // label2
             // 
@@ -140,19 +142,38 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Twoje uwagi";
             // 
+            // textBoxExaminationName
+            // 
+            this.textBoxExaminationName.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxExaminationName.Location = new System.Drawing.Point(314, 31);
+            this.textBoxExaminationName.Name = "textBoxExaminationName";
+            this.textBoxExaminationName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxExaminationName.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(227, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Nazwa badania";
+            // 
             // Supervisor_lab_manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 478);
+            this.Controls.Add(this.textBoxExaminationName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxDoctorComments);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCode);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxExaminationCode);
+            this.Controls.Add(this.textBoxExaminationRes);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonCancelExam);
             this.Controls.Add(this.buttonConfirmExam);
@@ -168,13 +189,15 @@
         private System.Windows.Forms.Button buttonConfirmExam;
         private System.Windows.Forms.Button buttonCancelExam;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxExaminationRes;
+        private System.Windows.Forms.TextBox textBoxExaminationCode;
         private System.Windows.Forms.Label labelCode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxDoctorComments;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxExaminationName;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -36,9 +36,6 @@ namespace PrzychodniaProjekt
             textBoxDoctorComments.Text = uwagi_lek;
 
             textBoxExaminationResult.Text = Bizz_technician.GetResult(static_id_bad);
-
-
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

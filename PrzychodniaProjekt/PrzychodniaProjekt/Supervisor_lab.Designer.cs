@@ -30,43 +30,40 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button buttonShowExams;
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.przychodniaDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.przychodniaDataSet3 = new PrzychodniaProjekt.PrzychodniaDataSet3();
             this.labelListOfExams = new System.Windows.Forms.Label();
             this.comboBoxState = new System.Windows.Forms.ComboBox();
             this.labelState = new System.Windows.Forms.Label();
-            this.textCode = new System.Windows.Forms.TextBox();
-            this.labelCode = new System.Windows.Forms.Label();
-            this.textLab = new System.Windows.Forms.TextBox();
-            this.labelLab = new System.Windows.Forms.Label();
-            this.textMD = new System.Windows.Forms.TextBox();
-            this.labelMD = new System.Windows.Forms.Label();
-            this.przychodniaDataSet3 = new PrzychodniaProjekt.PrzychodniaDataSet3();
-            this.przychodniaDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonManage = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpDone = new System.Windows.Forms.DateTimePicker();
+            this.dgvExaminations = new System.Windows.Forms.DataGridView();
             buttonShowExams = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonShowExams
             // 
-            buttonShowExams.Location = new System.Drawing.Point(714, 41);
+            buttonShowExams.Location = new System.Drawing.Point(603, 42);
             buttonShowExams.Name = "buttonShowExams";
-            buttonShowExams.Size = new System.Drawing.Size(127, 23);
+            buttonShowExams.Size = new System.Drawing.Size(109, 23);
             buttonShowExams.TabIndex = 5;
             buttonShowExams.Text = "Wyświetl badania";
             buttonShowExams.UseVisualStyleBackColor = true;
+            buttonShowExams.Click += new System.EventHandler(this.buttonShowExams_Click);
             // 
-            // dataGridView1
+            // przychodniaDataSet3BindingSource
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.przychodniaDataSet3BindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 104);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(684, 300);
-            this.dataGridView1.TabIndex = 0;
+            this.przychodniaDataSet3BindingSource.DataSource = this.przychodniaDataSet3;
+            this.przychodniaDataSet3BindingSource.Position = 0;
+            // 
+            // przychodniaDataSet3
+            // 
+            this.przychodniaDataSet3.DataSetName = "PrzychodniaDataSet3";
+            this.przychodniaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // labelListOfExams
             // 
@@ -80,7 +77,10 @@
             // comboBoxState
             // 
             this.comboBoxState.FormattingEnabled = true;
-            this.comboBoxState.Location = new System.Drawing.Point(610, 41);
+            this.comboBoxState.Items.AddRange(new object[] {
+            "WYK",
+            ""});
+            this.comboBoxState.Location = new System.Drawing.Point(499, 42);
             this.comboBoxState.Name = "comboBoxState";
             this.comboBoxState.Size = new System.Drawing.Size(86, 21);
             this.comboBoxState.TabIndex = 6;
@@ -88,73 +88,15 @@
             // labelState
             // 
             this.labelState.AutoSize = true;
-            this.labelState.Location = new System.Drawing.Point(564, 46);
+            this.labelState.Location = new System.Drawing.Point(453, 47);
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(40, 13);
             this.labelState.TabIndex = 7;
             this.labelState.Text = "Status:";
             // 
-            // textCode
-            // 
-            this.textCode.Location = new System.Drawing.Point(470, 41);
-            this.textCode.Name = "textCode";
-            this.textCode.Size = new System.Drawing.Size(70, 20);
-            this.textCode.TabIndex = 8;
-            // 
-            // labelCode
-            // 
-            this.labelCode.AutoSize = true;
-            this.labelCode.Location = new System.Drawing.Point(394, 46);
-            this.labelCode.Name = "labelCode";
-            this.labelCode.Size = new System.Drawing.Size(70, 13);
-            this.labelCode.TabIndex = 9;
-            this.labelCode.Text = "Kod badania:";
-            // 
-            // textLab
-            // 
-            this.textLab.Location = new System.Drawing.Point(250, 42);
-            this.textLab.Name = "textLab";
-            this.textLab.Size = new System.Drawing.Size(100, 20);
-            this.textLab.TabIndex = 10;
-            // 
-            // labelLab
-            // 
-            this.labelLab.AutoSize = true;
-            this.labelLab.Location = new System.Drawing.Point(192, 46);
-            this.labelLab.Name = "labelLab";
-            this.labelLab.Size = new System.Drawing.Size(52, 13);
-            this.labelLab.TabIndex = 11;
-            this.labelLab.Text = "Laborant:";
-            // 
-            // textMD
-            // 
-            this.textMD.Location = new System.Drawing.Point(57, 41);
-            this.textMD.Name = "textMD";
-            this.textMD.Size = new System.Drawing.Size(90, 20);
-            this.textMD.TabIndex = 12;
-            // 
-            // labelMD
-            // 
-            this.labelMD.AutoSize = true;
-            this.labelMD.Location = new System.Drawing.Point(12, 45);
-            this.labelMD.Name = "labelMD";
-            this.labelMD.Size = new System.Drawing.Size(39, 13);
-            this.labelMD.TabIndex = 13;
-            this.labelMD.Text = "Lekarz";
-            // 
-            // przychodniaDataSet3
-            // 
-            this.przychodniaDataSet3.DataSetName = "PrzychodniaDataSet3";
-            this.przychodniaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // przychodniaDataSet3BindingSource
-            // 
-            this.przychodniaDataSet3BindingSource.DataSource = this.przychodniaDataSet3;
-            this.przychodniaDataSet3BindingSource.Position = 0;
-            // 
             // buttonManage
             // 
-            this.buttonManage.Location = new System.Drawing.Point(714, 104);
+            this.buttonManage.Location = new System.Drawing.Point(603, 105);
             this.buttonManage.Name = "buttonManage";
             this.buttonManage.Size = new System.Drawing.Size(109, 24);
             this.buttonManage.TabIndex = 14;
@@ -162,47 +104,65 @@
             this.buttonManage.UseVisualStyleBackColor = true;
             this.buttonManage.Click += new System.EventHandler(this.buttonManage_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(120, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Data wykonania:";
+            // 
+            // dtpDone
+            // 
+            this.dtpDone.Checked = false;
+            this.dtpDone.Location = new System.Drawing.Point(213, 43);
+            this.dtpDone.Name = "dtpDone";
+            this.dtpDone.ShowCheckBox = true;
+            this.dtpDone.Size = new System.Drawing.Size(200, 20);
+            this.dtpDone.TabIndex = 15;
+            // 
+            // dgvExaminations
+            // 
+            this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExaminations.Location = new System.Drawing.Point(12, 104);
+            this.dgvExaminations.Name = "dgvExaminations";
+            this.dgvExaminations.Size = new System.Drawing.Size(578, 318);
+            this.dgvExaminations.TabIndex = 17;
+            // 
             // Supervisor_lab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 445);
+            this.ClientSize = new System.Drawing.Size(745, 445);
+            this.Controls.Add(this.dgvExaminations);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtpDone);
             this.Controls.Add(this.buttonManage);
-            this.Controls.Add(this.labelMD);
-            this.Controls.Add(this.textMD);
-            this.Controls.Add(this.labelLab);
-            this.Controls.Add(this.textLab);
-            this.Controls.Add(this.labelCode);
-            this.Controls.Add(this.textCode);
             this.Controls.Add(this.labelState);
             this.Controls.Add(this.comboBoxState);
             this.Controls.Add(buttonShowExams);
             this.Controls.Add(this.labelListOfExams);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Supervisor_lab";
             this.Text = "Supervisor_lab";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).EndInit();
+            this.Load += new System.EventHandler(this.Supervisor_lab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelListOfExams;
         private System.Windows.Forms.ComboBox comboBoxState;
         private System.Windows.Forms.Label labelState;
-        private System.Windows.Forms.TextBox textCode;
-        private System.Windows.Forms.Label labelCode;
-        private System.Windows.Forms.TextBox textLab;
-        private System.Windows.Forms.Label labelLab;
-        private System.Windows.Forms.TextBox textMD;
-        private System.Windows.Forms.Label labelMD;
         private System.Windows.Forms.BindingSource przychodniaDataSet3BindingSource;
         private PrzychodniaDataSet3 przychodniaDataSet3;
         private System.Windows.Forms.Button buttonManage;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDone;
+        private System.Windows.Forms.DataGridView dgvExaminations;
     }
 }

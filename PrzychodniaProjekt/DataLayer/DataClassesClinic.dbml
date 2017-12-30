@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Przychodnia" Class="DataClassesClinicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=COMP81\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="PrzychodniaConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-T34RC4B\SQLEXPRESS;Initial Catalog=Przychodnia;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="PrzychodniaConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Address" Member="Addresses">
     <Type Name="Address">
       <Column Name="id_adresu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
