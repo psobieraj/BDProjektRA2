@@ -162,7 +162,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
             return result;
         }
 
-        public static IQueryable<TResult> GetLaboratoryExaminationList<TResult>(int id_pac, int id_wiz, Func<object, object, object, object, object, object, object, object, TResult> creator)
+        public static IQueryable<TResult> GetLaboratoryExaminationList<TResult>(int id_pac, Func<object, object, object, object, object, object, object, object, object, TResult> creator)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from p in dc.Patients
@@ -173,9 +173,9 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
                          where p.id_pac == id_pac
                          where di.typ == "lab"
 
-                         where v.id_wiz == id_wiz
+                        // where v.id_wiz == id_wiz
 
-                         select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul, di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
+                         select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul, lab.data_zlec,di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
             return result;
         }//GetLaboratoryExaminationList
         public static string GetDescription(int id_wiz)

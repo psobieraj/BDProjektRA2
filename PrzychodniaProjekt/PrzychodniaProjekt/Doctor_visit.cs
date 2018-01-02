@@ -77,7 +77,7 @@ namespace PrzychodniaProjekt
 
         private void buttonBadLab_Click(object sender, EventArgs e)
         {
-            PatientLabExamList patientLabExamsList = new PatientLabExamList(id_wiz, id_pacjenta);
+            PatientLabExamList patientLabExamsList = new PatientLabExamList(id_pacjenta);
             id_wiz = Int32.Parse(textIDvisit.Text);
             
             Exam_dictionary.currentChosenExamType = "lab";
