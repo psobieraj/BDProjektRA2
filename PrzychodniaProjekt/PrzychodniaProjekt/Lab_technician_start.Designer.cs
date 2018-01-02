@@ -35,6 +35,7 @@
             this.buttonServe = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExaminations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // 
             // buttonServe
             // 
-            this.buttonServe.Location = new System.Drawing.Point(247, 335);
+            this.buttonServe.Location = new System.Drawing.Point(197, 335);
             this.buttonServe.Name = "buttonServe";
             this.buttonServe.Size = new System.Drawing.Size(75, 23);
             this.buttonServe.TabIndex = 4;
@@ -110,11 +111,22 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Data zlecenia:";
             // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Location = new System.Drawing.Point(300, 336);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogOut.TabIndex = 7;
+            this.buttonLogOut.Text = "Wyloguj";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // Lab_technician_start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 370);
+            this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonServe);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.Button buttonServe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }

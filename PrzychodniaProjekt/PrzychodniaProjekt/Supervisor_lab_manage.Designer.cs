@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxDoctorComments = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxNotes = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxExaminationName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.buttonConfirmExam.TabIndex = 0;
             this.buttonConfirmExam.Text = "Zatwierdź badanie";
             this.buttonConfirmExam.UseVisualStyleBackColor = true;
+            this.buttonConfirmExam.Click += new System.EventHandler(this.buttonConfirmExam_Click);
             // 
             // buttonCancelExam
             // 
@@ -60,6 +61,7 @@
             this.buttonCancelExam.TabIndex = 1;
             this.buttonCancelExam.Text = "Anuluj badanie";
             this.buttonCancelExam.UseVisualStyleBackColor = true;
+            this.buttonCancelExam.Click += new System.EventHandler(this.buttonCancelExam_Click);
             // 
             // buttonBack
             // 
@@ -125,13 +127,13 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Uwagi lekarza:";
             // 
-            // textBox5
+            // textBoxNotes
             // 
-            this.textBox5.Location = new System.Drawing.Point(43, 353);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(339, 45);
-            this.textBox5.TabIndex = 11;
+            this.textBoxNotes.Location = new System.Drawing.Point(43, 353);
+            this.textBoxNotes.Multiline = true;
+            this.textBoxNotes.Name = "textBoxNotes";
+            this.textBoxNotes.Size = new System.Drawing.Size(339, 45);
+            this.textBoxNotes.TabIndex = 11;
             // 
             // label4
             // 
@@ -167,7 +169,7 @@
             this.Controls.Add(this.textBoxExaminationName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxNotes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDoctorComments);
             this.Controls.Add(this.label1);
@@ -195,7 +197,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxDoctorComments;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxNotes;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxExaminationName;
         private System.Windows.Forms.Label label3;

@@ -57,5 +57,10 @@ namespace PrzychodniaProjekt
                 (kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab)
                 => new { kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab });
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+        }
     }
 }

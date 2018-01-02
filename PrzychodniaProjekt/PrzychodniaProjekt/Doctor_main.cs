@@ -68,5 +68,10 @@ namespace PrzychodniaProjekt
                 e.Handled = true;
             }
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+        }
     }
 }

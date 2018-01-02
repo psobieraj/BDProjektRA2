@@ -38,6 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textName = new System.Windows.Forms.TextBox();
             this.dateTimeRegistration = new System.Windows.Forms.DateTimePicker();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVisits)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,11 +138,22 @@
             this.dateTimeRegistration.TabIndex = 28;
             this.dateTimeRegistration.Value = new System.DateTime(2017, 12, 15, 11, 5, 0, 0);
             // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Location = new System.Drawing.Point(705, 134);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogOut.TabIndex = 29;
+            this.buttonLogOut.Text = "Wyloguj";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // Doctor_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 476);
+            this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.dateTimeRegistration);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.label5);
@@ -172,5 +184,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.DateTimePicker dateTimeRegistration;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }

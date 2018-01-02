@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDone = new System.Windows.Forms.DateTimePicker();
             this.dgvExaminations = new System.Windows.Forms.DataGridView();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             buttonShowExams = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet3)).BeginInit();
@@ -130,11 +131,22 @@
             this.dgvExaminations.Size = new System.Drawing.Size(578, 318);
             this.dgvExaminations.TabIndex = 17;
             // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Location = new System.Drawing.Point(621, 145);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogOut.TabIndex = 18;
+            this.buttonLogOut.Text = "Wyloguj";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // Supervisor_lab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 445);
+            this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.dgvExaminations);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDone);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpDone;
         private System.Windows.Forms.DataGridView dgvExaminations;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }

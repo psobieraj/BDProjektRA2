@@ -16,6 +16,8 @@ namespace PrzychodniaProjekt
     public partial class Supervisor_lab_manage : Form
     {
         public static int static_id_bad;
+        //public static string static_confirm_or_cancel = "";
+
         public Supervisor_lab_manage(int id_bad)
         {
             InitializeComponent();
@@ -38,6 +40,18 @@ namespace PrzychodniaProjekt
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+        }
+
+        private void buttonConfirmExam_Click(object sender, EventArgs e)
+        {
+            Bizz_technician.ManageExam(static_id_bad, textBoxNotes.Text, "confirm");
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+        }
+
+        private void buttonCancelExam_Click(object sender, EventArgs e)
+        {
+            Bizz_technician.ManageExam(static_id_bad, textBoxNotes.Text, "cancel");
             this.DialogResult = System.Windows.Forms.DialogResult.No;
         }
     }

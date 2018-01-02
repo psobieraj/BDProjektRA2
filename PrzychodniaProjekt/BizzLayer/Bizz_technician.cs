@@ -73,7 +73,7 @@ namespace BizzLayer
             exam.wynik = wynik;
             
 
-            if (exam.status == "ZLEC")
+            if (exam.status == "ZLEC" || exam.status == "AN_K") //jeszcze chyba trzeba dodać że jeśli jest AN_K to żeby po ponownym wykonaniu nadpisało
             {
                 exam.status = "WYK";
                 exam.data_wyk_anul = DateTime.Now.Date;
@@ -122,6 +122,44 @@ namespace BizzLayer
                 return result;
             }
         }
+
+
+        public static void ManageExam(int id_bad, string uwagi, string manage)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            Laboratory_exam exam = (from e in dc.Laboratory_exams
+                                    where e.id_bad_lab == id_bad
+                                    select e).Single();
+
+            //if (vis.status == "ANUL") return;   /// jak anulowana, nie wprowadzac zadnych zmian
+
+            exam.uwagi_kier = uwagi;
+
+
+            if (exam.status == "WYK")
+            {
+                if (manage == "confirm")
+                {
+                    exam.status = "ZATW";
+                    exam.data_zatw_anul = DateTime.Now.Date;
+                }
+
+                if (manage == "cancel")
+                {
+                    exam.status = "AN_K";
+                    exam.data_zatw_anul = DateTime.Now.Date;
+                }
+            }
+            dc.SubmitChanges();
+            //dc.SubmitChanges();
+
+
+        }
+
+
+
+
 
     }
 }
