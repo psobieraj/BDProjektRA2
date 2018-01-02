@@ -125,7 +125,7 @@ public static void AddExam(string wynik, int id_wiz, string kod)
 
         }
 
-public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie działa bo trzeba ogarnąć klucze obce
+public static void AddLabExam(string uwagi, int id_wiz, string kod) 
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             Laboratory_exam ex = new Laboratory_exam();
@@ -170,7 +170,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod) // nie dzia�
                          join lab in dc.Laboratory_exams on v.id_wiz equals lab.id_wiz
                          join di in dc.Exam_dictionaries on lab.kod equals di.kod
 
-                         //where p.id_pac == id_pac
+                         where p.id_pac == id_pac
                          where di.typ == "lab"
 
                          where v.id_wiz == id_wiz
