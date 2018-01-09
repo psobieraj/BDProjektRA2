@@ -17,6 +17,7 @@ namespace BizzLayer
                          join v in dc.Visits on p.id_pac equals v.id_pac
                          select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej, v.data_anul_zak, v.id_wiz);
             return result;
+
         }
 
 
