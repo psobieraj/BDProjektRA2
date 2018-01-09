@@ -36,13 +36,15 @@ namespace PrzychodniaProjekt
 
             Form1.doctor_examination_psychical.fillForms(code, name);
             PatientLabExamList.doctor_examination_laboratory.fillForms(code, name);
-            
+
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
             this.Hide();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+            //this.Hide();
         }
     }
 }

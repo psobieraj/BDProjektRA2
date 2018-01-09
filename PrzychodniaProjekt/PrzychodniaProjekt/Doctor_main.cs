@@ -73,5 +73,10 @@ namespace PrzychodniaProjekt
         {
             this.DialogResult = System.Windows.Forms.DialogResult.No;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

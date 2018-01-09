@@ -70,6 +70,7 @@
             // textBoxExaminationCode
             // 
             this.textBoxExaminationCode.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxExaminationCode.Enabled = false;
             this.textBoxExaminationCode.Location = new System.Drawing.Point(82, 6);
             this.textBoxExaminationCode.Name = "textBoxExaminationCode";
             this.textBoxExaminationCode.Size = new System.Drawing.Size(100, 20);
@@ -78,6 +79,7 @@
             // textBoxExaminationName
             // 
             this.textBoxExaminationName.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxExaminationName.Enabled = false;
             this.textBoxExaminationName.Location = new System.Drawing.Point(275, 6);
             this.textBoxExaminationName.Name = "textBoxExaminationName";
             this.textBoxExaminationName.Size = new System.Drawing.Size(100, 20);
@@ -85,7 +87,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(290, 408);
+            this.buttonBack.Location = new System.Drawing.Point(293, 305);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 8;
@@ -95,7 +97,7 @@
             // 
             // buttonServe
             // 
-            this.buttonServe.Location = new System.Drawing.Point(55, 408);
+            this.buttonServe.Location = new System.Drawing.Point(58, 305);
             this.buttonServe.Name = "buttonServe";
             this.buttonServe.Size = new System.Drawing.Size(75, 23);
             this.buttonServe.TabIndex = 6;
@@ -114,7 +116,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(177, 408);
+            this.buttonCancel.Location = new System.Drawing.Point(180, 305);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 10;
@@ -144,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 443);
+            this.ClientSize = new System.Drawing.Size(430, 360);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxDoctorComments);
             this.Controls.Add(this.buttonCancel);

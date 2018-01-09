@@ -136,7 +136,7 @@
             // 
             this.textPESEL.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textPESEL.Enabled = false;
-            this.textPESEL.Location = new System.Drawing.Point(396, 12);
+            this.textPESEL.Location = new System.Drawing.Point(396, 16);
             this.textPESEL.Name = "textPESEL";
             this.textPESEL.Size = new System.Drawing.Size(102, 20);
             this.textPESEL.TabIndex = 11;
@@ -144,7 +144,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(357, 15);
+            this.label5.Location = new System.Drawing.Point(357, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 12;

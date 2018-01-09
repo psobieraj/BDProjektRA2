@@ -44,7 +44,7 @@
             // 
             // buttonChoose
             // 
-            this.buttonChoose.Location = new System.Drawing.Point(40, 193);
+            this.buttonChoose.Location = new System.Drawing.Point(96, 168);
             this.buttonChoose.Name = "buttonChoose";
             this.buttonChoose.Size = new System.Drawing.Size(75, 23);
             this.buttonChoose.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(249, 192);
+            this.buttonBack.Location = new System.Drawing.Point(190, 168);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 347);
+            this.ClientSize = new System.Drawing.Size(368, 201);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonChoose);
             this.Controls.Add(this.dataGridViewExamDictionaryList);

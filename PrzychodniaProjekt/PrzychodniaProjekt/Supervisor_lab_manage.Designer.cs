@@ -45,7 +45,7 @@
             // 
             // buttonConfirmExam
             // 
-            this.buttonConfirmExam.Location = new System.Drawing.Point(43, 430);
+            this.buttonConfirmExam.Location = new System.Drawing.Point(43, 402);
             this.buttonConfirmExam.Name = "buttonConfirmExam";
             this.buttonConfirmExam.Size = new System.Drawing.Size(108, 23);
             this.buttonConfirmExam.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // buttonCancelExam
             // 
-            this.buttonCancelExam.Location = new System.Drawing.Point(184, 429);
+            this.buttonCancelExam.Location = new System.Drawing.Point(158, 402);
             this.buttonCancelExam.Name = "buttonCancelExam";
             this.buttonCancelExam.Size = new System.Drawing.Size(109, 23);
             this.buttonCancelExam.TabIndex = 1;
@@ -65,9 +65,9 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(330, 429);
+            this.buttonBack.Location = new System.Drawing.Point(273, 402);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.Size = new System.Drawing.Size(109, 23);
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "Wróć";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -75,15 +75,17 @@
             // 
             // textBoxExaminationRes
             // 
+            this.textBoxExaminationRes.Enabled = false;
             this.textBoxExaminationRes.Location = new System.Drawing.Point(42, 106);
             this.textBoxExaminationRes.Multiline = true;
             this.textBoxExaminationRes.Name = "textBoxExaminationRes";
             this.textBoxExaminationRes.ReadOnly = true;
-            this.textBoxExaminationRes.Size = new System.Drawing.Size(340, 39);
+            this.textBoxExaminationRes.Size = new System.Drawing.Size(340, 72);
             this.textBoxExaminationRes.TabIndex = 3;
             // 
             // textBoxExaminationCode
             // 
+            this.textBoxExaminationCode.Enabled = false;
             this.textBoxExaminationCode.Location = new System.Drawing.Point(111, 31);
             this.textBoxExaminationCode.Name = "textBoxExaminationCode";
             this.textBoxExaminationCode.ReadOnly = true;
@@ -111,17 +113,18 @@
             // 
             // textBoxDoctorComments
             // 
-            this.textBoxDoctorComments.Location = new System.Drawing.Point(42, 182);
+            this.textBoxDoctorComments.Enabled = false;
+            this.textBoxDoctorComments.Location = new System.Drawing.Point(42, 210);
             this.textBoxDoctorComments.Multiline = true;
             this.textBoxDoctorComments.Name = "textBoxDoctorComments";
             this.textBoxDoctorComments.ReadOnly = true;
-            this.textBoxDoctorComments.Size = new System.Drawing.Size(340, 42);
+            this.textBoxDoctorComments.Size = new System.Drawing.Size(340, 72);
             this.textBoxDoctorComments.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 166);
+            this.label2.Location = new System.Drawing.Point(39, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 8;
@@ -129,16 +132,16 @@
             // 
             // textBoxNotes
             // 
-            this.textBoxNotes.Location = new System.Drawing.Point(43, 353);
+            this.textBoxNotes.Location = new System.Drawing.Point(42, 324);
             this.textBoxNotes.Multiline = true;
             this.textBoxNotes.Name = "textBoxNotes";
-            this.textBoxNotes.Size = new System.Drawing.Size(339, 45);
+            this.textBoxNotes.Size = new System.Drawing.Size(340, 72);
             this.textBoxNotes.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 337);
+            this.label4.Location = new System.Drawing.Point(40, 308);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 12;
@@ -147,6 +150,7 @@
             // textBoxExaminationName
             // 
             this.textBoxExaminationName.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxExaminationName.Enabled = false;
             this.textBoxExaminationName.Location = new System.Drawing.Point(314, 31);
             this.textBoxExaminationName.Name = "textBoxExaminationName";
             this.textBoxExaminationName.Size = new System.Drawing.Size(100, 20);

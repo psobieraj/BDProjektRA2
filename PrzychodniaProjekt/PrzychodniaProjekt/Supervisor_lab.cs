@@ -62,5 +62,6 @@ namespace PrzychodniaProjekt
         {
             this.DialogResult = System.Windows.Forms.DialogResult.No;
         }
+
     }
 }

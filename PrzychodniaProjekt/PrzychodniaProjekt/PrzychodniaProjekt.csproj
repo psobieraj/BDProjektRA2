@@ -141,12 +141,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrzychodniaDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Recommend_examination.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recommend_examination.Designer.cs">
-      <DependentUpon>Recommend_examination.cs</DependentUpon>
-    </Compile>
     <Compile Include="Registry_AddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,9 +232,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Recommend_examination.resx">
-      <DependentUpon>Recommend_examination.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Registry_AddEdit.resx">
       <DependentUpon>Registry_AddEdit.cs</DependentUpon>
     </EmbeddedResource>

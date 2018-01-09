@@ -97,7 +97,7 @@
             this.buttonReturn.Name = "buttonReturn";
             this.buttonReturn.Size = new System.Drawing.Size(92, 28);
             this.buttonReturn.TabIndex = 5;
-            this.buttonReturn.Text = "Powrót";
+            this.buttonReturn.Text = "Wróć";
             this.buttonReturn.UseVisualStyleBackColor = true;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
@@ -218,9 +218,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(672, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 13);
+            this.label6.Size = new System.Drawing.Size(16, 13);
             this.label6.TabIndex = 17;
-            this.label6.Text = "ID";
+            this.label6.Text = "Id";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Registry_register

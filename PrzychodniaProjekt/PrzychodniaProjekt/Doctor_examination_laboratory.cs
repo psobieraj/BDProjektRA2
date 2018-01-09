@@ -33,12 +33,36 @@ namespace PrzychodniaProjekt
         private void buttonExecuteOrOrder_Click(object sender, EventArgs e)
         {
             Bizz_Doctor.AddLabExam(textBoxComments.Text, Doctor_visit.id_wiz, textCode.Text);
-            this.Hide();
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+            //this.Hide();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+            //this.Hide();
+        }
+
+        public void ClearTextBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
+        }
+
+        private void Doctor_examination_laboratory_Load(object sender, EventArgs e)
+        {
+            ClearTextBoxes();
         }
     }
 }

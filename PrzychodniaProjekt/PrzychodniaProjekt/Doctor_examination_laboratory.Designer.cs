@@ -50,6 +50,7 @@
             // textName
             // 
             this.textName.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textName.Enabled = false;
             this.textName.Location = new System.Drawing.Point(33, 51);
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(442, 20);
@@ -59,16 +60,16 @@
             // 
             this.textCode.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textCode.Enabled = false;
-            this.textCode.Location = new System.Drawing.Point(34, 24);
+            this.textCode.Location = new System.Drawing.Point(33, 24);
             this.textCode.Name = "textCode";
             this.textCode.Size = new System.Drawing.Size(100, 20);
             this.textCode.TabIndex = 35;
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(38, 261);
+            this.buttonBack.Location = new System.Drawing.Point(265, 229);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(95, 29);
+            this.buttonBack.Size = new System.Drawing.Size(95, 24);
             this.buttonBack.TabIndex = 34;
             this.buttonBack.Text = "Wróc";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -76,9 +77,9 @@
             // 
             // buttonExecuteOrOrder
             // 
-            this.buttonExecuteOrOrder.Location = new System.Drawing.Point(157, 261);
+            this.buttonExecuteOrOrder.Location = new System.Drawing.Point(139, 229);
             this.buttonExecuteOrOrder.Name = "buttonExecuteOrOrder";
-            this.buttonExecuteOrOrder.Size = new System.Drawing.Size(95, 29);
+            this.buttonExecuteOrOrder.Size = new System.Drawing.Size(95, 24);
             this.buttonExecuteOrOrder.TabIndex = 33;
             this.buttonExecuteOrOrder.Text = "Zleć";
             this.buttonExecuteOrOrder.UseVisualStyleBackColor = true;
@@ -98,14 +99,14 @@
             this.textBoxComments.Location = new System.Drawing.Point(33, 131);
             this.textBoxComments.Multiline = true;
             this.textBoxComments.Name = "textBoxComments";
-            this.textBoxComments.Size = new System.Drawing.Size(214, 92);
+            this.textBoxComments.Size = new System.Drawing.Size(442, 92);
             this.textBoxComments.TabIndex = 31;
             // 
             // Doctor_examination_laboratory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 472);
+            this.ClientSize = new System.Drawing.Size(490, 311);
             this.Controls.Add(this.btnSelectCode);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.textCode);
@@ -115,6 +116,7 @@
             this.Controls.Add(this.textBoxComments);
             this.Name = "Doctor_examination_laboratory";
             this.Text = "Doctor_examination_laboratory";
+            this.Load += new System.EventHandler(this.Doctor_examination_laboratory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

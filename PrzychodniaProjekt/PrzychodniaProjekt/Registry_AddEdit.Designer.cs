@@ -116,7 +116,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(158, 204);
+            this.buttonAdd.Location = new System.Drawing.Point(158, 168);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(110, 39);
             this.buttonAdd.TabIndex = 13;
@@ -126,7 +126,7 @@
             // 
             // buttonModify
             // 
-            this.buttonModify.Location = new System.Drawing.Point(311, 204);
+            this.buttonModify.Location = new System.Drawing.Point(311, 168);
             this.buttonModify.Name = "buttonModify";
             this.buttonModify.Size = new System.Drawing.Size(110, 39);
             this.buttonModify.TabIndex = 14;
@@ -136,11 +136,11 @@
             // 
             // buttonReturn
             // 
-            this.buttonReturn.Location = new System.Drawing.Point(455, 204);
+            this.buttonReturn.Location = new System.Drawing.Point(455, 168);
             this.buttonReturn.Name = "buttonReturn";
             this.buttonReturn.Size = new System.Drawing.Size(110, 39);
             this.buttonReturn.TabIndex = 15;
-            this.buttonReturn.Text = "Powrót";
+            this.buttonReturn.Text = "Wróć";
             this.buttonReturn.UseVisualStyleBackColor = true;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
@@ -242,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 292);
+            this.ClientSize = new System.Drawing.Size(710, 247);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textIDadr);

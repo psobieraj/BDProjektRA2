@@ -48,7 +48,7 @@
             // 
             // buttonShowExams
             // 
-            buttonShowExams.Location = new System.Drawing.Point(603, 42);
+            buttonShowExams.Location = new System.Drawing.Point(603, 41);
             buttonShowExams.Name = "buttonShowExams";
             buttonShowExams.Size = new System.Drawing.Size(109, 23);
             buttonShowExams.TabIndex = 5;
@@ -84,7 +84,7 @@
             "ZATW",
             "AN_L",
             "AN_K"});
-            this.comboBoxState.Location = new System.Drawing.Point(499, 42);
+            this.comboBoxState.Location = new System.Drawing.Point(445, 40);
             this.comboBoxState.Name = "comboBoxState";
             this.comboBoxState.Size = new System.Drawing.Size(86, 21);
             this.comboBoxState.TabIndex = 6;
@@ -92,7 +92,7 @@
             // labelState
             // 
             this.labelState.AutoSize = true;
-            this.labelState.Location = new System.Drawing.Point(453, 47);
+            this.labelState.Location = new System.Drawing.Point(399, 45);
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(40, 13);
             this.labelState.TabIndex = 7;
@@ -111,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 47);
+            this.label2.Location = new System.Drawing.Point(14, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 16;
@@ -120,7 +120,7 @@
             // dtpDone
             // 
             this.dtpDone.Checked = false;
-            this.dtpDone.Location = new System.Drawing.Point(213, 43);
+            this.dtpDone.Location = new System.Drawing.Point(107, 41);
             this.dtpDone.Name = "dtpDone";
             this.dtpDone.ShowCheckBox = true;
             this.dtpDone.Size = new System.Drawing.Size(200, 20);
@@ -131,14 +131,14 @@
             this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExaminations.Location = new System.Drawing.Point(12, 104);
             this.dgvExaminations.Name = "dgvExaminations";
-            this.dgvExaminations.Size = new System.Drawing.Size(578, 318);
+            this.dgvExaminations.Size = new System.Drawing.Size(573, 256);
             this.dgvExaminations.TabIndex = 17;
             // 
             // buttonLogOut
             // 
-            this.buttonLogOut.Location = new System.Drawing.Point(621, 145);
+            this.buttonLogOut.Location = new System.Drawing.Point(603, 337);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogOut.Size = new System.Drawing.Size(109, 23);
             this.buttonLogOut.TabIndex = 18;
             this.buttonLogOut.Text = "Wyloguj";
             this.buttonLogOut.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 445);
+            this.ClientSize = new System.Drawing.Size(745, 407);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.dgvExaminations);
             this.Controls.Add(this.label2);

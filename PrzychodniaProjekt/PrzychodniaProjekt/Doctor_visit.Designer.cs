@@ -50,16 +50,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 55);
+            this.label3.Location = new System.Drawing.Point(9, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 22;
-            this.label3.Text = "opis";
+            this.label3.Text = "Opis";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(43, 391);
+            this.buttonExit.Location = new System.Drawing.Point(51, 234);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(95, 23);
             this.buttonExit.TabIndex = 27;
@@ -69,9 +69,9 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(325, 388);
+            this.buttonBack.Location = new System.Drawing.Point(275, 234);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(95, 29);
+            this.buttonBack.Size = new System.Drawing.Size(95, 23);
             this.buttonBack.TabIndex = 28;
             this.buttonBack.Text = "Wróć";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             // 
             // textDecription
             // 
-            this.textDecription.Location = new System.Drawing.Point(28, 71);
+            this.textDecription.Location = new System.Drawing.Point(12, 71);
             this.textDecription.Multiline = true;
             this.textDecription.Name = "textDecription";
             this.textDecription.Size = new System.Drawing.Size(409, 67);
@@ -89,7 +89,7 @@
             // 
             this.textBoxName.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxName.Enabled = false;
-            this.textBoxName.Location = new System.Drawing.Point(179, 27);
+            this.textBoxName.Location = new System.Drawing.Point(174, 27);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 31;
@@ -98,7 +98,7 @@
             // 
             this.textBoxUsername.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxUsername.Enabled = false;
-            this.textBoxUsername.Location = new System.Drawing.Point(361, 27);
+            this.textBoxUsername.Location = new System.Drawing.Point(337, 27);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(100, 20);
             this.textBoxUsername.TabIndex = 32;
@@ -106,34 +106,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(148, 30);
+            this.label4.Location = new System.Drawing.Point(143, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 33;
-            this.label4.Text = "imie";
+            this.label4.Text = "Imię";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 145);
+            this.label5.Location = new System.Drawing.Point(12, 145);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 34;
-            this.label5.Text = "diagnoza";
+            this.label5.Text = "Diagnoza";
             // 
             // textDiagnosis
             // 
-            this.textDiagnosis.Location = new System.Drawing.Point(31, 161);
+            this.textDiagnosis.Location = new System.Drawing.Point(15, 161);
             this.textDiagnosis.Multiline = true;
             this.textDiagnosis.Name = "textDiagnosis";
-            this.textDiagnosis.Size = new System.Drawing.Size(406, 43);
+            this.textDiagnosis.Size = new System.Drawing.Size(409, 67);
             this.textDiagnosis.TabIndex = 35;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(155, 391);
+            this.btnCancel.Location = new System.Drawing.Point(163, 234);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(140, 23);
+            this.btnCancel.Size = new System.Drawing.Size(95, 23);
             this.btnCancel.TabIndex = 36;
             this.btnCancel.Text = "Anuluj wizyte";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -141,37 +141,37 @@
             // 
             // buttonPhExam
             // 
-            this.buttonPhExam.Location = new System.Drawing.Point(482, 71);
+            this.buttonPhExam.Location = new System.Drawing.Point(427, 71);
             this.buttonPhExam.Name = "buttonPhExam";
-            this.buttonPhExam.Size = new System.Drawing.Size(95, 23);
+            this.buttonPhExam.Size = new System.Drawing.Size(105, 23);
             this.buttonPhExam.TabIndex = 37;
-            this.buttonPhExam.Text = "Bad Fiz";
+            this.buttonPhExam.Text = "Bad. Fizykalne";
             this.buttonPhExam.UseVisualStyleBackColor = true;
             this.buttonPhExam.Click += new System.EventHandler(this.buttonPhExam_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(285, 30);
+            this.label1.Location = new System.Drawing.Point(280, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 38;
-            this.label1.Text = "nazwisko";
+            this.label1.Text = "Nazwisko";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 27);
+            this.label2.Location = new System.Drawing.Point(12, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 39;
-            this.label2.Text = "ID:";
+            this.label2.Text = "Id:";
             // 
             // textBoxIDPatient
             // 
             this.textBoxIDPatient.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxIDPatient.Enabled = false;
-            this.textBoxIDPatient.Location = new System.Drawing.Point(38, 24);
+            this.textBoxIDPatient.Location = new System.Drawing.Point(37, 28);
             this.textBoxIDPatient.Name = "textBoxIDPatient";
             this.textBoxIDPatient.Size = new System.Drawing.Size(100, 20);
             this.textBoxIDPatient.TabIndex = 40;
@@ -180,7 +180,7 @@
             // 
             this.textIDvisit.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textIDvisit.Enabled = false;
-            this.textIDvisit.Location = new System.Drawing.Point(533, 27);
+            this.textIDvisit.Location = new System.Drawing.Point(485, 28);
             this.textIDvisit.Name = "textIDvisit";
             this.textIDvisit.Size = new System.Drawing.Size(44, 20);
             this.textIDvisit.TabIndex = 41;
@@ -188,7 +188,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(491, 31);
+            this.label6.Location = new System.Drawing.Point(443, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 42;
@@ -196,11 +196,11 @@
             // 
             // buttonBadLab
             // 
-            this.buttonBadLab.Location = new System.Drawing.Point(482, 115);
+            this.buttonBadLab.Location = new System.Drawing.Point(427, 100);
             this.buttonBadLab.Name = "buttonBadLab";
-            this.buttonBadLab.Size = new System.Drawing.Size(95, 23);
+            this.buttonBadLab.Size = new System.Drawing.Size(105, 23);
             this.buttonBadLab.TabIndex = 43;
-            this.buttonBadLab.Text = "Bad Lab";
+            this.buttonBadLab.Text = "Bad. Laboratoryjne";
             this.buttonBadLab.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonBadLab.UseVisualStyleBackColor = true;
             this.buttonBadLab.Click += new System.EventHandler(this.buttonBadLab_Click);
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 472);
+            this.ClientSize = new System.Drawing.Size(619, 338);
             this.Controls.Add(this.buttonBadLab);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textIDvisit);

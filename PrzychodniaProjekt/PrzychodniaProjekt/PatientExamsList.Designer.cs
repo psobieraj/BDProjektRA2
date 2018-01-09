@@ -38,14 +38,14 @@
             // dataGridViewExams
             // 
             this.dataGridViewExams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExams.Location = new System.Drawing.Point(95, 46);
+            this.dataGridViewExams.Location = new System.Drawing.Point(79, 34);
             this.dataGridViewExams.Name = "dataGridViewExams";
             this.dataGridViewExams.Size = new System.Drawing.Size(605, 184);
             this.dataGridViewExams.TabIndex = 21;
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(233, 259);
+            this.buttonBack.Location = new System.Drawing.Point(503, 230);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 22;
@@ -55,7 +55,7 @@
             // 
             // buttonNextExam
             // 
-            this.buttonNextExam.Location = new System.Drawing.Point(368, 259);
+            this.buttonNextExam.Location = new System.Drawing.Point(150, 230);
             this.buttonNextExam.Name = "buttonNextExam";
             this.buttonNextExam.Size = new System.Drawing.Size(229, 23);
             this.buttonNextExam.TabIndex = 24;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 304);
+            this.ClientSize = new System.Drawing.Size(767, 273);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonNextExam);
             this.Controls.Add(this.buttonBack);
