@@ -13,6 +13,16 @@ namespace BizzLayer
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from d in dc.Laboratory_exams
+                         where d.status != "ZATW"
+                         select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
+            return result;
+        }
+
+        public static IQueryable<TResult> GetExamsSupervisor<TResult>(Func<object, object, object, object, object, object, object, object, object, TResult> creator)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+            var result = from d in dc.Laboratory_exams
+                         where d.status != "ZLEC"
                          select creator(d.kod, d.data_zlec, d.data_wyk_anul, d.data_zatw_anul, d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
             return result;
         }

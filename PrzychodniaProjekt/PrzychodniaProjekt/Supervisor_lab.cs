@@ -21,7 +21,7 @@ namespace PrzychodniaProjekt
 
         private void Supervisor_lab_Load(object sender, EventArgs e)
         {
-            dgvExaminations.DataSource = Bizz_technician.GetExams((kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab)
+            dgvExaminations.DataSource = Bizz_technician.GetExamsSupervisor((kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab)
                 => new { kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab });
         }
 

@@ -55,10 +55,8 @@
             this.dropdownChooseStatusStatus.Items.AddRange(new object[] {
             "ZLEC",
             "WYK",
-            "ZATW",
             "AN_L",
-            "AN_K",
-            ""});
+            "AN_K"});
             this.dropdownChooseStatusStatus.Location = new System.Drawing.Point(377, 11);
             this.dropdownChooseStatusStatus.Name = "dropdownChooseStatusStatus";
             this.dropdownChooseStatusStatus.Size = new System.Drawing.Size(93, 21);

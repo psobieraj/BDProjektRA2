@@ -77,10 +77,13 @@
             // 
             // comboBoxState
             // 
+            this.comboBoxState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxState.FormattingEnabled = true;
             this.comboBoxState.Items.AddRange(new object[] {
             "WYK",
-            ""});
+            "ZATW",
+            "AN_L",
+            "AN_K"});
             this.comboBoxState.Location = new System.Drawing.Point(499, 42);
             this.comboBoxState.Name = "comboBoxState";
             this.comboBoxState.Size = new System.Drawing.Size(86, 21);
