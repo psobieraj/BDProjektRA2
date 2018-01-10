@@ -53,12 +53,14 @@ namespace PrzychodniaProjekt
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            bool check = dateTimePicker.Checked;
+            if (dropdownChooseStatusStatus.Text != "")
+            {
+                bool check = dateTimePicker.Checked;
 
-            dataGridViewExaminations.DataSource = Bizz_technician.FilterExams(dateTimePicker.Value, dropdownChooseStatusStatus.Text, check,
-                (kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab)
-                => new { kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab });
-
+                dataGridViewExaminations.DataSource = Bizz_technician.FilterExams(dateTimePicker.Value, dropdownChooseStatusStatus.Text, check,
+                    (kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab)
+                    => new { kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab });
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)

@@ -33,6 +33,11 @@ namespace PrzychodniaProjekt
         private void buttonExecuteOrOrder_Click(object sender, EventArgs e)
         {
             Bizz_Doctor.AddExam(textBoxComments.Text, Doctor_visit.id_wiz, textCode.Text);
+
+            Form1 obj = (Form1)Application.OpenForms["Form1"];
+
+            obj.refreshFiz();
+
             this.DialogResult = System.Windows.Forms.DialogResult.No;
             //this.Hide();
         }

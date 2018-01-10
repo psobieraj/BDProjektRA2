@@ -147,6 +147,7 @@
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(143, 47);
+            this.textName.MaxLength = 40;
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(103, 20);
             this.textName.TabIndex = 16;
@@ -155,6 +156,7 @@
             // textSurname
             // 
             this.textSurname.Location = new System.Drawing.Point(325, 47);
+            this.textSurname.MaxLength = 40;
             this.textSurname.Name = "textSurname";
             this.textSurname.Size = new System.Drawing.Size(103, 20);
             this.textSurname.TabIndex = 17;
@@ -163,6 +165,7 @@
             // textCity
             // 
             this.textCity.Location = new System.Drawing.Point(143, 101);
+            this.textCity.MaxLength = 40;
             this.textCity.Name = "textCity";
             this.textCity.Size = new System.Drawing.Size(103, 20);
             this.textCity.TabIndex = 18;
@@ -180,6 +183,7 @@
             // textStreet
             // 
             this.textStreet.Location = new System.Drawing.Point(314, 104);
+            this.textStreet.MaxLength = 40;
             this.textStreet.Name = "textStreet";
             this.textStreet.Size = new System.Drawing.Size(103, 20);
             this.textStreet.TabIndex = 21;
@@ -188,14 +192,16 @@
             // textHouse
             // 
             this.textHouse.Location = new System.Drawing.Point(491, 104);
+            this.textHouse.MaxLength = 40;
             this.textHouse.Name = "textHouse";
             this.textHouse.Size = new System.Drawing.Size(30, 20);
             this.textHouse.TabIndex = 24;
-            this.textHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Press);
+            this.textHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number_Letter_Press);
             // 
             // textApartment
             // 
             this.textApartment.Location = new System.Drawing.Point(593, 104);
+            this.textApartment.MaxLength = 40;
             this.textApartment.Name = "textApartment";
             this.textApartment.Size = new System.Drawing.Size(30, 20);
             this.textApartment.TabIndex = 25;

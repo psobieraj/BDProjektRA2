@@ -48,6 +48,7 @@
             this.patientTableAdapter = new PrzychodniaProjekt.PrzychodniaDataSetTableAdapters.PatientTableAdapter();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.btnShowVisits = new System.Windows.Forms.Button();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.przychodniaDataSet)).BeginInit();
@@ -216,11 +217,22 @@
             this.btnShowVisits.UseVisualStyleBackColor = true;
             this.btnShowVisits.Click += new System.EventHandler(this.btnShowVisits_Click);
             // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Location = new System.Drawing.Point(717, 504);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(93, 20);
+            this.buttonLogOut.TabIndex = 17;
+            this.buttonLogOut.Text = "Wyloguj";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // Registry_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 570);
+            this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.btnShowVisits);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -270,5 +282,6 @@
         private PrzychodniaDataSetTableAdapters.PatientTableAdapter patientTableAdapter;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button btnShowVisits;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }

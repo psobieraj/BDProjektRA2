@@ -15,7 +15,7 @@ namespace BizzLayer
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from d in dc.Patients
                          join b in dc.Visits on d.id_pac equals b.id_pac
-                         select creator(d.id_pac, d.Imie, d.nazwisko, b.status, b.data_rej, b.data_anul_zak, b.id_wiz);
+                         select creator(d.id_pac, d.Imie, d.nazwisko, b.status, b.data_rej.ToString().Substring(0, 10), b.data_anul_zak.ToString().Substring(0, 10), b.id_wiz);
             return result;
         }
 
@@ -29,7 +29,7 @@ namespace BizzLayer
                 var result = from d in dc.Patients
                              join b in dc.Visits on d.id_pac equals b.id_pac
                              where d.nazwisko.Contains(pattern) && b.data_rej.Equals(pattern2) && b.status.Contains(pattern3)
-                             select creator(d.id_pac, d.Imie, d.nazwisko, b.status, b.data_rej, b.data_anul_zak, b.id_wiz);
+                             select creator(d.id_pac, d.Imie, d.nazwisko, b.status, b.data_rej.ToString().Substring(0, 10), b.data_anul_zak.ToString().Substring(0, 10), b.id_wiz);
                 return result;
             }
             else
@@ -37,7 +37,7 @@ namespace BizzLayer
                 var result = from d in dc.Patients
                              join b in dc.Visits on d.id_pac equals b.id_pac
                              where d.nazwisko.Contains(pattern) && b.status.Contains(pattern3)
-                             select creator(d.id_pac, d.Imie, d.nazwisko, b.status, b.data_rej, b.data_anul_zak, b.id_wiz);
+                             select creator(d.id_pac, d.Imie, d.nazwisko, b.status, b.data_rej.ToString().Substring(0, 10), b.data_anul_zak.ToString().Substring(0, 10), b.id_wiz);
                 return result;
             };
         }
@@ -158,7 +158,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
 
                          where v.id_wiz == id_wiz
 
-                         select creator(p.id_pac, p.nazwisko, v.data_anul_zak, di.kod, di.nazwa, ph.wynik);
+                         select creator(p.id_pac, p.nazwisko, v.data_anul_zak.ToString().Substring(0, 10), di.kod, di.nazwa, ph.wynik);
             return result;
         }
 
@@ -175,7 +175,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
 
                         // where v.id_wiz == id_wiz
 
-                         select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul, lab.data_zlec,di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
+                         select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul.ToString().Substring(0, 10), lab.data_zlec.ToString().Substring(0, 10), di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
             return result;
         }//GetLaboratoryExaminationList
         public static string GetDescription(int id_wiz)

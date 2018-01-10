@@ -63,22 +63,37 @@ namespace PrzychodniaProjekt
 
             if (Admin_main.addOrManage == "add")
             {
-                if (textBoxPassword.Text != "" && comboBoxRole.Text != "" && textBoxLogin.Text != "")
-                {
-                    Bizz_admin.AddUser(textBoxPassword.Text, comboBoxRole.Text, textBoxLogin.Text);
-                    this.DialogResult = System.Windows.Forms.DialogResult.No;
-                }
+                IQueryable<User> user = Bizz_admin.checkLogin(textBoxLogin.Text);
 
-                else
-                    MessageBox.Show("Wypelnij wszystkie pola.");
+                if (user.Any())
+                {
+                    MessageBox.Show("jest już taki użytkownik");
+                } else
+                {
+                    if (textBoxPassword.Text != "" && comboBoxRole.Text != "" && textBoxLogin.Text != "")
+                    {
+                        Bizz_admin.AddUser(textBoxPassword.Text, comboBoxRole.Text, textBoxLogin.Text);
+                        this.DialogResult = System.Windows.Forms.DialogResult.No;
+                    }
+                    else
+                        MessageBox.Show("Wypelnij wszystkie pola.");
+                }
             }
             if (Admin_main.addOrManage == "man")
             {
+                IQueryable<User> user = Bizz_admin.checkLogin(textBoxLogin.Text);
 
-                Bizz_admin.UpdateUser(int.Parse(textBoxId.Text), textBoxPassword.Text, 
-                    comboBoxRole.Text, textBoxLogin.Text, dateTimePickerExpired.Value, dateExpired);
+                if (user.Any())
+                {
+                    MessageBox.Show("jest już taki użytkownik");
+                }
+                else
+                {
+                    Bizz_admin.UpdateUser(int.Parse(textBoxId.Text), textBoxPassword.Text,
+                        comboBoxRole.Text, textBoxLogin.Text, dateTimePickerExpired.Value, dateExpired);
 
-                this.DialogResult = System.Windows.Forms.DialogResult.No;
+                    this.DialogResult = System.Windows.Forms.DialogResult.No;
+                }
             }
 
             //this.DialogResult = System.Windows.Forms.DialogResult.No;

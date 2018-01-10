@@ -15,7 +15,7 @@ namespace BizzLayer
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from p in dc.Patients
                          join v in dc.Visits on p.id_pac equals v.id_pac
-                         select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej, v.data_anul_zak, v.id_wiz);
+                         select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej.ToString().Substring(0, 10), v.data_anul_zak.ToString().Substring(0, 10), v.id_wiz);
             return result;
 
         }
@@ -39,7 +39,7 @@ namespace BizzLayer
                  var result = from p in dc.Patients
                               join v in dc.Visits on p.id_pac equals v.id_pac
                               where p.nazwisko.Contains(pattern) && p.Imie.Contains(pattern2) && p.PESEL.Contains(pattern3)
-                              select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej, v.data_anul_zak, v.id_wiz);
+                              select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej.ToString().Substring(0, 10), v.data_anul_zak.ToString().Substring(0, 10), v.id_wiz);
                  return result;
              }
 
@@ -48,7 +48,7 @@ namespace BizzLayer
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             var result = from d in dc.Patients
                          join b in dc.Addresses on d.id_pac equals b.id_pac
-                         select creator(d.id_pac, d.Imie, d.nazwisko, d.PESEL, b.id_adresu,b.miejscowosc, b.ulica, b.nr_domu, b.nr_lokalu);
+                         select creator(d.id_pac, d.Imie, d.nazwisko, d.PESEL, b.id_adresu, b.miejscowosc, b.ulica, b.nr_domu, b.nr_lokalu);
             return result;
         }
 
@@ -94,7 +94,7 @@ namespace BizzLayer
 
         }
 
-        public static void EditPatient(int id_pac, string Imie, string Nazwisko, string PESEL, int id_adresu,string Miejscowosc, string Ulica, string Nr_domu, string Nr_lokalu)
+        public static void EditPatient(int id_pac, string Imie, string Nazwisko, string PESEL, int id_adresu, string Miejscowosc, string Ulica, string Nr_domu, string Nr_lokalu)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 

@@ -19,6 +19,8 @@ namespace BizzLayer
                         where u.login.Contains(pattern)
                         select u);
             return user;
+
+
         }
 
         public static IQueryable<User> GetUsers()
@@ -29,6 +31,16 @@ namespace BizzLayer
             return user;
         }
 
+        public static IQueryable<User> checkLogin(string login)
+        {
+            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
+
+            var user = (from u in dc.Users
+                         where u.login == login
+                         select u);
+            return user;
+        }
+
         public static void AddUser(string haslo, string rola, string login)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -36,7 +48,6 @@ namespace BizzLayer
             user.login = login;
             user.haslo = Bizz_MD5hash.GetHash(haslo);
             user.Rola = rola;
-            
 
             dc.Users.InsertOnSubmit(user);
             dc.SubmitChanges();

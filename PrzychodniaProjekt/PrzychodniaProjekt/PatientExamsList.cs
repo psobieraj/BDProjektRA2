@@ -31,6 +31,13 @@ namespace PrzychodniaProjekt
             static_id_pacjenta = id_pacjenta;
         }
 
+        public void refreshFiz()
+        {
+            dataGridViewExams.DataSource = Bizz_Doctor.GetPhisicalExaminationList(static_id_pacjenta, static_id_wiz, (id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik)
+                  => new { id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik });
+            ClearTextBoxes();
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -47,7 +54,8 @@ namespace PrzychodniaProjekt
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.DialogResult = System.Windows.Forms.DialogResult.No;
+            //this.Hide();
         }
 
         public void ClearTextBoxes()

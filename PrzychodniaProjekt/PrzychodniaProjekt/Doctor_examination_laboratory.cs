@@ -33,6 +33,12 @@ namespace PrzychodniaProjekt
         private void buttonExecuteOrOrder_Click(object sender, EventArgs e)
         {
             Bizz_Doctor.AddLabExam(textBoxComments.Text, Doctor_visit.id_wiz, textCode.Text);
+
+
+            PatientLabExamList obj = (PatientLabExamList)Application.OpenForms["PatientLabExamList"];
+
+            obj.refreshLab();
+
             this.DialogResult = System.Windows.Forms.DialogResult.No;
             //this.Hide();
         }

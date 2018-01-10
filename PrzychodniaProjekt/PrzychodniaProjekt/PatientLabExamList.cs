@@ -31,6 +31,13 @@ namespace PrzychodniaProjekt
             static_id_pacjenta = id_pacjenta;
         }
 
+        public void refreshLab()
+        {
+            dataGridViewExams.DataSource = Bizz_Doctor.GetLaboratoryExaminationList(static_id_pacjenta, (id_pac, Nazwisko, data_wyk, data_zlec, Kod, Nazwa, Uwagi_lekarza, Wynik, Status)
+                 => new { id_pac, Nazwisko, data_wyk, data_zlec, Kod, Nazwa, Uwagi_lekarza, Wynik, Status });
+            ClearTextBoxes();
+        }
+
 
         private void PatientLabExamList_Load(object sender, EventArgs e)
         {
