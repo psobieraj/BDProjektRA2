@@ -49,7 +49,7 @@
             this.dataGridViewAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAccounts.Location = new System.Drawing.Point(12, 32);
             this.dataGridViewAccounts.Name = "dataGridViewAccounts";
-            this.dataGridViewAccounts.Size = new System.Drawing.Size(361, 198);
+            this.dataGridViewAccounts.Size = new System.Drawing.Size(560, 198);
             this.dataGridViewAccounts.TabIndex = 0;
             // 
             // userBindingSource
@@ -64,7 +64,7 @@
             // 
             // buttonManage
             // 
-            this.buttonManage.Location = new System.Drawing.Point(379, 38);
+            this.buttonManage.Location = new System.Drawing.Point(618, 38);
             this.buttonManage.Name = "buttonManage";
             this.buttonManage.Size = new System.Drawing.Size(106, 23);
             this.buttonManage.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(379, 67);
+            this.buttonAdd.Location = new System.Drawing.Point(618, 67);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(106, 23);
             this.buttonAdd.TabIndex = 2;
@@ -100,7 +100,7 @@
             // 
             // buttonLogOut
             // 
-            this.buttonLogOut.Location = new System.Drawing.Point(379, 207);
+            this.buttonLogOut.Location = new System.Drawing.Point(618, 207);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(106, 23);
             this.buttonLogOut.TabIndex = 7;
@@ -114,7 +114,7 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(379, 9);
+            this.buttonSearch.Location = new System.Drawing.Point(618, 9);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(106, 23);
             this.buttonSearch.TabIndex = 4;
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 242);
+            this.ClientSize = new System.Drawing.Size(736, 242);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPattern);

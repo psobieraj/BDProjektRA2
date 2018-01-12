@@ -79,20 +79,29 @@ namespace PrzychodniaProjekt
                         MessageBox.Show("Wypelnij wszystkie pola.");
                 }
             }
+
             if (Admin_main.addOrManage == "man")
             {
                 IQueryable<User> user = Bizz_admin.checkLogin(textBoxLogin.Text);
 
-                if (user.Any())
+                if (user.Any() && (user.Single().Id_user).ToString() != textBoxId.Text)
                 {
                     MessageBox.Show("jest już taki użytkownik");
                 }
                 else
                 {
-                    Bizz_admin.UpdateUser(int.Parse(textBoxId.Text), textBoxPassword.Text,
+                    if (textBoxPassword.Text != "" && comboBoxRole.Text != "" && textBoxLogin.Text != "")
+                    {
+                        Bizz_admin.UpdateUser(int.Parse(textBoxId.Text), textBoxPassword.Text,
                         comboBoxRole.Text, textBoxLogin.Text, dateTimePickerExpired.Value, dateExpired);
+                        this.DialogResult = System.Windows.Forms.DialogResult.No;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wypelnij wszystkie pola.");
+                    }
 
-                    this.DialogResult = System.Windows.Forms.DialogResult.No;
+                    
                 }
             }
 

@@ -34,14 +34,14 @@ namespace BizzLayer
             if (!check)
             {
                 var result = from d in dc.Laboratory_exams
-                             where d.status.Contains(status)
+                             where d.status.Contains(status) && d.status != "ZATW"
                              select creator(d.kod, d.data_zlec.ToString().Substring(0, 10), d.data_wyk_anul.ToString().Substring(0, 10), d.data_zatw_anul.ToString().Substring(0, 10), d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
                 return result;
             }
             else
             {
                 var result = from d in dc.Laboratory_exams
-                             where d.status.Contains(status)
+                             where d.status.Contains(status) && d.status != "ZATW"
                              where d.data_zlec == data
                              select creator(d.kod, d.data_zlec.ToString().Substring(0, 10), d.data_wyk_anul.ToString().Substring(0, 10), d.data_zatw_anul.ToString().Substring(0, 10), d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
                 return result;
@@ -119,15 +119,15 @@ namespace BizzLayer
             if (!check)
             {
                 var result = from d in dc.Laboratory_exams
-                             where d.status.Contains(status)
+                             where d.status.Contains(status) && d.status!="ZLEC"
                              select creator(d.kod, d.data_zlec.ToString().Substring(0, 10), d.data_wyk_anul.ToString().Substring(0, 10), d.data_zatw_anul.ToString().Substring(0, 10), d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
                 return result;
             }
             else
             {
                 var result = from d in dc.Laboratory_exams
-                             where d.status.Contains(status)
-                             where d.data_wyk_anul == data
+                             where d.status.Contains(status) && d.status != "ZLEC"
+                             where d.data_wyk_anul == data 
                              select creator(d.kod, d.data_zlec.ToString().Substring(0, 10), d.data_wyk_anul.ToString().Substring(0, 10), d.data_zatw_anul.ToString().Substring(0, 10), d.uwagi_lek, d.wynik, d.uwagi_kier, d.status, d.id_bad_lab);
                 return result;
             }

@@ -26,9 +26,10 @@ namespace PrzychodniaProjekt
 
         public Form1(int id_wiz, int id_pacjenta)
         {
-            InitializeComponent();
+            
             static_id_wiz = id_wiz;
             static_id_pacjenta = id_pacjenta;
+            InitializeComponent();
         }
 
         public void refreshFiz()
@@ -43,7 +44,7 @@ namespace PrzychodniaProjekt
         {
             dataGridViewExams.DataSource = Bizz_Doctor.GetPhisicalExaminationList(static_id_pacjenta,static_id_wiz,(id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik ) 
                 => new { id_pac, Nazwisko, data_zak, Kod, Nazwa, Wynik });
-            ClearTextBoxes();
+            //ClearTextBoxes();
         }
 
 

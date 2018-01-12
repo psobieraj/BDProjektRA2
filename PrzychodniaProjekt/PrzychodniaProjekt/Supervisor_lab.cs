@@ -51,14 +51,14 @@ namespace PrzychodniaProjekt
 
         private void buttonShowExams_Click(object sender, EventArgs e)
         {
-            if (comboBoxState.Text != "")
-            {
+            //if (comboBoxState.Text == "")
+            //{
                 bool check = dtpDone.Checked;
 
                 dgvExaminations.DataSource = Bizz_technician.FilterExamsSupervisor(dtpDone.Value, comboBoxState.Text, check,
                     (kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab)
                     => new { kod, data_zlec, data_wyk_anul, data_zatw_anul, uwagi_lek, wynik, uwagi_kier, status, id_bad_lab });
-            }
+            //}
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)

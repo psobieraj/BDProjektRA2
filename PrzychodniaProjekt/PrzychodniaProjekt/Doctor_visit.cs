@@ -67,7 +67,7 @@ namespace PrzychodniaProjekt
 
         private void buttonPhExam_Click(object sender, EventArgs e)
         {
-            Form1 patientExamsList = new Form1(id_wiz, id_pacjenta);       //
+            Form1 patientExamsList = new Form1(int.Parse(textIDvisit.Text), id_pacjenta);       //
             id_wiz = Int32.Parse(textIDvisit.Text);
             
             Exam_dictionary.currentChosenExamType = "fiz";
