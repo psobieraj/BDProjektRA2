@@ -30,7 +30,6 @@ namespace PrzychodniaProjekt
         public void fillForms(string login, string rola, string id, dynamic data)
         {
             textBoxLogin.Text = login.Replace(" ", string.Empty);
-            //textBoxPassword.Text = haslo;
             comboBoxRole.Text = rola;
             textBoxId.Text = id;
             dateTimePickerExpired.Value = Convert.ToDateTime(data);
@@ -49,13 +48,10 @@ namespace PrzychodniaProjekt
 
         private void Admin_manage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'przychodniaDataSet2.User' table. You can move, or remove it, as needed.
-            //this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
         }
 
         private void comboBoxRole_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -104,11 +100,6 @@ namespace PrzychodniaProjekt
                     
                 }
             }
-
-            //this.DialogResult = System.Windows.Forms.DialogResult.No;
-            //textBoxLogin.Text = names;
-
-
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

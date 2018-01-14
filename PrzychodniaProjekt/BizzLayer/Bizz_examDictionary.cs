@@ -9,7 +9,6 @@ namespace BizzLayer
 {
     public class Bizz_examDictionary
     {
-
         public static IQueryable<Exam_dictionary> GetExams(string currentChosenExamType)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();

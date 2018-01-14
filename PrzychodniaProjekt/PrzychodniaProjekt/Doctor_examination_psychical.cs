@@ -39,13 +39,11 @@ namespace PrzychodniaProjekt
             obj.refreshFiz();
 
             this.DialogResult = System.Windows.Forms.DialogResult.No;
-            //this.Hide();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.DialogResult = System.Windows.Forms.DialogResult.No;
-            //this.Hide();
         }
 
         public void ClearTextBoxes()

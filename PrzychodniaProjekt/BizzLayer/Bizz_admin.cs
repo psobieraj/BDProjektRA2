@@ -9,9 +9,6 @@ namespace BizzLayer
 {
     public class Bizz_admin
     {
-       
-
-
         public static IQueryable<User> FilterUser(string pattern)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -19,8 +16,6 @@ namespace BizzLayer
                         where u.login.Contains(pattern)
                         select u);
             return user;
-
-
         }
 
         public static IQueryable<User> GetUsers()
@@ -58,22 +53,11 @@ namespace BizzLayer
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
-            //var user = (from u in dc.Users
-            //            where u.login == login
-            //            select u);
-
-            //foreach (users u in user)
-            //{
-            //    user.login = login;
-            //    user.haslo = Bizz_MD5hash.GetHash(haslo);
-            //    user.Rola = rola;
-            //    user.dat_wyg = data_wyg;
-            //}
-
             User user = (from u in dc.Users
                             where u.Id_user == id
                             select u).Single();
             user.login = login;
+
             if (haslo != string.Empty)
             {
                 user.haslo = Bizz_MD5hash.GetHash(haslo);
@@ -84,12 +68,8 @@ namespace BizzLayer
             {
                 user.dat_wyg = data_wyg;
             }
-
             dc.SubmitChanges();
-
-
             dc.SubmitChanges();
-
         }
     }
 }

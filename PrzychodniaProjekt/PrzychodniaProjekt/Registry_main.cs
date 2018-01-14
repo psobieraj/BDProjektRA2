@@ -20,23 +20,15 @@ namespace PrzychodniaProjekt
         }
 
         private void Registry_main_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'przychodniaDataSet.Patient' table. You can move, or remove it, as needed.
-            //this.patientTableAdapter.Fill(this.przychodniaDataSet.Patient);
-            //dgvVisits.Columns[5].DefaultCellStyle.Format = "yyyy'/'MM'/'dd";
-            
+        {            
             dgvVisits.DataSource = Bizz_registry.GetVisits((id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz) => new { id_pac, Imie, Nazwisko, PESEL, Status, data_rej, data_anul_zak, id_wiz });
 
-            
             dgvPatients.DataSource = Bizz_registry.GetPatients((id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu});
-            //((DataGridViewTextBoxColumn)dgvPatients.Columns[5]).MaxInputLength = 6;
-            //dgvVisits.Columns[5].DefaultCellStyle.Format = "yyyy'/'MM'/'dd";
+
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            //IQueryable<Patients_n_Adresses> patient = Bizz_registry.FilterPatient(textSurname.Text);
-
             dgvPatients.DataSource = Bizz_registry.FilterPatient(textSurname.Text, textName.Text, textPesel.Text,
                 (id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu) => 
                 new { id_pac, Imie, Nazwisko, PESEL, id_adresu, Miejscowosc, Ulica, Nr_domu, Nr_lokalu });

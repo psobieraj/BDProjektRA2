@@ -53,7 +53,6 @@ namespace PrzychodniaProjekt
 
             if (user.Any())
             {
-                //var userDate = user.Single().dat_wyg;
                 if (user.Single().dat_wyg < DateTime.Now.Date) /// jesli konto wygaslo
                 {
                     MessageBox.Show("Konto wygasło.");

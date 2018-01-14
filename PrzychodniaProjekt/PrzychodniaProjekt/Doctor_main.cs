@@ -21,9 +21,6 @@ namespace PrzychodniaProjekt
 
         private void Doctor_main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'przychodniaDataSet.Patient' table. You can move, or remove it, as needed.
-            //this.patientTableAdapter.Fill(this.przychodniaDataSet.Patient);
-
             dataGridViewVisits.DataSource = Bizz_Doctor.GetVisits((id_pac, Imie, Nazwisko, status, data_rej, data_anul_zak, id_wiz) => new { id_pac, Imie, Nazwisko, status, data_rej, data_anul_zak, id_wiz });
         }
 
@@ -54,8 +51,7 @@ namespace PrzychodniaProjekt
             string imie = dataGridViewVisits.Rows[rowindex].Cells[1].Value.ToString();
             string id = dataGridViewVisits.Rows[rowindex].Cells[0].Value.ToString();
             string id_wiz= dataGridViewVisits.Rows[rowindex].Cells[6].Value.ToString();
-
-
+            
             doctor_visit.fillForms(id, imie, nazwisko, id_wiz);
            
             doctor_visit.ShowDialog();

@@ -17,9 +17,7 @@ namespace BizzLayer
                          join v in dc.Visits on p.id_pac equals v.id_pac
                          select creator(p.id_pac, p.Imie, p.nazwisko, p.PESEL, v.status, v.data_rej.ToString().Substring(0, 10), v.data_anul_zak.ToString().Substring(0, 10), v.id_wiz);
             return result;
-
         }
-
 
         public static IQueryable<TResult> FilterPatient<TResult>(string pattern, string pattern2, string pattern3,
             Func<object, object, object, object, object, object, object, object, object, TResult> creator)
@@ -52,8 +50,6 @@ namespace BizzLayer
             return result;
         }
 
-
-
         public static void UpdateVisit(int id_wiz, System.DateTime data_anul)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -78,6 +74,7 @@ namespace BizzLayer
                        select d);
             return doc;
         }
+
         public static void AddVisit(int id_pac, int id_rec, int id_lek, System.DateTime data_rej)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -124,25 +121,18 @@ namespace BizzLayer
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             Patient pat = new Patient();
-            
-
             pat.Imie = Imie;
             pat.nazwisko = Nazwisko;
             pat.PESEL = PESEL;
-            
-
             dc.Patients.InsertOnSubmit(pat);
             dc.SubmitChanges();
 
-
             Address adr = new Address();
-
             adr.miejscowosc = Miejscowosc;
             adr.ulica = Ulica;
             adr.nr_domu = Nr_domu;
             adr.nr_lokalu = Nr_lokalu;
             adr.id_pac = pat.id_pac;
-
             
             dc.Addresses.InsertOnSubmit(adr);
             dc.SubmitChanges();
@@ -153,22 +143,17 @@ namespace BizzLayer
 
         public static int checkRegistryLadyID(string login_rejestratorki)
         {
-
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             User idrec = (from usr in dc.Users
                            where usr.login == login_rejestratorki
                            select usr).Single();
-
-           
-
+            
             Register idrec2 = (from usr in dc.Registers
                           where usr.Id_user == idrec.Id_user
                                select usr).Single();
 
             return idrec2.id_rec;
         }
-
     }
-
-    }
+}

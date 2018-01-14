@@ -44,7 +44,6 @@ namespace PrzychodniaProjekt
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.DialogResult = System.Windows.Forms.DialogResult.No;
-            //this.Hide();
         }
     }
 }

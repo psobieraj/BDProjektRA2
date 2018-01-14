@@ -32,7 +32,6 @@ namespace PrzychodniaProjekt
         {
             textBoxExaminationCode.Text = kod;
             textBoxExaminationName.Text = Bizz_technician.GetExamName(kod);
-            //textBoxExaminationResult.Text = wynik;
             textBoxDoctorComments.Text = uwagi_lek;
 
             textBoxExaminationResult.Text = Bizz_technician.GetResult(static_id_bad);

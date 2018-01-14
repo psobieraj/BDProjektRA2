@@ -23,8 +23,6 @@ namespace PrzychodniaProjekt
 
         private void Admin_main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'przychodniaDataSet2.User' table. You can move, or remove it, as needed.
-            //this.userTableAdapter.Fill(this.przychodniaDataSet2.User);
             dataGridViewAccounts.DataSource = Bizz_admin.GetUsers();
         }
 
@@ -32,11 +30,7 @@ namespace PrzychodniaProjekt
         {
             IQueryable<User> user = Bizz_admin.FilterUser(textBoxPattern.Text);
             dataGridViewAccounts.DataSource = user;
-
         }
-
-        
-        
 
         private void buttonManage_Click(object sender, EventArgs e)
         {
@@ -58,25 +52,10 @@ namespace PrzychodniaProjekt
                 data = DateTime.Now;
             };
 
-            //if(data==null) MessageBox.Show("Nieustawiona data.");
-
-            //if (data != string.Empty)
-            //{
-            //    data = data.ToString();
-            //}
-
-
-            //if (dataGridViewAccounts.Rows[rowindex].Cells[4].Value != null)
-            //{
-            //    data = "";
-            //};
-
             admin_manage.fillForms(login, rola, id, data);
             admin_manage.setCheckBoxUserActive(dataGridViewAccounts.Rows[rowindex].Cells[4].Value);
             addOrManage = "man";
             admin_manage.ShowDialog();
-
-
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -86,19 +65,11 @@ namespace PrzychodniaProjekt
             admin_add.HideDatePicker(false);
             addOrManage = "add";
             admin_add.ShowDialog();
-            
-            //admin_add.set
-
-            //admin_add.textBoxLogin = dataGridViewAccounts.DataSource;
-            // admin_add->te
-            
-
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             this.DialogResult = System.Windows.Forms.DialogResult.No;
-            //this.Show();
         }
     }
 }

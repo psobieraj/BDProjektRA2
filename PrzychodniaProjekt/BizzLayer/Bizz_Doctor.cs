@@ -44,30 +44,13 @@ namespace BizzLayer
 
         public static void UpdateVisitEnd(int id_wiz, System.DateTime data_zak, string opis, string diagnoza)
         {
-            /*
-            /// poprzednia wersja:
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             Visit vis = (from v in dc.Visits
                          where v.id_wiz == id_wiz
                          select v).Single();
 
-            if (vis.status != "ZAK")
-            {
-                vis.status = "ZAK";
-                vis.data_anul_zak = data_zak;
-                dc.SubmitChanges();
-                dc.SubmitChanges();
-            }*/
-
-            
-            DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-
-            Visit vis = (from v in dc.Visits
-                         where v.id_wiz == id_wiz
-                         select v).Single();
-
-            if (vis.status == "ANUL") return;   /// jak anulowana, nie wprowadzac zadnych zmian
+            if (vis.status == "ANUL") return;
 
             vis.opis = opis;
             vis.diagnoza = diagnoza;
@@ -80,22 +63,8 @@ namespace BizzLayer
             dc.SubmitChanges();
         }
 
-public static void UpdateVisitCancel(int id_wiz, System.DateTime data_anul, string opis, string dignoza)
+        public static void UpdateVisitCancel(int id_wiz, System.DateTime data_anul, string opis, string dignoza)
         {
-            /*DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
-
-            Visit vis = (from v in dc.Visits
-                         where v.id_wiz == id_wiz
-                         select v).Single();
-
-            if (vis.status != "ANUL")
-            {
-                vis.status = "ANUL";
-                vis.data_anul_zak = data_anul;
-                dc.SubmitChanges();
-                dc.SubmitChanges();
-            }*/
-
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
 
             Visit vis = (from v in dc.Visits
@@ -106,12 +75,11 @@ public static void UpdateVisitCancel(int id_wiz, System.DateTime data_anul, stri
             {
                 vis.status = "ANUL";
                 vis.data_anul_zak = data_anul;
-                //dc.SubmitChanges();
                 dc.SubmitChanges();
             }
         }
 
-public static void AddExam(string wynik, int id_wiz, string kod)
+        public static void AddExam(string wynik, int id_wiz, string kod)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             Physical_exam ex = new Physical_exam();
@@ -122,27 +90,23 @@ public static void AddExam(string wynik, int id_wiz, string kod)
 
             dc.Physical_exams.InsertOnSubmit(ex);
             dc.SubmitChanges();
-
         }
 
-public static void AddLabExam(string uwagi, int id_wiz, string kod) 
+        public static void AddLabExam(string uwagi, int id_wiz, string kod) 
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
             Laboratory_exam ex = new Laboratory_exam();
-
-            //ex.wynik = uwagi; zamiast do wyniku chyba powinno być wpisane do uwagi_lekarza?
             ex.uwagi_lek = uwagi;
             ex.id_wiz = id_wiz;
             ex.kod = kod;
 
-            ex.id_lab = 1; //dodana wartość domyślna wszystko idzie na tego samego laboranta
-            ex.id_klab = 1; //dodana wartosć domyślna wszystko idzie na tego samego supervisora
+            ex.id_lab = 1;
+            ex.id_klab = 1;
             ex.status = "ZLEC";
             ex.data_zlec = System.DateTime.Today;
 
             dc.Laboratory_exams.InsertOnSubmit(ex);
             dc.SubmitChanges();
-
         }
 
         public static IQueryable<TResult> GetPhisicalExaminationList<TResult>(int id_pac, int id_wiz, Func<object, object, object, object, object, object, TResult> creator)
@@ -155,7 +119,6 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
 
                          where p.id_pac == id_pac
                          where di.typ == "fiz"
-
                          where v.id_wiz == id_wiz
 
                          select creator(p.id_pac, p.nazwisko, v.data_anul_zak.ToString().Substring(0, 10), di.kod, di.nazwa, ph.wynik);
@@ -173,11 +136,10 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
                          where p.id_pac == id_pac
                          where di.typ == "lab"
 
-                        // where v.id_wiz == id_wiz
-
                          select creator(p.id_pac, p.nazwisko, lab.data_wyk_anul.ToString().Substring(0, 10), lab.data_zlec.ToString().Substring(0, 10), di.kod, di.nazwa, lab.uwagi_lek, lab.wynik, lab.status);
             return result;
         }//GetLaboratoryExaminationList
+
         public static string GetDescription(int id_wiz)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();
@@ -188,6 +150,7 @@ public static void AddLabExam(string uwagi, int id_wiz, string kod)
 
             return vis.opis;
         }//GetDescription
+
         public static string GetDiagnosis(int id_wiz)
         {
             DataClassesClinicDataContext dc = new DataClassesClinicDataContext();

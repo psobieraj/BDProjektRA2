@@ -16,7 +16,6 @@ namespace PrzychodniaProjekt
     public partial class Supervisor_lab_manage : Form
     {
         public static int static_id_bad;
-        //public static string static_confirm_or_cancel = "";
 
         public Supervisor_lab_manage(int id_bad)
         {
@@ -28,7 +27,6 @@ namespace PrzychodniaProjekt
         {
             textBoxExaminationCode.Text = kod;
             textBoxExaminationName.Text = Bizz_technician.GetExamName(kod);
-            //textBoxExaminationResult.Text = wynik;
             textBoxDoctorComments.Text = uwagi_lek;
 
             textBoxExaminationRes.Text = Bizz_technician.GetResult(static_id_bad);

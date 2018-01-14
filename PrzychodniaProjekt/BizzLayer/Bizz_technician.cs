@@ -77,21 +77,15 @@ namespace BizzLayer
             Laboratory_exam exam = (from e in dc.Laboratory_exams
                          where e.id_bad_lab == id_bad
                          select e).Single();
-
-            //if (vis.status == "ANUL") return;   /// jak anulowana, nie wprowadzac zadnych zmian
-
-            exam.wynik = wynik;
             
+            exam.wynik = wynik;            
 
-            if (exam.status == "ZLEC" || exam.status == "AN_K") //jeszcze chyba trzeba dodać że jeśli jest AN_K to żeby po ponownym wykonaniu nadpisało
+            if (exam.status == "ZLEC" || exam.status == "AN_K")
             {
                 exam.status = "WYK";
                 exam.data_wyk_anul = DateTime.Now.Date;
             }
             dc.SubmitChanges();
-            //dc.SubmitChanges();
-
-
         }
 
         public static void CancelExam(int id_bad, string wynik)
@@ -106,7 +100,7 @@ namespace BizzLayer
 
             if (exam.status == "ZLEC")
             {
-                exam.status = "AN_L";       /// ewentualnie do poprawy, w bazie jest varchar(4)
+                exam.status = "AN_L";
                 exam.data_wyk_anul = DateTime.Now.Date;
             }
             dc.SubmitChanges();
@@ -141,11 +135,8 @@ namespace BizzLayer
             Laboratory_exam exam = (from e in dc.Laboratory_exams
                                     where e.id_bad_lab == id_bad
                                     select e).Single();
-
-            //if (vis.status == "ANUL") return;   /// jak anulowana, nie wprowadzac zadnych zmian
-
+            
             exam.uwagi_kier = uwagi;
-
 
             if (exam.status == "WYK")
             {
@@ -162,14 +153,6 @@ namespace BizzLayer
                 }
             }
             dc.SubmitChanges();
-            //dc.SubmitChanges();
-
-
         }
-
-
-
-
-
     }
 }
