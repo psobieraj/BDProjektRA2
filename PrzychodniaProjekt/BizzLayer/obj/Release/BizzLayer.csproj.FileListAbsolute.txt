@@ -1,0 +1,7 @@
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Release\BizzLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Release\BizzLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Release\DataLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Release\DataLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\obj\Release\BizzLayer.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\obj\Release\BizzLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\obj\Release\BizzLayer.pdb

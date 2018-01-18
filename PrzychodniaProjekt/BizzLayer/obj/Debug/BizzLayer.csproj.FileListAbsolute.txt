@@ -68,3 +68,10 @@ C:\Users\Daniel\Source\Repos\BDProjektRA211\PrzychodniaProjekt\BizzLayer\bin\Deb
 C:\Users\Daniel\Source\Repos\BDProjektRA211\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Source\Repos\BDProjektRA211\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.dll
 C:\Users\Daniel\Source\Repos\BDProjektRA211\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Debug\BizzLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Debug\BizzLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Debug\DataLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\bin\Debug\DataLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\BizzLayer\obj\Debug\BizzLayer.pdb

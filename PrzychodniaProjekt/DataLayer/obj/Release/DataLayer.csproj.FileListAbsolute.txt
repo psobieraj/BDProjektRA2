@@ -1,0 +1,6 @@
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\DataLayer\bin\Release\DataLayer.dll.config
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\DataLayer\bin\Release\DataLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\DataLayer\bin\Release\DataLayer.pdb
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\DataLayer\obj\Release\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\DataLayer\obj\Release\DataLayer.dll
+C:\Users\Daniel\Source\Repos\BDProjektRA214\PrzychodniaProjekt\DataLayer\obj\Release\DataLayer.pdb
